@@ -38,6 +38,9 @@ async function shot(page, name) {
   await page.waitForTimeout(2300); // Let real toast/entrance animations finish, do not edit the scene.
   await page.screenshot({ path: path.join(out, name) });
 }
+async function nav(page, name, width) {
+  await page.locator(width < 900 ? `#mtab [data-go="${name}"]` : `.nav[data-go="${name}"]`).click();
+}
 (async () => {
   server = http.createServer((req, res) => { res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(html); });
   await new Promise(r => server.listen(0, '127.0.0.1', r));
@@ -51,6 +54,28 @@ async function shot(page, name) {
     const page = await context.newPage();
     page.on('pageerror', e => errors.push(label + ': ' + e.message));
     await page.goto(url); await page.waitForFunction(() => !!window.__WFAPI);
+    // 切换真实选书按钮，确保旧会话和撤销栈不会跨词书残留。
+    const switchResult = await page.evaluate(() => {
+      const api = __WFAPI, original = api.getDB(), d = api.blankDB();
+      const rows = api.bookWords('cet4').slice(0, 8);
+      d.custom.switchA = { name: '切书 A', words: rows.slice(0, 4) };
+      d.custom.switchB = { name: '切书 B', words: rows.slice(4, 8) };
+      d.book = '@switchA'; d.cfg.autoSpeak = false;
+      api.setDB(d); api.resetPreview(); api.startSession('auto');
+      const progress = JSON.stringify(d.prog);
+      api.showBookPicker();
+      document.querySelector('[data-book="@switchB"]').click();
+      const cleared = api.session() === null;
+      const preview = api.previewQueue('auto');
+      api.startSession('auto');
+      const s = api.session(), allowed = rows.slice(4, 8).map(r => r[0]);
+      const result = { cleared, newBook: s.book === '@switchB' && s.queue.every(w => allowed.includes(w)), preview: preview.every(w => allowed.includes(w)), preserved: progress === JSON.stringify(d.prog) };
+      api.setDB(original); api.go('today'); api.resetPreview();
+      return result;
+    });
+    check(label + ': changing book clears old session', switchResult.cleared);
+    check(label + ': changing book replaces preview and actual queue', switchResult.newBook && switchResult.preview);
+    check(label + ': changing book preserves progress', switchResult.preserved);
     await noOverflow(page, label + ' home');
     if (width < 900 && height >= 500) {
       check(label + ': primary study action visible without scrolling', (await metrics(page, '#startStudy')).visible);
@@ -76,6 +101,9 @@ async function shot(page, name) {
     else await page.locator('.opt').first().click();
     await page.locator('[data-g="3"]').click();
     check(label + ': answered Next is labelled as a save action', (await page.locator('#sessionNext').innerText()).includes('保存评价'));
+    const cardState = await page.evaluate(() => { const s = __WFAPI.session(); return JSON.stringify([s.queue, s.i, s.pending, s.revealed, s.steps]); });
+    await nav(page, 'read', width); await nav(page, 'study', width);
+    check(label + ': tab return restores revealed card and pending rating', await page.locator('#wcard').count() === 1 && await page.evaluate(() => { const s = __WFAPI.session(); return JSON.stringify([s.queue, s.i, s.pending, s.revealed, s.steps]); }) === cardState);
     if (width === 390) await shot(page, 'session-390x844.png');
     const first = await page.evaluate(() => __WFAPI.session().queue[__WFAPI.session().i]);
     await page.locator('#sessionNext').click();
@@ -86,12 +114,20 @@ async function shot(page, name) {
     if (await page.locator('#reveal').count()) await page.locator('#reveal').click();
     else await page.locator('.opt').first().click();
     await page.locator('#sessionNext').click();
-    check(label + ': final card renders a completion summary', (await page.locator('#view').innerText()).includes('本轮完成'));
-    await page.locator('#homeSes').click();
-    check(label + ': summary Home button is functional', await page.locator('#startStudy').count() === 1);
-    // Choice answers must save immediately and advance: correct → known (7), wrong → forgotten (8).
+    check(label + ': final card automatically starts a different batch', await page.evaluate(w => { const s = __WFAPI.session(); return s.i === 0 && !s.queue.includes(w); }, first));
+    check(label + ': next batch displays a card', await page.locator('#wcard').count() === 1);
+    await page.evaluate(() => __WFAPI.go('today'));
+    check(label + ': Home remains accessible after automatic continuation', await page.locator('#startStudy').count() === 1);
+    // Choices save immediately; wrong answers remain visible until the learner continues.
     await page.evaluate(() => { __WFAPI.setCfg('vmode', 'w2m'); __WFAPI.setCfg('vask', 'choice'); __WFAPI.setCfg('autoSpeak', false); __WFAPI.startSession('auto'); });
     check(label + ': choice mode renders options', await page.locator('.opt').count() > 0);
+    const optionState = await page.evaluate(() => JSON.stringify(__WFAPI.session().opts));
+    await nav(page, 'read', width);
+    const hiddenIndex = await page.evaluate(() => __WFAPI.session().i);
+    await page.keyboard.press('Enter'); await page.keyboard.press('f');
+    check(label + ': hidden study session ignores study shortcuts', await page.locator('#wcard').count() === 0 && await page.evaluate(() => __WFAPI.session().i) === hiddenIndex);
+    await nav(page, 'study', width);
+    check(label + ': tab return keeps unanswered choice order', await page.locator('.opt').count() > 0 && await page.evaluate(() => JSON.stringify(__WFAPI.session().opts)) === optionState);
     {
       const word = await page.evaluate(() => { const s = __WFAPI.session(); return s.queue[s.i]; });
       const before = await page.evaluate(() => __WFAPI.session().i);
@@ -110,11 +146,55 @@ async function shot(page, name) {
       const word = await page.evaluate(() => { const s = __WFAPI.session(); return s.queue[s.i]; });
       const beforeRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return p ? { ok: p[7], no: p[8] } : { ok: 0, no: 0 }; }, word);
       const badIdx = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => !o.ok));
+      const okIdx = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => o.ok));
+      const beforeIndex = await page.evaluate(() => __WFAPI.session().i);
+      const beforeDB = await page.evaluate(() => { const d = __WFAPI.getDB(); return JSON.stringify([d.prog, d.log, d.wlog]); });
+      const beforeOpts = await page.evaluate(() => JSON.stringify(__WFAPI.session().opts));
       await page.locator(`.opt[data-pick="${badIdx}"]`).click();
       const afterRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return { ok: p[7], no: p[8] }; }, word);
       check(label + ': wrong choice is saved as forgotten without manual rating',
         afterRec.no === beforeRec.no + 1 && afterRec.ok === beforeRec.ok, JSON.stringify({ beforeRec, afterRec }));
+      check(label + ': wrong answer stays on current word', await page.evaluate(() => __WFAPI.session().i) === beforeIndex);
+      check(label + ': correct answer and mistaken choice have explicit labels',
+        (await page.locator(`.opt.right[data-pick="${okIdx}"]`).innerText()).includes('正确答案') &&
+        (await page.locator(`.opt.wrong[data-pick="${badIdx}"]`).innerText()).includes('你的选择'));
+      check(label + ': wrong feedback is visible and options are locked', await page.locator('#choiceFeedback[role="status"]').count() === 1 && await page.locator('.opt:not([disabled])').count() === 0 && await page.locator('.gbtn').count() === 0);
+      check(label + ': correct option is scrolled into view above the action dock', (await metrics(page, '.opt.right')).visible && await page.evaluate(() => document.querySelector('.opt.right').getBoundingClientRect().bottom <= document.querySelector('#sessionDock').getBoundingClientRect().top));
+      await noOverflow(page, label + ' wrong answer');
+      if (width === 390) await shot(page, 'wrong-choice-390x844.png');
+      await nav(page, 'read', width); await nav(page, 'study', width);
+      check(label + ': wrong feedback and option order survive tabs', await page.locator('.opt.right').count() === 1 && await page.locator('.opt.wrong').count() === 1 && await page.evaluate(() => JSON.stringify(__WFAPI.session().opts)) === beforeOpts);
+      await page.keyboard.press(String(okIdx + 1));
+      check(label + ': repeat choice cannot change grade or add rating bar', await page.locator('.gbtn').count() === 0 && await page.evaluate(() => __WFAPI.session().pending) === 0);
+      await page.locator('#sessionNext').click();
+      check(label + ': continuing wrong answer advances without duplicate scoring', await page.evaluate(() => __WFAPI.session().i) === beforeIndex + 1 && await page.evaluate(w => __WFAPI.getDB().prog[w][8], word) === afterRec.no);
+      await page.locator('#sessionPrev').click();
+      check(label + ': previous fully undoes saved wrong answer', await page.evaluate(() => { const d = __WFAPI.getDB(); return JSON.stringify([d.prog, d.log, d.wlog]); }) === beforeDB);
+      // Keyboard choices use the same feedback path. Undo while still viewing a wrong answer.
+      const keyboardBad = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => !o.ok));
+      await page.keyboard.press(String(keyboardBad + 1));
+      await page.locator('#sessionPrev').click();
+      check(label + ': undo held first answer restores all records and allows retry', await page.evaluate(() => { const d = __WFAPI.getDB(); return JSON.stringify([d.prog, d.log, d.wlog]); }) === beforeDB && await page.locator('.opt:not([disabled])').count() > 0);
+      // Last-word mistakes must not trigger batch continuation before confirmation.
+      await page.evaluate(() => { const s = __WFAPI.session(); s.queue = [s.queue[s.i]]; s.i = 0; __WFAPI.go('study'); });
+      const lastBad = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => !o.ok));
+      await page.locator(`.opt[data-pick="${lastBad}"]`).click();
+      check(label + ': last wrong answer waits for confirmation', await page.locator('#choiceFeedback').count() === 1 && await page.evaluate(() => __WFAPI.session().queue.length === 1 && __WFAPI.session().i === 0));
+      await page.locator('#sessionNext').click();
+      check(label + ': confirmed last wrong answer continues to different batch', await page.evaluate(w => !__WFAPI.session().queue.includes(w), word));
     }
+    await page.evaluate(() => { __WFAPI.setCfg('vmode', 'm2w'); __WFAPI.startSession('auto'); });
+    const reverseBad = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => !o.ok));
+    const reverseAnswer = await page.evaluate(() => __WFAPI.session().opts.find(o => o.ok).v);
+    await page.locator(`.opt[data-pick="${reverseBad}"]`).click();
+    check(label + ': Chinese-to-English wrong choice highlights the correct word', (await page.locator('.opt.right').innerText()).includes(reverseAnswer) && await page.locator('#choiceFeedback').count() === 1);
+    await page.evaluate(() => { const api = __WFAPI, s = api.session(), w = s.queue[s.i]; api.getDB().prog[w][api.N.DUE] = 1; api.startSession('review'); });
+    const reviewState = await page.evaluate(() => { const s = __WFAPI.session(); return JSON.stringify([s.kind, s.queue, s.i, s.opts]); });
+    await nav(page, 'read', width); await nav(page, 'review', width);
+    check(label + ': review tab also restores its active session', await page.locator('#wcard').count() === 1 && await page.evaluate(() => { const s = __WFAPI.session(); return JSON.stringify([s.kind, s.queue, s.i, s.opts]); }) === reviewState);
+    await page.locator('#quitSes').click(); await page.locator('#mYes').click();
+    await nav(page, 'study', width);
+    check(label + ': explicitly ended session is not resurrected by navigation', await page.locator('#wcard').count() === 0 && await page.evaluate(() => __WFAPI.session()) === null);
     const id = await seedArticle(page);
     // This route used to render correctly but have no click handlers from Today.
     await page.evaluate(id => { __WFAPI.go('today'); __WFAPI.jumpTo('art', id); }, id);

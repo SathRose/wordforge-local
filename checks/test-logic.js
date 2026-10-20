@@ -517,11 +517,58 @@ t("随机化只改顺序、不改选词集合",
 t("顺序策略名称可读",
   API.orderName("smart") === "智能随机" && API.orderName("random") === "完全随机" && API.orderName("order") === "固定顺序");
 API.setQueueOrder("smart");
+// stub 不解析 HTML，已有会话的「回到首页」处理器可用于明确结束夹具会话。
+document.getElementById("homeSes").click();
 API.go("study");
 const svH = String(document.getElementById("view").innerHTML || "");
 t("学习页出现「换一批」按钮", svH.indexOf('id="reshuffle"') >= 0);
 t("学习页标注当前顺序策略", svH.indexOf("智能随机") >= 0 && svH.indexOf("每轮重新洗牌") >= 0);
 API.resetPreview();
+
+// 连续批次使用隔离词书，真正提交评价，不改真实学习数据。
+{
+  const savedDB = API.getDB();
+  const batchDB = API.blankDB();
+  const rows = API.bookWords("cet4").slice(0, 7).map(r => r.slice());
+  batchDB.custom.batchqa = { name: "批次回归", words: rows };
+  batchDB.book = "@batchqa";
+  batchDB.cfg.newPerDay = 2;
+  batchDB.cfg.revPerDay = 2;
+  batchDB.cfg.autoSpeak = false;
+  API.setDB(batchDB); API.resetPreview();
+  const initial = API.previewQueue("auto").slice();
+  const swapped = API.rotatePreview().slice();
+  const swappedAgain = API.rotatePreview().slice();
+  t("换一批更换候选集合", swapped.length === 2 && swapped.every(w => !initial.includes(w)));
+  t("连续换批不重复前两批", swappedAgain.every(w => !initial.concat(swapped).includes(w)));
+  t("换批不写学习记录", Object.keys(batchDB.prog).length === 0);
+  API.startSession("auto");
+  t("开始学习沿用换批预览", API.session().queue.join() === swappedAgain.join());
+  const visited = [];
+  for (let i = 0; i < 7; i++) {
+    const s = API.session();
+    visited.push(s.queue[s.i]);
+    s.pending = i === 0 ? 0 : 2;
+    API.commitAndNext();
+    if (i === 1) t("学完一批自动续批", API.session() !== s && API.session().i === 0);
+  }
+  t("连续批次覆盖词书且不重复", visited.length === 7 && new Set(visited).size === 7);
+  t("超过每日目标仍继续学习", Object.keys(batchDB.prog).length === 7);
+  t("词书耗尽显示总结且无兜底循环", API.session().i === API.session().queue.length && API.buildQueue("auto").length === 0);
+  t("每批只记录一次会话", batchDB.sessions.length === 4);
+  batchDB.prog[rows[0][F.W]][2] = Date.now() - 1000;
+  delete batchDB.prog[rows[1][F.W]];
+  API.resetPreview();
+  const review = API.previewQueue("review");
+  const normal = API.previewQueue("auto");
+  t("纯复习只选到期词且预览缓存区分模式", review.length === 1 && review[0] === rows[0][F.W] && normal.includes(rows[1][F.W]));
+  batchDB.custom.batchqa.words = [];
+  API.setDB(batchDB); API.resetPreview();
+  let emptyError = null;
+  try { API.startSession("auto"); API.rotatePreview(); } catch (e) { emptyError = e; }
+  t("空词书启动与换批不抛异常", !emptyError, emptyError && emptyError.message);
+  API.setDB(savedDB); API.resetPreview(); API.go("today");
+}
 
 /* ============ 词书详情页 & 词书包含关系 ============ */
 p("");
@@ -1148,6 +1195,52 @@ p("[18] 手机底部导航 & 学习卡滑动手势");
   API.go("today");
   t("离开会话页后手势不接管（在首页左右滑不该翻词）", API.swipeReady() === false);
 })();
+
+// [18.4] 答错停留、即时保存与跨栏目恢复：使用隔离词书驱动真实会话逻辑。
+{
+  const original = API.getDB(), d = API.blankDB();
+  d.custom.feedbackqa = { name: "错题反馈回归", words: API.bookWords("cet4").slice(0, 8).map(r => r.slice()) };
+  d.book = "@feedbackqa";
+  Object.assign(d.cfg, { autoSpeak: false, netOff: true, vmode: "w2m", vask: "choice", newPerDay: 4 });
+  API.setDB(d); API.resetPreview(); API.startSession("auto");
+  const baseline = JSON.stringify([d.prog, d.log, d.wlog]);
+  API.nextWord();
+  const s = API.session(), opts = JSON.stringify(s.opts), queue = s.queue.join();
+  API.go("read"); API.go("study");
+  t("跨栏目恢复同一学习会话、位置与队列", API.session() === s && s.i === 1 && s.queue.join() === queue);
+  t("未答题选项顺序跨栏目不变", JSON.stringify(s.opts) === opts);
+  const w = s.queue[s.i];
+  s.picked = s.opts.findIndex(o => !o.ok); API.markAnswer(false);
+  t("答错即时记为忘记但不前进", s.i === 1 && s.pending === 0 && s.committed && d.prog[w][API.N.NO] === 1);
+  const view = document.getElementById("view");
+  t("答错反馈明确标记正确项和误选项", view.innerHTML.includes('✓ 正确答案') && view.innerHTML.includes('✗ 你的选择') && view.innerHTML.includes('id="choiceFeedback"'));
+  const recorded = JSON.stringify([d.prog, d.log, d.wlog]);
+  API.go("stats"); API.go("study");
+  t("答错后跨栏目恢复锁定选项及反馈", s.answered && s.committed && JSON.stringify(s.opts) === opts && view.innerHTML.includes('id="choiceFeedback"'));
+  API.markAnswer(true);
+  t("重复作答不覆盖已保存错题", JSON.stringify([d.prog, d.log, d.wlog]) === recorded && s.pending === 0);
+  API.nextWord();
+  t("错题确认后前进且不重复计分", s.i === 2 && JSON.stringify([d.prog, d.log, d.wlog]) === recorded);
+  API.prevWord();
+  t("从下一张撤销错题后还原全部学习记录", s.i === 1 && JSON.stringify([d.prog, d.log, d.wlog]) === baseline && !s.committed && !s.answered);
+  s.picked = s.opts.findIndex(o => !o.ok); API.markAnswer(false); API.prevWord();
+  t("错题停留时上一张先撤销当前错题再回退", s.i === 0 && JSON.stringify([d.prog, d.log, d.wlog]) === baseline && s.steps.length === 0);
+  s.picked = s.opts.findIndex(o => !o.ok); API.markAnswer(false); API.prevWord();
+  t("第一张答错可撤销重答且不越界", s.i === 0 && !s.answered && JSON.stringify([d.prog, d.log, d.wlog]) === baseline);
+  s.picked = s.opts.findIndex(o => o.ok); API.markAnswer(true);
+  t("答对仍即时保存并自动前进", s.i === 1 && s.correct === 1 && !s.committed && !s.autoGraded);
+  API.prevWord();
+  t("答对后的上一张保持原有撤销语义", s.i === 0 && JSON.stringify([d.prog, d.log, d.wlog]) === baseline);
+  // 复习会话回到复习栏目；结束后不应在学习栏目复活。
+  API.grade(w, 0); d.prog[w][API.N.DUE] = 1;
+  API.startSession("review");
+  const review = API.session();
+  API.go("read"); API.go("review");
+  t("复习会话也能恢复且不被学习入口替代", API.session() === review && review.kind === "review" && view.getAttribute("data-screen") === "session");
+  document.getElementById("homeSes").click(); API.go("study");
+  t("明确结束后不恢复旧会话", API.session() === null && view.innerHTML.includes('id="startStudy"'));
+  API.setDB(original); API.resetPreview(); API.go("today");
+}
 
 /* [19] 中国英文媒体源（大陆可达）
    夹具是 2026-09-18 从真实站点抓下来的页面（抓法与出处见 verify-cn.js 顶部注释）。

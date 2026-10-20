@@ -35,6 +35,10 @@ node checks/test-book-picker.cjs
 
 ## 移动交互优化
 
+最新本地包 `1.1.1-local.8`：参考用户截图优化无衬线字体与字重层级，音标改用更自然的比例字体；保留紧凑一屏布局、答错标记和跨栏目恢复。使用系统字体、离线可用，原有衬线/等宽词头设置仍有效。已生成同签名 APK，未公开发布，详见[本轮日志](docs/updates/2026-10-20-13-typography-polish.md)。字体专项：`node checks/test-typography.cjs`；布局专项：`node checks/test-study-layout.cjs`，外部 Playwright 配置与通用浏览器回归相同。
+
+上一版 `1.1.1-local.6` 的错题反馈/会话恢复记录见[历史日志](docs/updates/2026-10-20-11-study-feedback-and-resume.md)。
+
 `1.1.1-local.4` 保留上一版手机首页、精读与返回键优化，并让选择题点击后自动保存推进（答对记“认识”、答错记“忘记”），加入切词动画；中文选英文保留，拼写输入题移除。
 设计参考与回归方法见 [移动端修复说明](docs/MOBILE-UI.md)。[1.1.1-local.4 发布页](https://github.com/SathRose/wordforge-local/releases/tag/v1.1.1-local.4) 提供 APK 下载；覆盖安装前请先导出完整备份。
 

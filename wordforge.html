@@ -10,10 +10,13 @@
 :root{
   --r-s:6px; --r-m:10px; --r-l:16px; --r-xl:22px;
   --fs-base:15px; --lh:1.65;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  /* 参考清爽的界面无衬线风格；使用本机字体，不引入联网字体或转载商业字库。 */
+  --sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --phonetic: "Segoe UI", "Noto Sans", "DejaVu Sans", Arial, sans-serif;
   --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
   --mono: "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
   --word-font: var(--sans);
+  --weight-body:400; --weight-control:500; --weight-heading:600;
   --dur:.18s;
 }
 html[data-theme="dawn"]{ /* 晨雾 · 默认浅色 */
@@ -81,6 +84,7 @@ body{
   font-family:var(--sans);font-size:var(--fs-base);line-height:var(--lh);
   background:var(--bg);color:var(--text);
   -webkit-font-smoothing:antialiased;overflow:hidden;
+  font-weight:var(--weight-body);font-kerning:normal;font-optical-sizing:auto;
 }
 button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
 button{cursor:pointer;border:none;background:none}
@@ -255,8 +259,8 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
 @media(prefers-reduced-motion:reduce){.wcard.anim-next,.wcard.anim-prev{animation:none}}
 .wcard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent 70%)}
 .wcard-top{display:flex;align-items:center;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.w-word{font-family:var(--word-font);font-size:clamp(32px,6.4vw,54px);font-weight:700;letter-spacing:-.5px;line-height:1.12;word-break:break-word}
-.w-ipa{display:flex;gap:14px;flex-wrap:wrap;margin-top:9px;color:var(--text-dim);font-size:14.5px;font-family:var(--mono)}
+.w-word{font-family:var(--word-font);font-size:clamp(32px,6.4vw,54px);font-weight:var(--weight-heading);letter-spacing:-.025em;line-height:1.2;word-break:break-word}
+.w-ipa{display:flex;gap:14px;flex-wrap:wrap;margin-top:9px;color:var(--text-dim);font-size:14.5px;font-family:var(--phonetic);font-weight:400;letter-spacing:.01em}
 .w-ipa span{display:inline-flex;align-items:center;gap:5px}
 .w-ipa em{font-style:normal;font-size:10.5px;color:var(--text-faint);font-family:var(--sans);letter-spacing:.5px}
 .spk{width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:inline-grid;place-items:center;transition:all var(--dur);flex:0 0 30px}
@@ -398,6 +402,11 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
 .opt.wrong .k{background:var(--bad);color:#fff;border-color:var(--bad)}
 .opt.dim{opacity:.5}
 .opt:disabled{cursor:default}
+.opt .answer-label{display:block;font-size:12px;font-weight:700;margin-bottom:4px}
+.opt.right .answer-label{color:var(--ok)}
+.opt.wrong .answer-label{color:var(--bad)}
+.choice-feedback{padding:12px 14px;margin-top:14px;border:1.5px solid var(--bad);border-radius:var(--r-m);background:var(--bad-soft);line-height:1.6}
+.choice-feedback b{color:var(--bad)}
 
 .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}
 .gbtn{padding:12px 6px;border-radius:var(--r-m);border:1.5px solid var(--border);background:var(--panel-2);text-align:center;transition:all var(--dur)}
@@ -921,6 +930,108 @@ summary{cursor:pointer;color:var(--text-dim);font-size:13px;line-height:1.6;padd
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+/* 学习主流程一屏优先。操作区参与普通布局，绝不压在选项/释义上。
+   不锁死高度、不裁掉选项；极端长内容仍可安全滚动，完整资料由显式入口打开。 */
+#view[data-screen="session"]{padding:10px 14px;scroll-padding:0}
+#view[data-screen="session"] .session-shell{display:flex;flex-direction:column;gap:8px;min-height:100%;max-width:760px}
+#view[data-screen="session"] .session-meta{gap:8px;margin:0;flex-wrap:wrap;line-height:1.3}
+#view[data-screen="session"] .session-meta .btn{min-height:32px;padding:4px 10px;font-size:12px}
+#view[data-screen="session"] .session-meta .session-count{font-size:11px}
+#view[data-screen="session"] .wcard{flex:0 0 auto;padding:16px 18px;border-radius:16px;overflow:visible}
+#view[data-screen="session"] .wcard::before{left:16px;right:16px}
+#view[data-screen="session"] .wcard-top{margin-bottom:10px;gap:6px;flex-wrap:nowrap}
+#view[data-screen="session"] .wcard-top>.tag:nth-of-type(n+3){display:none}
+#view[data-screen="session"] .wcard-top>.tag{font-size:10px;padding:3px 6px;white-space:nowrap}
+.study-question{min-width:0}
+.study-word-head{display:flex;align-items:center;gap:10px}
+#view[data-screen="session"] .w-word{font-size:34px;line-height:1.25;flex:1;min-width:0;overflow-wrap:anywhere}
+#view[data-screen="session"] .study-say{min-height:40px;width:40px;padding:6px;flex:0 0 40px;justify-content:center}
+#view[data-screen="session"] .w-ipa{font-size:12px;line-height:1.4;gap:4px 12px;margin-top:5px;overflow-wrap:anywhere}
+#view[data-screen="session"] .w-ipa>span{min-width:0;display:block}
+#view[data-screen="session"] .w-ipa .spk{display:none}
+.study-prompt-title{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-faint);margin-bottom:5px}
+#view[data-screen="session"] .study-prompt-title .btn{min-height:28px;padding:3px 7px;margin-left:auto;font-size:11px}
+.study-meaning{font-size:15px;line-height:1.55;overflow-wrap:anywhere;white-space:pre-line}
+#view[data-screen="session"] .study-answer{margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+#view[data-screen="session"] .study-answer .w-word{font-size:28px}
+#view[data-screen="session"] .reveal{font-size:11px;line-height:1.4;padding:8px 0}
+#view[data-screen="session"] #reveal{min-height:42px;padding:6px 10px;font-size:13px;width:100%}
+#view[data-screen="session"] .opts{gap:7px;margin-top:12px}
+#view[data-screen="session"] .opts.six-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+#view[data-screen="session"] .opt{min-height:44px;padding:9px 11px;gap:9px;font-size:14px;line-height:1.4;min-width:0}
+#view[data-screen="session"] .opt>span:last-child{min-width:0;overflow-wrap:anywhere}
+#view[data-screen="session"] .opt .k{width:22px;height:22px;flex-basis:22px}
+#view[data-screen="session"] .opt .answer-label{display:inline;font-size:11px;margin:0 6px 0 0;white-space:nowrap}
+#view[data-screen="session"] .session-dock{position:static;z-index:auto;flex:0 0 auto;margin-top:auto;border:0;border-radius:0;padding:0;background:none;box-shadow:none}
+#view[data-screen="session"] .session-nav{gap:8px;margin-top:6px}
+#view[data-screen="session"] .session-nav .btn{min-height:44px;padding:7px 12px;font-size:13px}
+.study-response-row{display:flex;align-items:center;gap:8px;min-width:0}
+#view[data-screen="session"] #studyDetails{margin-left:auto;min-height:32px;padding:4px 8px;font-size:12px;flex:0 0 auto}
+#view[data-screen="session"] .choice-feedback{font-size:12px;line-height:1.4;margin:0;padding:6px 8px;border-radius:8px;flex:1;min-width:0}
+#view[data-screen="session"] .grade{margin:4px 0 0;gap:6px}
+#view[data-screen="session"] .gbtn{min-height:44px;padding:6px 3px}
+#view[data-screen="session"] .gbtn b{font-size:13px}
+#view[data-screen="session"] .gbtn>span{font-size:10px}
+#view[data-screen="session"] .gbtn>span:first-of-type{display:none}
+#view[data-screen="session"] .underbar{margin:0;padding:0;border:0;gap:5px;min-height:6px}
+#view[data-screen="session"] #hintLine,#view[data-screen="session"] .swipehint{display:none}
+#view[data-screen="session"] .dots{gap:3px}
+#view[data-screen="session"] .dot{width:5px;height:5px}
+#view[data-screen="session"] .opt,#view[data-screen="session"] .btn,#view[data-screen="session"] .gbtn{transition:background-color .15s,border-color .15s,color .15s}
+#view[data-screen="session"][data-density="1"] .wcard,#view[data-screen="session"][data-density="2"] .wcard{padding:10px 12px}
+#view[data-screen="session"][data-density="1"] .w-word{font-size:28px}
+#view[data-screen="session"][data-density="1"] .opt{font-size:13px;padding:7px 9px}
+#view[data-screen="session"][data-density="1"] .study-meaning{font-size:14px;line-height:1.4}
+#view[data-screen="session"][data-density="2"] .session-shell{gap:5px}
+#view[data-screen="session"][data-density="2"] .wcard-top{display:none}
+#view[data-screen="session"][data-density="2"] .wcard{padding-top:8px;padding-bottom:8px}
+#view[data-screen="session"][data-density="2"] .w-word{font-size:24px}
+#view[data-screen="session"][data-density="2"] .opt{font-size:12px;line-height:1.3;padding:4px 6px;gap:5px}
+#view[data-screen="session"][data-density="2"] .opts{gap:5px;margin-top:7px;grid-template-columns:repeat(2,minmax(0,1fr))}
+#view[data-screen="session"][data-density="2"] .study-meaning{font-size:13px;line-height:1.35}
+#view[data-screen="session"][data-density="2"] .w-ipa{font-size:11px}
+@media(max-width:600px){
+  #view[data-screen="session"]{padding:8px 10px}
+  #view[data-screen="session"] .w-word{font-size:30px}
+  #view[data-screen="session"] .wcard{padding:14px}
+}
+@media(max-height:500px) and (min-width:600px){
+  #view[data-screen="session"]{padding:5px 10px}
+  #view[data-screen="session"] .session-shell{gap:4px}
+  #view[data-screen="session"] .wcard{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:0 14px;padding:8px 12px}
+  #view[data-screen="session"] .wcard-top{grid-column:1/-1;margin-bottom:4px}
+  #view[data-screen="session"] .study-question{grid-column:1;grid-row:2}
+  #view[data-screen="session"] .study-question.study-flip{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:3px 16px;align-items:center}
+  #view[data-screen="session"] .study-flip>.study-word-head,#view[data-screen="session"] .study-flip>.study-prompt-title{grid-column:1;grid-row:1}
+  #view[data-screen="session"] .study-flip>.w-ipa,#view[data-screen="session"] .study-flip>.study-meaning{grid-column:1;grid-row:2}
+  #view[data-screen="session"] .study-flip>.study-answer{grid-column:2;grid-row:1 / span 2;margin:0;padding:0 0 0 12px;border-top:0;border-left:1px solid var(--border)}
+  #view[data-screen="session"] .study-flip>.study-answer.blurred,#view[data-screen="session"] .study-flip>.reveal{display:none}
+  #view[data-screen="session"] .study-flip>#reveal{grid-column:2;grid-row:1 / span 2}
+  #view[data-screen="session"] .opts{grid-column:2;grid-row:2 / span 2;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0;gap:5px}
+  #view[data-screen="session"] .opts.six-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #view[data-screen="session"] .w-word{font-size:26px}
+  #view[data-screen="session"] .opt{font-size:12px;padding:5px 7px}
+  #view[data-screen="session"] .session-dock{display:flex;align-items:center;gap:8px}
+  #view[data-screen="session"] .session-nav{flex:1;margin:0}
+  #view[data-screen="session"] #gradeHost{flex:1}
+  #view[data-screen="session"] #gradeHost:empty{display:none}
+  #view[data-screen="session"] .study-response-row:empty{display:none}
+  #view[data-screen="session"] .choice-feedback{font-size:11px}
+  #view[data-screen="session"] .gbtn>span,#view[data-screen="session"] .gbtn .kd{display:none}
+}
+
+/* 字体层级：正文常规、按钮中等、词头/中文标题半粗，避免整页又黑又重。
+   不覆盖 --word-font 的用户选择，也不改字号与安全触控区域。 */
+#topbar h1,.card-h h2,.jtitle .jw,.modal-h b,.study-response-row b{font-weight:var(--weight-heading);letter-spacing:0}
+.btn,.seg button,.nav{font-weight:var(--weight-control);letter-spacing:0}
+.btn.primary,.nav.on,.gbtn b{font-weight:var(--weight-heading)}
+.opt{font-weight:var(--weight-body);letter-spacing:0}
+.opt .k{font-family:var(--sans);font-weight:var(--weight-heading);font-variant-numeric:tabular-nums}
+.opt .answer-label{font-weight:var(--weight-heading)}
+.jtitle .jw{letter-spacing:-.02em}
+.study-meaning{font-weight:var(--weight-body);letter-spacing:.015em}
+#view[data-screen="session"] .session-meta{font-variant-numeric:tabular-nums}
 
 </style>
 </head>
@@ -2278,7 +2389,7 @@ var JROOTTOP = 0;
 function go(v) {
   if (VIEWS.indexOf(v) < 0) v = "today";
   rdStopSpeaking();
-  SESSION_VISIBLE = false;
+  /* 导航只切换页面，不结束正在进行的学习会话。 */
   cur = v;
   /* 点导航即放弃整条跳转链 */
   JSTACK = []; JFROM = "today"; JSES = false;
@@ -2292,11 +2403,17 @@ function go(v) {
   var view = $("view"); if (view) view.scrollTop = 0;
 }
 function render() {
+  /* 切换词书后旧会话不能继续显示，也不能带着旧撤销栈恢复。 */
+  if (S && S.book && S.book !== DB.book) {
+    S = null;
+    PQ = null;
+    SESSION_VISIBLE = false;
+  }
   var v = $("view");
   if (!v) return;
   v.onscroll = null;
   v.setAttribute("data-screen", JSTACK.length ? JSTACK[JSTACK.length - 1].kind : cur);
-  if (!JSTACK.length && cur === "study" && S && SESSION_VISIBLE) { renderSession(); updateChrome(); return; }
+  if (!JSTACK.length && S && SESSION_VISIBLE && cur === (S.kind === "review" ? "review" : "study")) { renderSession(); updateChrome(); return; }
   if (JSTACK.length) v.innerHTML = jumpViewHTML();
   else if (cur === "today") v.innerHTML = vToday();
   else if (cur === "study") v.innerHTML = vStudy();
@@ -2664,7 +2781,7 @@ function duePreview(n) {
 /* ---------- 12. 学习会话 ---------- */
 var S = null;
 
-function buildQueue(kind) {
+function buildQueue(kind, excluded) {
   var c = cfg();
   var book = DB.book;
   var pool = bookWords(book);
@@ -2673,7 +2790,7 @@ function buildQueue(kind) {
   var seen = {};
   for (var i = 0; i < pool.length; i++) {
     var w = pool[i][F.W];
-    if (seen[w]) continue;
+    if (seen[w] || (excluded && excluded.indexOf(w) >= 0)) continue;
     seen[w] = 1;
     var p = DB.prog[w];
     if (p) { if (isDue(p)) due.push(w); }
@@ -2685,22 +2802,10 @@ function buildQueue(kind) {
   if (!sourceOrderedBook()) fresh.sort(function (a, b) { return (rec(a)[F.FRQ] || rec(a)[F.BNC] || 999999) - (rec(b)[F.FRQ] || rec(b)[F.BNC] || 999999); });
 
   var maxRev = kind === "all" ? 99999 : c.revPerDay;
-  var maxNew = kind === "all" ? 99999 : c.newPerDay;
-  var dk = todayKey();
-  var dlog = DB.log[dk] || { n: 0, r: 0 };
-  if (kind !== "all") maxNew = Math.max(0, maxNew - Math.max(0, dlog.n - (dlog.r || 0)));
-
-  /* 选词仍按优先级取前 N 个；顺序则交给 applyOrder 打乱，
-     这样「学哪些词」稳定，「先学哪个」每轮都不同 */
-  var q = applyOrder(due.slice(0, maxRev)).concat(applyOrder(fresh.slice(0, maxNew)));
-  if (!q.length) {
-    /* 没有到期也没有新词 → 取遗忘风险最高的已学词 */
-    var all = [];
-    for (var w2 in DB.prog) if (Object.prototype.hasOwnProperty.call(DB.prog, w2)) all.push(w2);
-    all.sort(function (a, b) { return retention(DB.prog[a]) - retention(DB.prog[b]); });
-    q = applyOrder(all.slice(0, 20));
-  }
-  return q;
+  /* 每日目标用于进度统计，同时作为每批大小；达标后仍可继续学习新词。
+     纯复习不混入新词，也不拿尚未到期的已学词兜底。 */
+  var maxNew = kind === "review" ? 0 : kind === "all" ? 99999 : c.newPerDay;
+  return applyOrder(due.slice(0, maxRev)).concat(applyOrder(fresh.slice(0, maxNew)));
 }
 
 /* 队列顺序策略（设置里可切）：
@@ -2738,15 +2843,32 @@ function previewQueue(kind) {
   var dl = DB.log[todayKey()] || {};
   /* 缓存键覆盖「词书 / 日期 / 每日配额 / 顺序策略 / 今日已学次数」，
      任一变化都会重新洗牌；点「换一批」则直接清空缓存。 */
-  var key = [DB.book, todayKey(), cfg().newPerDay, cfg().revPerDay, cfg().queueOrder, dl.n || 0].join("|");
+  var key = [DB.book, kind, todayKey(), cfg().newPerDay, cfg().revPerDay, cfg().queueOrder, dl.n || 0].join("|");
   if (!PQ || PQ.key !== key) PQ = { key: key, q: buildQueue(kind) };
   return PQ.q;
 }
 
-function startSession(kind) {
-  /* 学习页上看到的顺序就是真正要学的顺序（所见即所得）；
-     学完这轮后清缓存，下一轮重新洗牌。 */
-  var q = (kind === "auto" && PQ && PQ.q && PQ.q.length) ? PQ.q : buildQueue(kind);
+/* 换批只轮换预览，不修改学习记录；一轮候选用尽后再开始轮换。 */
+function rotatePreview() {
+  var previous = (previewQueue("auto") || []).slice();
+  var excluded = uniq((PQ.excluded || []).concat(previous));
+  var q = buildQueue("auto", excluded) || [];
+  if (!q.length) {
+    excluded = previous;
+    q = buildQueue("auto", excluded) || [];
+  }
+  if (!q.length) { excluded = []; q = buildQueue("auto") || []; }
+  /* 小词书可能只能重用同一集合，仍保证多词队列的顺序有变化。 */
+  if (q.length > 1 && q.join("\n") === previous.join("\n") && !sourceOrderedBook() && queueOrderMode() !== "order") q.push(q.shift());
+  PQ.q = q;
+  PQ.excluded = excluded;
+  return q;
+}
+
+function startSession(kind, continuation) {
+  /* 连续批次只在内存记录已展示词，防止错误词或跳过词立即循环。 */
+  var q = continuation ? continuation.queue :
+    kind === "auto" ? (previewQueue(kind) || []).slice() : buildQueue(kind);
   if (!q) { toast("当前词书是空的，先选一个词书吧", "bad"); return; }
   if (!q.length) { toast("暂无需要学习或复习的词，休息一下吧", "ok"); return; }
   PQ = null;
@@ -2756,9 +2878,10 @@ function startSession(kind) {
   if (pool.length < cfg().optCount) pool = WORDS;
   S = {
     kind: kind, queue: q, i: 0, modes: modes,
+    book: DB.book, seen: continuation ? continuation.seen : [],
     pool: pool, results: [], start: now(), answered: false,
     pending: null, typed: "", revealed: false, correct: 0, wrong: 0, newCount: 0, revCount: 0,
-    anim: "",   /* 切词方向：next / prev，仅用于下一张卡的进入动画 */
+    anim: continuation ? "next" : "",   /* 切词方向：next / prev，仅用于下一张卡的进入动画 */
     quiz: null,
     steps: []   /* 滑动翻词的撤销栈：每前进一步压一份现场快照，向右滑时整份还原 */
   };
@@ -2929,7 +3052,7 @@ function startDrill(words) {
     for (var k = 0; k < extra.length && pool.length < cfg().optCount + 2; k++) pool.push(extra[k]);
   }
   S = {
-    kind: "drill", queue: q, i: 0, modes: sessionModes(),
+    kind: "drill", book: DB.book, queue: q, i: 0, modes: sessionModes(),
     pool: pool, results: [], start: now(), answered: false,
     pending: null, typed: "", revealed: false, correct: 0, wrong: 0, newCount: 0, revCount: 0,
     quiz: null, steps: []
@@ -2975,24 +3098,28 @@ function renderSession() {
   if (S.renderedIdx !== S.i) {
     S.renderedIdx = S.i;
     S.answered = false; S.pending = null; S.typed = ""; S.revealed = false;
-    S.picked = undefined; S.opts = null;
+    S.picked = undefined; S.opts = null; S.autoGraded = false; S.committed = false;
   }
 
-  var h = '<div class="study-wrap">';
-  h += '<div class="row tiny faint" style="margin-bottom:10px;gap:14px">' +
+  var h = '<div class="study-wrap session-shell">';
+  h += '<div class="row tiny faint session-meta">' +
     '<span>' + (S.kind === "review" ? "复习" : S.kind === "drill" ? "易混词专练" : S.kind === "all" ? "自由学习" : "学习") + "</span>" +
     '<span>进度 ' + (S.i + 1) + " / " + S.queue.length + "</span>" +
-    (S.newCount ? '<span style="color:var(--accent)">新词 ' + S.newCount + "</span>" : "") +
-    (S.revCount ? '<span style="color:var(--warn)">复习 ' + S.revCount + "</span>" : "") +
+    (S.newCount ? '<span class="session-count" style="color:var(--accent)">新词 ' + S.newCount + "</span>" : "") +
+    (S.revCount ? '<span class="session-count" style="color:var(--warn)">复习 ' + S.revCount + "</span>" : "") +
     '<span class="sp"></span><button class="btn ghost sm" id="quitSes">结束</button></div>';
 
   h += '<div class="wcard' + (anim === "next" ? " anim-next" : anim === "prev" ? " anim-prev" : "") + '" id="wcard">';
   h += '<div class="wcard-top">' + modeTag(mode) + statusTag(r) + '<span class="sp"></span>' +
     (r[F.FRQ] || r[F.BNC] ? '<span class="tag">词频 ' + fmtNum(r[F.FRQ] || r[F.BNC]) + "</span>" : "") + "</div>";
-  h += cardBody(r, mode);
+  h += studyCardBody(r, mode);
   h += "</div>";
 
-  h += '<div class="session-dock" id="sessionDock"><div id="gradeHost">' + (S.answered ? gradeBarHTML() : "") + '</div>' + sessionNavHTML() + "</div>";
+  var canInspect = S.answered || (mode === "card" && !cfg().blurDef) || (mode === "recallCard" && !cfg().blurDef && !cfg().vflipFirst);
+  h += '<div class="session-dock" id="sessionDock"><div class="study-response-row">' +
+    (S.autoGraded && S.answered ? '<div class="choice-feedback" id="choiceFeedback" role="status"><b>✗ 答错 · 已记忘记</b></div>' : '') +
+    (canInspect ? '<button class="btn ghost sm" id="studyDetails" title="完整释义、例句与词形">详解 ›</button>' : '') +
+    '</div><div id="gradeHost">' + (S.answered && !S.autoGraded ? gradeBarHTML() : "") + '</div>' + sessionNavHTML() + "</div>";
   h += progressDots();
   /* 手势提示只在手机上显示（.swipehint 默认 display:none，窄屏媒体查询里才打开） */
   h += '<div class="swipehint">在卡片上左右滑动翻词 · <b>向右滑</b> 回上一条 · <b>向左滑</b> 跳下一条</div>';
@@ -3004,8 +3131,49 @@ function renderSession() {
   bindCommon();
   bindSession();
   updateChrome();
+  fitSession();
   if (!S.answered && cfg().autoSpeak && (mode === "listen" || mode === "card")) {
     setTimeout(function () { speak(r[F.W]); }, 160);
+  }
+}
+function studyWordHead(r, silent) {
+  return '<div class="study-word-head"><div class="w-word">' + esc(r[F.W]) + '</div>' +
+    (silent ? '' : '<button class="btn study-say" id="say" aria-label="朗读单词" title="朗读"><svg><use href="#i-vol"/></svg></button>') + '</div>' + (silent ? '' : ipaHTML(r));
+}
+function studyMeaning(r, prompt) {
+  return (prompt ? '<div class="study-prompt-title">根据释义' + (pickMode() === "recallCard" ? '回想单词' : '选择单词') + '<button class="btn ghost sm" id="studyPrompt">完整题干 ›</button></div>' : '') +
+    '<div class="study-meaning">' + esc(firstDef(r)) + '</div>';
+}
+/* 主流程只放核心题干；完整释义/英文解释/例句等仍可从显式入口查看，不截断选项。 */
+function studyCardBody(r, mode) {
+  var choice = mode === "recog" || mode === "recall" || mode === "listen";
+  var blur = (mode === "recallCard" ? cfg().vflipFirst || cfg().blurDef : cfg().blurDef) && !S.revealed;
+  var h = '<div class="study-question' + (choice ? '' : ' study-flip') + '">';
+  if (mode === "recall" || mode === "recallCard") h += studyMeaning(r, true);
+  else if (mode === "listen") h += '<div class="study-word-head"><button class="btn study-say" id="say" aria-label="重听单词"><svg><use href="#i-vol"/></svg></button><span class="tiny faint">点击重听，选择听到的单词</span></div>';
+  else h += studyWordHead(r, false);
+  if (!choice) {
+    h += '<div class="study-answer' + (blur ? ' blurred' : '') + '" id="revBox">' +
+      (mode === "recallCard" ? studyWordHead(r, blur) : studyMeaning(r, false)) + '</div>';
+    if (blur) h += '<div class="reveal">先回想，再揭晓答案</div><button class="btn primary" id="reveal">' + (mode === "recallCard" ? '看单词' : '显示释义') + '（空格）</button>';
+  }
+  h += '</div>';
+  if (choice) {
+    S.opts = S.opts || makeOptions(r, S.pool, cfg().optCount, mode !== "recog", preferWords());
+    h += '<div class="opts' + (S.opts.length > 4 ? ' six-options' : '') + '">';
+    for (var i = 0; i < S.opts.length; i++) h += studyOptionHTML(S.opts[i], i);
+    h += '</div>';
+  }
+  return h;
+}
+function fitSession() {
+  var v = $("view");
+  if (!v || v.getAttribute("data-screen") !== "session" || !(v.clientHeight > 0)) return;
+  /* 逐档缩小留白和字号；最小选项字号 12px，点击区域始终至少 44px。
+     超长自定义内容超出三档能力时保留自然滚动，不能用 overflow:hidden 伪造一屏。 */
+  for (var density = 0; density <= 2; density++) {
+    v.setAttribute("data-density", String(density));
+    if (v.scrollHeight <= v.clientHeight + 1) break;
   }
 }
 function modeTag(m) {
@@ -3031,34 +3199,41 @@ function cardBody(r, mode) {
   return cardBodyFlip(r);
 }
 function recogBody(r) {
-  var opts = makeOptions(r, S.pool, cfg().optCount, false, preferWords());
+  var opts = S.opts || makeOptions(r, S.pool, cfg().optCount, false, preferWords());
   S.opts = opts;
   var h = '<div class="w-word">' + esc(r[F.W]) + "</div>" + ipaHTML(r) +
     '<button class="btn sm" id="say" style="margin-top:12px"><svg><use href="#i-vol"/></svg>朗读</button>';
   h += '<div class="opts">';
   for (var i = 0; i < opts.length; i++) {
-    h += '<button class="opt" data-pick="' + i + '"><span class="k">' + (i + 1) + "</span><span>" + esc(opts[i].v) + "</span></button>";
+    h += studyOptionHTML(opts[i], i);
   }
   return h + "</div>";
 }
 function recallBody(r) {
-  var opts = makeOptions(r, S.pool, cfg().optCount, true, preferWords());
+  var opts = S.opts || makeOptions(r, S.pool, cfg().optCount, true, preferWords());
   S.opts = opts;
   var h = '<div class="w-block"><div class="bt">根据释义选择单词</div>' + defHTML(r) +
     (cfg().showEn && r[F.EN] ? '<div class="w-en">' + esc(r[F.EN]) + "</div>" : "") + "</div>";
   h += '<div class="opts">';
-  for (var i = 0; i < opts.length; i++) h += '<button class="opt" data-pick="' + i + '"><span class="k">' + (i + 1) + "</span><span>" + esc(opts[i].v) + "</span></button>";
+  for (var i = 0; i < opts.length; i++) h += studyOptionHTML(opts[i], i);
   return h + "</div>";
 }
 function listenBody(r) {
-  var opts = makeOptions(r, S.pool, cfg().optCount, true, preferWords());
+  var opts = S.opts || makeOptions(r, S.pool, cfg().optCount, true, preferWords());
   S.opts = opts;
   var h = '<div style="text-align:center;padding:10px 0 4px">' +
     '<button class="spk" id="say" style="width:64px;height:64px;border-radius:50%"><svg style="width:28px;height:28px"><use href="#i-vol"/></svg></button>' +
     '<div class="tiny faint" style="margin-top:12px">点击喇叭重听 · 按 S 慢速朗读</div></div>';
   h += '<div class="opts">';
-  for (var i = 0; i < opts.length; i++) h += '<button class="opt" data-pick="' + i + '"><span class="k">' + (i + 1) + "</span><span>" + esc(opts[i].v) + "</span></button>";
+  for (var i = 0; i < opts.length; i++) h += studyOptionHTML(opts[i], i);
   return h + "</div>";
+}
+function studyOptionHTML(opt, i) {
+  var answered = S.answered && S.autoGraded;
+  var cls = answered ? (opt.ok ? " right" : i === S.picked ? " wrong" : "") : "";
+  var label = answered ? (opt.ok ? "✓ 正确答案" : i === S.picked ? "✗ 你的选择" : "") : "";
+  return '<button class="opt' + cls + '" data-pick="' + i + '"' + (answered ? ' disabled' : '') + '><span class="k">' + (i + 1) + '</span><span>' +
+    (label ? '<span class="answer-label">' + label + '</span>' : '') + esc(opt.v) + '</span></button>';
 }
 /* 反方向的自评卡：**题干是释义，答案是单词**。
    这就是用户说的「给定释义回想单词」被点名要的那种 —— 原来的六个题型里
@@ -3119,7 +3294,7 @@ function progressDots() {
     h += '<i class="dot ' + cls + '"></i>';
   }
   return h + '</div><span class="sp"></span><span class="tiny faint" id="hintLine">' +
-    (S.answered ? "按 1-4 调整评价，Enter 下一张" : "按 1-4 或点击选择，空格揭晓") + "</span></div>";
+    (S.autoGraded ? "核对正确答案，点击下一张或按 Enter 继续" : S.answered ? "按 1-4 调整评价，Enter 下一张" : "按 1-4 或点击选择，空格揭晓") + "</span></div>";
 }
 function gradeBarHTML() {
   var g = S.pending;
@@ -3151,8 +3326,8 @@ function markAnswer(ok) {
   S.pending = ok ? 2 : 0;
   S.answered = true;
   S.autoGraded = true;
-  /* 答对沿用「认识」(2)，答错沿用「忘记」(0)，由原提交路径写学习记录并立刻进入下一词。 */
-  commitAndNext();
+  /* 均即时保存；答错停留核对答案，继续时不重复打分。 */
+  commitAndNext(!ok);
 }
 function revealAnswer() {
   var r = curWord();
@@ -3185,19 +3360,23 @@ function revealAnswer() {
   var dots = $("hintLine");
   if (dots) dots.textContent = "按 1-4 或点击评价，Enter 下一张";
 }
-function commitAndNext() {
+function commitAndNext(hold) {
   if (!S) return;
   var r = curWord();
   if (!r) return;
   var g = S.pending === null || S.pending === undefined ? 2 : S.pending;
-  pushStep(snapStep(r[F.W], g));   /* 先留快照再打分：向右滑回上一条时靠它把四处数据整份还原 */
-  grade(r[F.W], g);
-  S.results[S.i] = g;
-  if (g === 0) S.wrong++; else S.correct++;
+  if (!S.committed) {
+    pushStep(snapStep(r[F.W], g));   /* 先留快照再打分：撤销时整份还原 */
+    grade(r[F.W], g);
+    S.results[S.i] = g;
+    if (g === 0) S.wrong++; else S.correct++;
+    S.committed = true;
+  }
+  if (hold) { save(true); renderSession(); return; }
   S.anim = "next";
   S.i++;
   save();
-  if (S.i >= S.queue.length) { finishSession(); renderSession(); return; }
+  if (S.i >= S.queue.length) { finishSession(); if (S.i >= S.queue.length) renderSession(); return; }
   renderSession();
 }
 function finishSession() {
@@ -3206,7 +3385,18 @@ function finishSession() {
   if (DB.sessions.length > 200) DB.sessions = DB.sessions.slice(-200);
   DB.meta.days = uniq(Object.keys(DB.log).filter(function (k) { return DB.log[k].n > 0; })).length;
   save(true);
-  toast("本轮完成！共 " + S.queue.length + " 词", "ok");
+  PQ = null;
+  if (S.kind !== "drill" && S.book === DB.book) {
+    var seen = uniq((S.seen || []).concat(S.queue));
+    var nextBatch = buildQueue(S.kind, seen);
+    if (nextBatch && nextBatch.length) {
+      var count = S.queue.length;
+      startSession(S.kind, { seen: seen, queue: nextBatch });
+      toast("已完成 " + count + " 词，已进入下一批", "ok");
+      return;
+    }
+  }
+  toast("本轮完成！共 " + S.queue.length + " 词，暂无下一批", "ok");
 }
 
 /* ---------- 15b. 学习卡左右滑动翻词 ---------- */
@@ -3252,7 +3442,19 @@ function pushStep(st) {
 function prevWord() {
   if (!S) return;
   if (!S.steps || !S.steps.length) { toast("已经是这一轮的第一条了", "ok"); return; }
+  /* 答错后仍停留在已保存的当前卡：先撤销当前题，再回到上一张。
+     首张没有上一题时，留在首张供重新作答。 */
+  if (S.committed) { restoreStep(S.steps.pop()); S.committed = false; }
   var st = S.steps.pop();
+  if (st) restoreStep(st);
+  S.anim = "prev";
+  if (st) S.i = st.i;
+  S.renderedIdx = undefined;
+  save();
+  renderSession();
+  toast(!st || st.kind === "grade" ? "已撤销评价，可重新作答" : "回到上一条", "ok");
+}
+function restoreStep(st) {
   var dk = todayKey();
   if (st.kind === "grade") {
     if (st.prog === null) delete DB.prog[st.w];
@@ -3266,11 +3468,6 @@ function prevWord() {
     if (st.g === 0) S.wrong = Math.max(0, S.wrong - 1); else S.correct = Math.max(0, S.correct - 1);
     S.results[st.i] = undefined;
   }
-  S.anim = "prev";
-  S.i = st.i;
-  save();
-  renderSession();
-  toast(st.kind === "grade" ? "回到上一条（上次评价已撤销）" : "回到上一条", "ok");
 }
 /* 向左滑：跳下一条。已评价就等同按 Enter 提交前进；没评价则纯跳过，不计对错。 */
 function nextWord() {
@@ -3392,18 +3589,34 @@ function sessionSummaryHTML() {
 }
 function sessionNavHTML() {
   return '<div class="session-nav"><button class="btn" id="sessionPrev"' + (!S.steps || !S.steps.length ? ' disabled' : '') + '>‹ 上一张</button>' +
-    '<button class="btn primary" id="sessionNext">' + (S.answered ? '保存评价 · 下一张 ›' : '跳过这词 ›') + '</button></div>';
+    '<button class="btn primary" id="sessionNext">' + sessionNextLabel() + '</button></div>';
+}
+function sessionNextLabel() {
+  if (S.committed) return S.i === S.queue.length - 1 ? "已核对 · 完成本轮" : "已核对 · 下一张 ›";
+  return S.answered ? (S.i === S.queue.length - 1 ? "保存评价 · 完成本轮" : "保存评价 · 下一张 ›") : "跳过这词 ›";
 }
 function bindSessionNav() {
   var prev = $("sessionPrev"), next = $("sessionNext");
   if (prev) prev.onclick = prevWord;
   if (next) {
-    next.textContent = S.answered ? (S.i === S.queue.length - 1 ? "保存评价 · 完成本轮" : "保存评价 · 下一张 ›") : "跳过这词 ›";
+    next.textContent = sessionNextLabel();
     next.onclick = function () { nextWord(); };
   }
 }
 function bindSession() {
   bindSessionNav();
+  var details = $("studyDetails");
+  if (details) details.onclick = function () { var r = curWord(); if (r) {
+    openModal(r[F.W] + " · 详解", statusTag(r) + wordDetailHTML(r, {}), "", function (m) {
+      bindCommon();
+      /* 在弹层里下钻词形/词条前先关闭弹层，避免跳转页仍被旧弹层盖住。 */
+      m.querySelector('.modal-b').addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('[data-jump]')) closeModal();
+      }, true);
+    });
+  } };
+  var prompt = $("studyPrompt");
+  if (prompt) prompt.onclick = function () { var r = curWord(); if (r) openModal("完整题干", defHTML(r) + (cfg().showEn && r[F.EN] ? '<div class="w-en">' + esc(r[F.EN]) + '</div>' : ''), ""); };
   var say = $("say");
   if (say) say.onclick = function () { var r = curWord(); if (r) speak(r[F.W]); };
   var rv = $("reveal");
@@ -3610,10 +3823,9 @@ function bindCommon() {
   var jb = $("jumpBack"); if (jb) jb.onclick = jumpBack;
   var rs = $("reshuffle");
   if (rs) rs.onclick = function () {
-    PQ = null;
-    previewQueue("auto");
+    rotatePreview();
     render();
-    toast("队列已重新洗牌", "ok");
+    toast("已切换下一批候选词", "ok");
   };
 
   /* ---- 词书详情页 ---- */
@@ -8039,9 +8251,13 @@ function onKey(e) {
     if (/^[1-9]$/.test(e.key) && !Q.answered && Q.opts) { var i2 = Number(e.key) - 1; if (i2 < Q.opts.length) { Q.picked = i2; quizAnswer(i2); } }
     return;
   }
-  if (!S || S.i >= S.queue.length) return;
+  if (!S || S.i >= S.queue.length || !swipeReady()) return;
   var r = curWord();
   if (!r) return;
+  if (/^[1-9]$/.test(e.key) && S.opts) {
+    if (!S.answered) { var pick = Number(e.key) - 1; if (pick < S.opts.length) { S.picked = pick; markAnswer(!!S.opts[pick].ok); } }
+    return;
+  }
   if (/^[1-4]$/.test(e.key)) { S.pending = Number(e.key) - 1; if (S.answered) { refreshGradeHost(); document.querySelectorAll(".gbtn").forEach(function (b) { b.style.borderColor = Number(b.getAttribute("data-g")) === S.pending ? "currentColor" : ""; }); } return; }
   if (e.key === " " || e.key === "Spacebar") {
     e.preventDefault();
@@ -8065,7 +8281,8 @@ function init() {
   bindSwipe();   /* 学习卡左右滑动翻词（手势一节） */
   document.addEventListener("keydown", onKey);
   try { loadVoices(); if (window.speechSynthesis) window.speechSynthesis.onvoiceschanged = loadVoices; } catch (e) {}
-  window.addEventListener("resize", function () { updateChrome(); });
+  window.addEventListener("resize", function () { updateChrome(); fitSession(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSession);
   var lib = document.querySelector('.nav[data-go="library"]');
   go("today");
   var origRender = render;
@@ -8146,6 +8363,7 @@ window.__WFAPI = {
   applyOrder: applyOrder,
   orderName: orderName,
   resetPreview: function () { PQ = null; },
+  rotatePreview: rotatePreview,
   setQueueOrder: function (m) { cfg().queueOrder = m; PQ = null; },
   mkBlank: mkBlank,
   /* 设置面板：数值格式校验 */
@@ -8208,6 +8426,7 @@ window.__WFAPI = {
   prevWord: function () { return prevWord(); },
   nextWord: function () { return nextWord(); },
   commitAndNext: function () { return commitAndNext(); },
+  markAnswer: function (ok) { return markAnswer(ok); },
   mtabPlan: function () {
     return {
       p: MTAB_PRIMARY.map(function (x) { return x[0]; }),

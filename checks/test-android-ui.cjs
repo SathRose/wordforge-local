@@ -63,10 +63,12 @@ async function back() { shell(['shell', 'input', 'keyevent', '4']); await delay(
   await shot('android-api' + sdk + '-home');
   await tap('#startStudy');
   check('Tap opens the study card (native touch or fallback)', await c.evaluate(`!!document.getElementById('wcard')`));
+  check('Native study question fits one screen with no covered options', await c.evaluate(`(function(){var v=document.getElementById('view'),r=v.getBoundingClientRect(),d=document.getElementById('sessionDock').getBoundingClientRect(),card=document.getElementById('wcard').getBoundingClientRect();return v.scrollHeight<=v.clientHeight+1&&card.bottom<=d.top+1&&d.bottom<=r.bottom+1;})()`));
   const before = await c.evaluate(`({i:__WFAPI.session().i,log:JSON.stringify(__WFAPI.getDB().log),prog:JSON.stringify(__WFAPI.getDB().prog)})`);
-  /* 选择题点击即自动保存并推进；卡片题仍走揭晓 → 评分 → 下一张。 */
+  /* 答对自动推进；随机点首项可能答错并停留，因此明确选择正确项。 */
   if (await c.evaluate(`!!document.querySelector('.opt')`)) {
-    await tap('.opt');
+    const ok = await c.evaluate(`__WFAPI.session().opts.findIndex(o=>o.ok)`);
+    await tap('.opt[data-pick="' + ok + '"]');
     check('Choice tap commits and advances without manual rating',
       await c.evaluate(`__WFAPI.session().i`) === before.i + 1);
     check('No manual rating bar after a choice',
@@ -81,6 +83,25 @@ async function back() { shell(['shell', 'input', 'keyevent', '4']); await delay(
   await tap('#sessionPrev');
   const restored = await c.evaluate(`({i:__WFAPI.session().i,log:JSON.stringify(__WFAPI.getDB().log),prog:JSON.stringify(__WFAPI.getDB().prog)})`);
   check('Previous restores all progress and counts exactly', JSON.stringify(restored) === JSON.stringify(before));
+  if (await c.evaluate(`!!document.querySelector('.opt')`)) {
+    const bad = await c.evaluate(`__WFAPI.session().opts.findIndex(o=>!o.ok)`);
+    await tap('.opt[data-pick="' + bad + '"]');
+    check('Wrong answer stays visible with correct and mistaken labels', await c.evaluate(`__WFAPI.session().i===${before.i}&&!!document.querySelector('.opt.right .answer-label')&&!!document.querySelector('.opt.wrong .answer-label')&&!!document.getElementById('choiceFeedback')`));
+    check('Native wrong feedback and Next fit without scrolling or overlap', await c.evaluate(`(function(){var v=document.getElementById('view'),r=v.getBoundingClientRect(),d=document.getElementById('sessionDock').getBoundingClientRect(),card=document.getElementById('wcard').getBoundingClientRect();return v.scrollHeight<=v.clientHeight+1&&card.bottom<=d.top+1&&d.bottom<=r.bottom+1;})()`));
+    const saved = await c.evaluate(`JSON.stringify([__WFAPI.getDB().prog,__WFAPI.getDB().log,__WFAPI.getDB().wlog])`);
+    const opts = await c.evaluate(`JSON.stringify(__WFAPI.session().opts)`);
+    await tap('#mtab [data-go="read"]'); await tap('#mtab [data-go="study"]');
+    check('Native tab return restores wrong feedback and option order', await c.evaluate(`!!document.getElementById('choiceFeedback')&&JSON.stringify(__WFAPI.session().opts)===${JSON.stringify(opts)}`));
+    await tap('#studyDetails');
+    check('Native details dialog retains full definitions and examples', await c.evaluate(`document.getElementById('mask').classList.contains('on')&&!!document.querySelector('.modal-b .w-def')&&!!document.querySelector('.modal-b .w-ex')`));
+    await back();
+    check('Android Back closes details and preserves the current wrong answer', await c.evaluate(`!document.getElementById('mask').classList.contains('on')&&!!document.getElementById('choiceFeedback')&&JSON.stringify(__WFAPI.session().opts)===${JSON.stringify(opts)}`));
+    await shot('android-api' + sdk + '-wrong-choice');
+    await tap('#sessionNext');
+    check('Wrong answer continues without duplicate scoring', await c.evaluate(`__WFAPI.session().i`) === before.i + 1 && await c.evaluate(`JSON.stringify([__WFAPI.getDB().prog,__WFAPI.getDB().log,__WFAPI.getDB().wlog])`) === saved);
+    await tap('#sessionPrev');
+    check('Native wrong-answer undo restores original counts', await c.evaluate(`JSON.stringify({i:__WFAPI.session().i,log:JSON.stringify(__WFAPI.getDB().log),prog:JSON.stringify(__WFAPI.getDB().prog)})`) === JSON.stringify(before));
+  }
   await back();
   check('Android Back asks before leaving an active session', await c.evaluate(`document.getElementById('mask').classList.contains('on')&&!!document.getElementById('mYes')`));
   await tap('#mYes');
