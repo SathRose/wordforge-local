@@ -4,6 +4,7 @@
 
 | 日期（北京时间） | 更新 | 应用版本 | 详细日志 |
 | --- | --- | --- | --- |
+| 2026-10-20 · 14 | local.5–local.8 六轮改动分三提交入库并推送 GitHub；定位测试桩覆盖全局 `URL` 的 8 项失败 | 不变：1.1.1-local.8，无新 APK | [提交与推送](docs/updates/2026-10-20-14-git-commit-and-push.md) |
 | 2026-10-20 · 13 | 参考中英文字体截图优化无衬线、字重层级与音标字体 | 1.1.1-local.8，versionCode 8，本地生成 | [字体美化](docs/updates/2026-10-20-13-typography-polish.md) |
 | 2026-10-20 · 12 | 紧凑背词主界面、一屏自适应与无覆盖操作区；长资料移入详解 | 1.1.1-local.7，versionCode 7，本地生成 | [紧凑背词布局](docs/updates/2026-10-20-12-compact-study-layout.md) |
 | 2026-10-20 · 11 | 答错即时标记正确项并停留，跨栏目恢复学习会话；同签名新版 APK | 1.1.1-local.6，versionCode 6，本地生成 | [答错反馈与会话恢复](docs/updates/2026-10-20-11-study-feedback-and-resume.md) |
