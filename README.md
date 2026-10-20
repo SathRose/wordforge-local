@@ -36,7 +36,7 @@ node checks/test-book-picker.cjs
 ## 移动交互优化
 
 `1.1.1-local.4` 保留上一版手机首页、精读与返回键优化，并让选择题点击后自动保存推进（答对记“认识”、答错记“忘记”），加入切词动画；中文选英文保留，拼写输入题移除。
-设计参考与回归方法见 [移动端修复说明](docs/MOBILE-UI.md)。安装包在本仓库的 [Releases](https://github.com/SathRose/wordforge-local/releases) 发布；覆盖安装前请先导出完整备份。
+设计参考与回归方法见 [移动端修复说明](docs/MOBILE-UI.md)。[1.1.1-local.4 发布页](https://github.com/SathRose/wordforge-local/releases/tag/v1.1.1-local.4) 提供 APK 下载；覆盖安装前请先导出完整备份。
 
 ## 数据与公开范围
 

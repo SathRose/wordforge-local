@@ -68,4 +68,4 @@ node checks/test-android-ui.cjs
 - API 36 隔离模拟器原生检查 16 项通过，覆盖选择题自动推进、撤销、返回键、软键盘、粘贴导入和重载持久化。
 - QA 包内验证中文选英文、无拼写输入框、`anim-next` / `wfCardNext` 切词动画生效。
 - 正式包签名证书 SHA-256 与 1.1.1-local.3 一致，同签名覆盖安装成功且 `firstInstallTime` 未变。
-- 移动端 Playwright 回归未运行：本机缺 `playwright` 模块；上一轮逻辑/导入结果继续有效（本轮未再修改 HTML）。
+- 移动端 Playwright 回归 238 项通过、0 失败（临时 `playwright-core` + 系统 Chrome，七种尺寸）；上一轮逻辑/导入结果继续有效。
