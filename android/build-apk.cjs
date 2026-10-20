@@ -67,8 +67,11 @@ if(verified.status!==0)throw new Error('Signature verification failed: '+verifie
 fs.writeFileSync(path.join(build,'signature-verification.txt'),verified.stdout+verified.stderr);
 run(path.join(tools,'zipalign.exe'),['-c','-p','4',apk]);
 copyTree(build,archivedBuild);
-const published=qa?path.join(archivedBuild,'wordforge-qa.apk'):path.join(releases,'词匠-本地版-1.1.1-local.2.apk');
+const manifest = fs.readFileSync(path.join(__dirname, 'AndroidManifest.xml'), 'utf8');
+const versionName = manifest.match(/android:versionName="([^"]+)"/)[1];
+const versionCode = Number(manifest.match(/android:versionCode="(\d+)"/)[1]);
+const published=qa?path.join(archivedBuild,'wordforge-qa.apk'):path.join(releases,'词匠-本地版-'+versionName+'.apk');
 if(!qa)fs.copyFileSync(apk,published);
-const info={file:published,package:'com.wordforge.local',versionName:'1.1.1-local.2',versionCode:2,minAndroid:'8.0',targetSdk:35,qa,bytes:fs.statSync(apk).size,sha256:hash(apk),sourceHtmlSha256:originalHash,packagedHtmlSha256:hash(path.join(build,'assets/index.html')),builtAt:new Date().toISOString(),sdkBuildTools:'36.0.0',signingKey:key};
+const info={file:published,package:'com.wordforge.local',versionName,versionCode,minAndroid:'8.0',targetSdk:35,qa,bytes:fs.statSync(apk).size,sha256:hash(apk),sourceHtmlSha256:originalHash,packagedHtmlSha256:hash(path.join(build,'assets/index.html')),builtAt:new Date().toISOString(),sdkBuildTools:'36.0.0'};
 fs.writeFileSync(qa?path.join(archivedBuild,'build-info.json'):path.join(releases,'apk-build-info.json'),JSON.stringify(info,null,2)+'\n');
 console.log(JSON.stringify(info,null,2));

@@ -3,9 +3,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const cp = require('node:child_process');
 const adb = path.join(process.env.ANDROID_HOME || 'D:/Android/SDK','platform-tools/adb.exe');
-const serial = 'emulator-5556';
+const serial = process.env.WORDFORGE_DEVICE || 'emulator-5556';
 function shell(args) {
-  const r=cp.spawnSync(adb,['-s',serial,...args],{encoding:'utf8',windowsHide:true});
+  const r=cp.spawnSync(adb,['-s',serial,...args],{encoding:'utf8',windowsHide:true,timeout:15000});
   if(r.status!==0)throw new Error(r.stdout+r.stderr);
   return r.stdout.trim();
 }

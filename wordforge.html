@@ -130,7 +130,7 @@ button{cursor:pointer;border:none;background:none}
 .tb-btn svg{width:15px;height:15px}
 .tb-btn.primary{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
 .tb-btn.primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
-#view{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;scroll-behavior:smooth}
+#view{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;scroll-behavior:auto}
 #view.center{display:flex;align-items:center;justify-content:center}
 
 /* ============ 通用组件 ============ */
@@ -713,7 +713,7 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
      再叠一个缩进会变成双重提示，反而显得空 */
   .rtext{text-indent:0}
 }
-.rw{cursor:pointer;border-radius:3px;padding:0 1px;transition:background var(--dur)}
+.rw{touch-action:manipulation;cursor:pointer;border-radius:3px;padding:0 1px;transition:background var(--dur)}
 .rw:hover{background:var(--accent-soft)}
 @media(hover:none){
   /* 触屏没有 hover，用手指点词是最主要的交互。纵向补偿 0.16em 让可点区域
@@ -785,6 +785,135 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
   .rpcol b{font-size:14.5px}
   .rtline b{min-width:0}
 }
+
+/* Mobile interaction fixes · 1.1.1-local.3 */
+/* Shared additions stay small; narrow-screen rules do not redesign the desktop. */
+.session-nav{display:flex;gap:10px;margin-top:10px}
+.session-nav .btn{min-height:46px}
+.session-nav #sessionNext{flex:1}
+.session-nav button:disabled{opacity:.45;cursor:default}
+.reader-tools{background:var(--panel);border:1px solid var(--border);border-radius:var(--r-l);padding:12px 18px;margin:12px 0}
+.reader-tools .rassist{margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.reader-tools .ras{min-height:44px;padding:6px;white-space:nowrap}
+.reader-info,.reader-options,.read-more-sources{margin-top:10px}
+summary{cursor:pointer;color:var(--text-dim);font-size:13px;line-height:1.6;padding:9px 0}
+.read-details-body{padding:8px 0}
+.read-last-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:10px}
+.read-entry .rrow .btn{min-height:46px}
+.read-more-sources{border-top:1px solid var(--border);padding-top:6px}
+.read-library .cnsec{margin-top:0;padding-top:6px;border:0}
+#rdBody .rtext,#rdBody .rsent{font-size:var(--reader-size,17px);line-height:1.85;overflow-wrap:anywhere}
+#rdBody .rbody{margin:0 auto}
+@media(max-width:900px){
+  #app{min-height:0}
+  #main{min-height:0}
+  /* In-flow navigation respects the native WebView bounds, IME and system insets. */
+  #mtab{position:relative;flex:0 0 auto}
+  #view{min-height:0;padding:14px 14px 24px;scroll-behavior:auto;scroll-padding:12px 0 160px}
+  #topbar{gap:8px}
+  #topbar h1{white-space:nowrap;flex:0 0 auto;max-width:32%;overflow:hidden;text-overflow:ellipsis}
+  #topbar .tb-sp{min-width:0}
+  #btnBook{min-width:0;max-width:50%;flex:0 1 auto}
+  #btnBook svg,#btnTheme svg{flex:0 0 16px}
+  #curBookName{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  #btnTheme{flex:0 0 44px;width:44px;justify-content:center;padding:8px}
+  #btnQuick{display:none}
+  .btn,.tb-btn,.rtab,.cchip,.ras{min-height:44px;touch-action:manipulation}
+  .btn svg{flex-shrink:0}
+  .home-wrap{display:flex;flex-direction:column;gap:14px}
+  .home-wrap>.card,.home-wrap>.card+.card{margin:0}
+  .home-wrap>.home-learning{order:-2}
+  .home-wrap>.home-stats{order:-1;margin:0!important}
+  .home-stats.grid.g4.keep{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .home-stats .card{margin:0;padding:12px 14px;box-shadow:none}
+  .home-learning-main{flex-wrap:nowrap!important;gap:14px!important;align-items:flex-start!important}
+  .home-learning .ring{flex:0 0 80px;width:80px;height:80px;margin-top:4px}
+  .home-learning .ring>svg{width:80px;height:80px}
+  .home-learning .ring .ctr b{font-size:21px}
+  .home-learning .ring .ctr span{font-size:10px}
+  .home-book{min-width:0;overflow-wrap:anywhere}
+  .home-book-title{flex-wrap:wrap;gap:5px 8px}
+  .home-book-title>b{flex:1 1 100%;line-height:1.5}
+  .home-book-title #switchBook{min-height:36px;padding:4px;margin-left:auto;flex:0 0 auto}
+  .home-book>.tiny{display:none}
+  .home-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-actions #startStudy{grid-column:1/-1;min-height:50px;font-size:16px}
+  .home-actions #startQuiz:last-child:nth-child(2){grid-column:1/-1}
+  .card-h{flex-wrap:wrap;gap:4px 8px}
+  .card-h .hint{margin-left:0}
+  .rhome .rrow{gap:8px}
+  .session-dock{position:sticky;bottom:-24px;z-index:20;background:var(--panel);border:1px solid var(--border);border-radius:14px 14px 0 0;padding:10px 12px 12px;box-shadow:0 -6px 20px rgba(0,0,0,.06);margin-top:14px}
+  .session-dock .grade{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0}
+  .session-dock .gbtn{padding:8px 3px;min-height:60px}
+  .session-dock .gbtn b{font-size:13px}
+  .session-dock .gbtn>span:first-of-type,.session-dock .kd{display:none}
+  .session-dock .gbtn>span{font-size:10px}
+  .session-nav{gap:8px;margin-top:8px}
+  .session-nav:first-child{margin-top:0}
+  .session-nav .btn{min-height:48px;padding:8px 12px}
+  #view[data-screen="session"] .underbar{flex-wrap:wrap;gap:8px}
+  #view[data-screen="session"] #hintLine{display:none}
+  #view[data-screen="session"] .swipehint{font-size:11px;line-height:1.6}
+  .reader-tools{position:sticky;top:-14px;z-index:30;margin:10px 0;border-radius:12px;padding:8px 10px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+  .reader-tools .rtip,.reader-tools>p{display:none}
+  .reader-options{margin-top:2px}
+  .reader-options summary{padding:4px;font-size:12px;text-align:center}
+  .reader-options .rrow{gap:5px;justify-content:center;padding-bottom:4px}
+  #rdBody{padding:18px 16px}
+  #rdBody .rpara{padding-left:0;text-indent:0}
+  #rdBody .rtext{text-indent:1.4em}
+  #rdBody .rpara.rsent-mode{padding-left:20px}
+  #rdBody .rsent-mode .rpnum{position:absolute;left:0;top:5px;font-size:10px;color:var(--text-faint);text-indent:0}
+  #view[data-screen="art"] .rtitle{font-size:21px;overflow-wrap:anywhere}
+  #view[data-screen="art"]>.study-wrap>.card:first-child{padding:14px 16px}
+  #view[data-screen="art"] .jhead{flex-wrap:wrap;gap:6px}
+  #view[data-screen="art"] .jhead .jcrumb{display:none}
+  #view[data-screen="art"] .rmeta{overflow-wrap:anywhere}
+  #view[data-screen="art"] #rdDone{width:100%;background:var(--accent);color:var(--accent-text)}
+  #view[data-screen="art"] #rdToLearn{white-space:normal;text-align:left}
+  .read-entry .rrow{gap:8px}
+  .read-entry .rrow>.btn{flex:1}
+  .read-entry .card-h .hint{margin-left:auto}
+  .read-library .rtabs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .read-library .rnet{padding:9px 10px}
+  .read-library .cchips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  .read-library .cchip{padding:7px 6px;white-space:normal}
+  .read-library .rrow>.rin,.read-library .rrow>.rsel{max-width:100%;width:100%;min-width:0}
+  .read-library .rin,.read-library .rta,.qzin{font-size:16px}
+  .read-library #rdImport{background:var(--accent);color:var(--accent-text);flex:1}
+  .read-library .ritem .rrow{gap:6px}
+  .read-library .ritem .rrow .btn{flex:1;padding:8px}
+  .read-about{padding:9px 16px}
+  .rta{min-height:180px}
+  .modal{max-height:calc(100dvh - 24px)}
+  .modal-h .x{width:44px;height:44px;flex:0 0 44px}
+  .modal-h{padding:8px 14px}
+  .modal-h b{min-width:0;overflow-wrap:anywhere}
+  .modal-b{min-height:0;padding:16px}
+  .modal-f{padding:10px 14px;flex-wrap:wrap;gap:8px}
+  .mask.word-sheet{align-items:flex-end;padding:0}
+  .mask.word-sheet .modal{border-radius:20px 20px 0 0;max-height:72dvh;padding-bottom:env(safe-area-inset-bottom)}
+  .mask.word-sheet .modal-f .btn{flex:1 1 auto;padding:8px;font-size:12px}
+  .qzin{min-width:0;max-width:100%}
+}
+@media(max-width:360px){
+  #view{padding-left:10px;padding-right:10px}
+  .home-learning{padding:14px}
+  .home-learning .ring{flex-basis:64px;width:64px;height:64px}
+  .home-learning .ring>svg{width:64px;height:64px}
+  .home-learning .ring .ctr b{font-size:18px}
+  .reader-tools .ras{font-size:11px;padding:4px 2px}
+}
+@media(max-height:500px) and (max-width:900px){
+  #topbar{min-height:44px;padding:4px 12px}
+  #mtab button{min-height:44px;padding:3px}
+  .reader-tools{position:relative;top:0}
+  .session-dock{position:relative;bottom:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -860,7 +989,7 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
 </div>
 
 <div class="mask" id="mask"><div class="modal" id="modal"></div></div>
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 <div id="storageWarn" class="hide" style="position:fixed;left:0;right:0;top:0;z-index:1500;background:var(--bad);color:#fff;padding:9px 16px;font-size:13px;text-align:center">
   本地存储写入失败：进度可能无法保存。<b>请到「设置 → 数据」导出备份</b>，或换用 Chrome / Edge 打开。
 </div>
@@ -1436,6 +1565,7 @@ function toast(msg, kind) {
   var el = document.createElement("div");
   el.className = "toast" + (kind ? " " + kind : "");
   el.textContent = msg;
+  box.innerHTML = "";
   box.appendChild(el);
   setTimeout(function () { el.style.opacity = "0"; el.style.transition = "opacity .3s"; }, 1800);
   setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 2200);
@@ -1444,7 +1574,8 @@ var modalClose = null;
 function openModal(title, bodyHTML, footHTML, onMount, wide) {
   var m = $("modal");
   m.className = "modal" + (wide ? " wide" : "");
-  m.innerHTML = '<div class="modal-h"><b>' + esc(title) + '</b><button class="x" id="mClose"><svg><use href="#i-x"/></svg></button></div>' +
+  m.setAttribute("role", "dialog"); m.setAttribute("aria-modal", "true"); m.setAttribute("aria-label", title);
+  m.innerHTML = '<div class="modal-h"><b>' + esc(title) + '</b><button class="x" id="mClose" aria-label="关闭弹窗"><svg><use href="#i-x"/></svg></button></div>' +
     '<div class="modal-b">' + bodyHTML + '</div>' +
     (footHTML ? '<div class="modal-f">' + footHTML + '</div>' : "");
   $("mask").classList.add("on");
@@ -1454,7 +1585,7 @@ function openModal(title, bodyHTML, footHTML, onMount, wide) {
 }
 /* 关闭时连 .sheet 一起摘掉 —— 那是「底部抽屉」变体加的类，
    不清掉的话下一个居中弹窗会贴着屏幕底边弹出来。 */
-function closeModal() { $("mask").classList.remove("on"); $("mask").classList.remove("sheet"); modalClose = null; }
+function closeModal() { $("mask").classList.remove("on"); $("mask").classList.remove("sheet"); $("mask").classList.remove("word-sheet"); modalClose = null; }
 
 /* ---------- 7. 主题 ---------- */
 function applyTheme() {
@@ -1716,26 +1847,39 @@ function jumpTo(kind, word, coll, replace) {
     toast("词库里没有「" + word + "」", "bad");
     return;
   }
-  if (!JSTACK.length) { JFROM = cur; JSES = !!(S && (cur === "study" || cur === "review")); }
+  var oldView = $("view"), oldTop = oldView ? oldView.scrollTop : 0;
+  rdStopSpeaking();
+  if (!JSTACK.length) { JROOTTOP = oldTop; JFROM = cur; JSES = !!(S && (cur === "study" || cur === "review")); }
+  else JSTACK[JSTACK.length - 1].scrollTop = oldTop;
   var node = kind === "book" ? { kind: "book", book: word }
     : (kind === "art" || kind === "artq") ? { kind: kind, art: word }
       : { kind: kind, word: word, coll: coll || "" };
   if (replace && JSTACK.length) JSTACK[JSTACK.length - 1] = node;
   else JSTACK.push(node);
   render();
-  var v = $("view"); if (v) v.scrollTop = 0;
+  var v = $("view");
+  if (v) {
+    v.scrollTop = 0;
+    if (kind === "art") {
+      var article = artGet(word);
+      if (article && article.rd) v.scrollTop = (Number(article.rd.pos) || 0) * Math.max(0, v.scrollHeight - v.clientHeight);
+    }
+  }
 }
 function jumpBack() {
+  rdStopSpeaking();
   if (JSTACK.length) JSTACK.pop();
   if (!JSTACK.length) {
     var wasSes = JSES, f = JFROM;
     JSES = false; JFROM = "today";
     if (wasSes && S) { renderSession(); return; }
+    var rootTop = JROOTTOP;
     go(VIEWS.indexOf(f) >= 0 ? f : "today");
+    if ($("view")) $("view").scrollTop = rootTop;
     return;
   }
   render();
-  var v = $("view"); if (v) v.scrollTop = 0;
+  var v = $("view"); if (v) v.scrollTop = JSTACK[JSTACK.length - 1].scrollTop || 0;
 }
 function jumpViewHTML() {
   var j = JSTACK[JSTACK.length - 1];
@@ -2125,8 +2269,12 @@ function openMoreSheet() {
 }
 
 var cur = "today";
+var SESSION_VISIBLE = false;
+var JROOTTOP = 0;
 function go(v) {
   if (VIEWS.indexOf(v) < 0) v = "today";
+  rdStopSpeaking();
+  SESSION_VISIBLE = false;
   cur = v;
   /* 点导航即放弃整条跳转链 */
   JSTACK = []; JFROM = "today"; JSES = false;
@@ -2142,6 +2290,9 @@ function go(v) {
 function render() {
   var v = $("view");
   if (!v) return;
+  v.onscroll = null;
+  v.setAttribute("data-screen", JSTACK.length ? JSTACK[JSTACK.length - 1].kind : cur);
+  if (!JSTACK.length && cur === "study" && S && SESSION_VISIBLE) { renderSession(); updateChrome(); return; }
   if (JSTACK.length) v.innerHTML = jumpViewHTML();
   else if (cur === "today") v.innerHTML = vToday();
   else if (cur === "study") v.innerHTML = vStudy();
@@ -2154,7 +2305,7 @@ function render() {
   else if (cur === "stats") v.innerHTML = vStats();
   else if (cur === "settings") v.innerHTML = vSettings();
   if (cur === "quiz" && typeof quizMount === "function") quizMount();
-  if (cur === "read" && typeof readMount === "function") readMount();
+  if ((cur === "read" || (JSTACK.length && /^(art|artq)$/.test(JSTACK[JSTACK.length - 1].kind))) && typeof readMount === "function") readMount();
   if (cur === "confuse" && typeof confMount === "function") confMount();
   if (cur === "vocab" && typeof vlMount === "function") vlMount();
   bindCommon();
@@ -2250,11 +2401,11 @@ function examPlan() {
 function readHomeCardHTML() {
   var c = cfg();
   var st = AUTOA.st || "";
-  var a = st === "run" ? null : autoArtToday();
+  var a = autoArtToday() || (DB.read && artGet(DB.read.last));
   var h = '<div class="card rhome">' +
     '<div class="card-h"><h2>今日精读</h2><span class="hint">打开应用自动取一篇真实文章</span></div>';
 
-  if (st === "run") {
+  if (st === "run" && !a) {
     h += '<p class="rmuted" style="font-size:12.5px;margin:2px 0 0">正在取今天的文章…</p>' +
       '<div class="rskel"><i></i><i style="width:72%"></i></div>';
     return h + "</div>";
@@ -2312,9 +2463,9 @@ function vToday() {
   var C = 2 * Math.PI * 52;
   var bookStat = statsOf(DB.book);
   var bm = bookMeta(DB.book) || { name: "未选择", desc: "" };
-  var h = '<div class="study-wrap">';
+  var h = '<div class="study-wrap home-wrap">';
 
-  h += '<div class="grid g4 keep" style="margin-bottom:16px">' +
+  h += '<div class="grid g4 keep home-stats" style="margin-bottom:16px">' +
     statCard("今日学习", l.n, "词", "目标 " + c.dailyGoal + " 词") +
     statCard("待复习", g.due, "词", "按记忆曲线到期") +
     statCard("已学单词", fmtNum(g.seen), "词", "共 " + fmtNum(WORDS.length) + " 词") +
@@ -2343,13 +2494,13 @@ function vToday() {
       "</div>";
   }
 
-  h += '<div class="card"><div class="row wrap" style="gap:26px;align-items:center">' +
+  h += '<div class="card home-learning"><div class="row wrap home-learning-main" style="gap:26px;align-items:center">' +
     '<div class="ring"><svg width="124" height="124" viewBox="0 0 124 124">' +
     '<circle cx="62" cy="62" r="52" fill="none" stroke="var(--panel-3)" stroke-width="11"/>' +
     '<circle cx="62" cy="62" r="52" fill="none" stroke="var(--accent)" stroke-width="11" stroke-linecap="round" stroke-dasharray="' + C + '" stroke-dashoffset="' + (C * (1 - pct / 100)) + '"/>' +
     '</svg><div class="ctr"><b>' + pct + "%</b><span>今日目标</span></div></div>" +
-    '<div style="flex:1;min-width:250px">' +
-    '<div class="row" style="margin-bottom:6px"><b style="font-size:16px">' + esc(bm.name) + "</b>" +
+    '<div class="home-book" style="flex:1;min-width:0">' +
+    '<div class="row home-book-title" style="margin-bottom:6px"><b style="font-size:16px">' + esc(bm.name) + "</b>" +
     '<span class="tag accent">' + fmtNum(bookStat.total) + " 词</span>" +
     '<button class="btn ghost sm sp" id="switchBook" style="justify-content:flex-end">换词书</button></div>' +
     '<div class="tiny faint" style="margin-bottom:12px">' + esc(bm.desc || "") + "</div>" +
@@ -2357,7 +2508,7 @@ function vToday() {
     progressRow("复习中", bookStat.review, bookStat.total, "warn") +
     progressRow("已掌握", bookStat.mastered, bookStat.total, "ok") +
     "</div></div>" +
-    '<div class="row wrap" style="gap:10px;margin-top:20px">' +
+    '<div class="row wrap home-actions" style="gap:10px;margin-top:20px">' +
     '<button class="btn primary lg" id="startStudy"><svg><use href="#i-zap"/></svg>开始学习</button>' +
     (g.due ? '<button class="btn lg" id="startReview"><svg><use href="#i-rotate"/></svg>复习 ' + g.due + " 词</button>" : "") +
     '<button class="btn lg" id="startQuiz"><svg><use href="#i-target"/></svg>来个小测</button>' +
@@ -2799,9 +2950,10 @@ function pickMode() {
 }
 
 function renderSession() {
+  SESSION_VISIBLE = true;
   var v = $("view");
   if (!S) { go("today"); return; }
-  if (S.i >= S.queue.length) { v.innerHTML = sessionSummaryHTML(); bindCommon(); return; }
+  if (S.i >= S.queue.length) { v.setAttribute("data-screen", "summary"); v.onscroll = null; v.innerHTML = sessionSummaryHTML(); v.scrollTop = 0; bindCommon(); bindSession(); updateChrome(); return; }
   var r = curWord();
   var mode = pickMode();
   if (S.renderedIdx !== S.i) {
@@ -2824,14 +2976,18 @@ function renderSession() {
   h += cardBody(r, mode);
   h += "</div>";
 
-  if (S.answered) h += gradeBarHTML();
+  h += '<div class="session-dock" id="sessionDock"><div id="gradeHost">' + (S.answered ? gradeBarHTML() : "") + '</div>' + sessionNavHTML() + "</div>";
   h += progressDots();
   /* 手势提示只在手机上显示（.swipehint 默认 display:none，窄屏媒体查询里才打开） */
   h += '<div class="swipehint">在卡片上左右滑动翻词 · <b>向右滑</b> 回上一条 · <b>向左滑</b> 跳下一条</div>';
   h += "</div>";
+  v.setAttribute("data-screen", "session");
+  v.onscroll = null;
   v.innerHTML = h;
+  v.scrollTop = 0;
   bindCommon();
   bindSession();
+  updateChrome();
   if (!S.answered && cfg().autoSpeak && (mode === "listen" || mode === "spell" || mode === "card")) {
     setTimeout(function () { speak(r[F.W]); }, 160);
   }
@@ -3050,7 +3206,7 @@ function commitAndNext() {
   if (g === 0) S.wrong++; else S.correct++;
   S.i++;
   save();
-  if (S.i >= S.queue.length) { finishSession(); return; }
+  if (S.i >= S.queue.length) { finishSession(); renderSession(); return; }
   renderSession();
 }
 function finishSession() {
@@ -3241,7 +3397,20 @@ function sessionSummaryHTML() {
     '<button class="btn lg" id="homeSes">回到首页</button></div>' +
     "</div></div>";
 }
+function sessionNavHTML() {
+  return '<div class="session-nav"><button class="btn" id="sessionPrev"' + (!S.steps || !S.steps.length ? ' disabled' : '') + '>‹ 上一张</button>' +
+    '<button class="btn primary" id="sessionNext">' + (S.answered ? '保存评价 · 下一张 ›' : '跳过这词 ›') + '</button></div>';
+}
+function bindSessionNav() {
+  var prev = $("sessionPrev"), next = $("sessionNext");
+  if (prev) prev.onclick = prevWord;
+  if (next) {
+    next.textContent = S.answered ? (S.i === S.queue.length - 1 ? "保存评价 · 完成本轮" : "保存评价 · 下一张 ›") : "跳过这词 ›";
+    next.onclick = function () { nextWord(); };
+  }
+}
 function bindSession() {
+  bindSessionNav();
   var say = $("say");
   if (say) say.onclick = function () { var r = curWord(); if (r) speak(r[F.W]); };
   var rv = $("reveal");
@@ -3328,6 +3497,18 @@ function refreshGradeHost() {
     card.parentNode.insertBefore(host, card.nextSibling);
   }
   host.innerHTML = gradeBarHTML();
+  document.querySelectorAll(".gbtn").forEach(function (b) {
+    b.onclick = function () {
+      if (!S) return;
+      S.pending = Number(b.getAttribute("data-g"));
+      document.querySelectorAll(".gbtn").forEach(function (x) {
+        var on = Number(x.getAttribute("data-g")) === S.pending;
+        x.style.borderColor = on ? "currentColor" : "";
+        x.style.background = on ? "var(--panel-3)" : "";
+      });
+    };
+  });
+  bindSessionNav();
 }
 
 /* ---------- 13. 复习 ---------- */
@@ -4936,6 +5117,7 @@ function artWordsToLearn(prof) {
                   跳转栈天然处理了「回来」这件事，不用自己维护状态机。 */
 
 /* ---------- 19. 精读状态 ---------- */
+var RPASTE = "", RPASTESRC = "";
 var RTAB = "discover";        /* discover | mine */
 var RSRC = "simplewiki";      /* 当前选中的文章源 */
 var RQ = "";                  /* 检索关键词 */
@@ -4965,12 +5147,19 @@ function starStr(n) { var s = ""; for (var i = 1; i <= 5; i++) s += i <= n ? "�
 /* ---------- 20. 精读主页 ---------- */
 function vRead() {
   var h = '<div class="study-wrap">';
-  h += '<div class="card">' + rdTabsHTML() + rdNetBarHTML();
+  var saved = artAll(), last = DB.read && artGet(DB.read.last);
+  if (!last && saved.length) last = saved[0];
+  h += '<div class="card read-entry"><div class="card-h"><h2>美文精读</h2><span class="hint">读文章，记住词</span></div>' +
+    '<p class="rmuted">点词查义、调整阅读辅助，已保存的文章离线也能读。</p><div class="rrow">' +
+    (last ? '<button class="btn primary" data-jump="art:' + esc(last.id) + '">继续精读 ›</button>' : '') +
+    '<button class="btn' + (last ? '' : ' primary') + '" data-rtab="mine">粘贴 / 导入文章</button></div>' +
+    (last ? '<p class="rmuted read-last-title">' + esc(last.t) + '</p>' : '') + '</div>';
+  h += '<div class="card read-library">' + rdTabsHTML() + rdNetBarHTML();
   if (RTAB === "discover") h += rdDiscoverHTML();
   else h += rdMineHTML();
   h += "</div>";
   /* 说明区：把「为什么这个功能要联网」「离线时还能做什么」讲清楚 */
-  h += '<div class="card"><div class="secttl">关于精读</div>' +
+  h += '<details class="card read-about"><summary>关于精读与网络自测</summary><div class="read-details-body">' +
     '<p class="muted" style="line-height:1.85;font-size:13px">' +
     "精读是<b>唯一需要联网</b>的模块：文章本来就在网上，得先把正文取回来。其余功能（背单词、复习、词库、统计）全程零网络请求，断网照常使用。<br>" +
     "取回来的文章会存进本地库，<b>之后断网也能反复精读</b> —— 联网只是「进货」的那一次。<br>" +
@@ -4978,7 +5167,7 @@ function vRead() {
     "</p>" +
     '<div class="rrow"><button class="btn ghost sm" id="rdTestAll">源可达性自测</button>' +
     '<span class="muted" style="font-size:12px">测一下你这台设备现在能连上哪几个源</span></div>' +
-    "</div>";
+    "</div></div></details>";
   h += "</div>";
   return h;
 }
@@ -4996,7 +5185,7 @@ function rdNetBarHTML() {
      粘贴导入是完全离线的，所以在「我的文章」页；这里直接放一个切页按钮，
      免得用户自己在两个页签之间摸索。 */
   if (off) {
-    h += '<span>到「设置 → 精读」打开联网开关才能取文（这是应用里唯一联网的模块）</span>' +
+    h += '<button class="btn sm" id="rdEnableNet">开启联网取文</button>' +
       '<button class="btn ghost sm" data-rtab="mine">不联网，直接粘贴导入 ›</button>';
   } else if (on === false) {
     h += '<span>现在取不了新文章；已经取回本地的仍可离线精读</span>' +
@@ -5038,9 +5227,9 @@ function rdCNHTML() {
   for (var q = 0; q < CSRC.length; q++) (srcDown(CSRC[q]) ? downs : ups).push(CSRC[q]);
   if (!ups.length) ups = CSRC;                      /* 兜底：全不可用时不要交出一个空壳 */
   if (srcDown(s)) s = ups[0];
-  var h = '<div class="secttl cnsec">中国英文媒体 <span class="cntag">大陆可达</span></div>';
+  var h = '<div class="secttl cnsec">中国英文媒体 <span class="cntag">新闻来源</span></div>';
   h += '<p class="muted" style="font-size:12px;margin:2px 0 8px">' +
-    "这一组是实测在<b>中国大陆网络下连得上</b>的英文媒体。取回来的文章会存进本地库，之后断网也能反复精读。</p>";
+    "选择栏目后获取文章，能否连接取决于当前网络。保存后可离线精读。</p>";
   h += '<div class="cchips">';
   for (var i = 0; i < ups.length; i++) {
     h += '<button type="button" class="cchip' + (CSEL === ups[i].id ? " on" : "") +
@@ -5081,7 +5270,7 @@ function rdDownNote(name, what) {
     "现在要读文章的话，用下面的「中国英文媒体」，或者走「我的文章 → 粘贴导入」（完全离线、不挑来源）。</span></div>";
 }
 function rdDiscoverHTML() {
-  var h = "";
+  var h = rdCNHTML() + '<details class="read-more-sources"' + (RRES || RFEED || RNEWS || RBUSY ? " open" : "") + '><summary>更多来源与主题搜索</summary><div class="read-details-body">';
   var disabled = cfg().netOff || NETST.on === false;
   /* 「今日可读」和「当日新闻稿」两块都挂在维基上。维基一旦被判定不可达，
      这两块的按钮点了就是白等 —— 与其让人等 12 秒超时，不如直接标明并用一条
@@ -5111,8 +5300,7 @@ function rdDiscoverHTML() {
     h += '<div class="secttl">今日可读</div>';
     h += rdDownNote("维基百科", "每日精选（特色条目 / 时事 / 历史上的今天）与当日的维基新闻稿");
   }
-  /* ---- 中国英文媒体（大陆可达） ---- */
-  h += rdCNHTML();
+  /* 中国英文媒体已在首屏显示；其它来源按需展开。 */
   /* ---- 主题检索 ---- */
   h += '<div class="secttl">按主题找文章</div>';
   /* 下拉框里只放当前网络下能用的源。原来一次性列 6 个、其中 5 个是维基家族，
@@ -5183,7 +5371,7 @@ function rdDiscoverHTML() {
   h += '<div class="rrow"><input id="rdUrl" class="rin" type="text" placeholder="https:// 开头的 JSON 接口地址"></div>' +
     '<p class="muted" style="font-size:12px;margin:4px 0 0">只接受白名单内的域名；返回的内容需是含正文的 JSON。' +
     "如果某个源能用别的办法取到纯文本，也可以走「我的文章 → 粘贴导入」，那条路不联网、也不挑来源。</p>";
-  return h;
+  return h + "</div></details>";
 }
 function rdMineHTML() {
   var list = artAll();
@@ -5220,6 +5408,11 @@ function rdMineHTML() {
 
 /* ---------- 21. 精读主页事件 ---------- */
 function readMount() {
+  var draft = $("rdPaste"), source = $("rdPasteSrc");
+  if (draft) { draft.value = RPASTE; draft.oninput = function () { RPASTE = draft.value; }; }
+  if (source) { source.value = RPASTESRC; source.oninput = function () { RPASTESRC = source.value; }; }
+  var enable = $("rdEnableNet");
+  if (enable) enable.onclick = function () { cfg().netOff = false; save(true); render(); };
   /* 精读台与练习页都是跳转页，而跳转不改 cur —— 所以这里主动接管它们的绑定 */
   var jt = JSTACK.length ? JSTACK[JSTACK.length - 1] : null;
   if (jt && jt.kind === "art") { rdBindArt(jt.art); return; }
@@ -5421,7 +5614,7 @@ function rdPasteImport() {
   body = stripHTMLLite(body);
   var a = artMk({ t: title, text: body, src: src || "手动导入", sid: "manual", lic: "仅个人学习使用" });
   artSave(a);
-  RQ = ""; RMSG = null;
+  RQ = ""; RMSG = null; RPASTE = ""; RPASTESRC = "";
   jumpTo("art", a.id);
   toast("已导入：" + a.t, "ok");
 }
@@ -5488,22 +5681,25 @@ function artPageHTML(id) {
   h += '<div class="rmeta">' + esc(a.src) + " · " + esc(a.d) + " · " + esc(a.lic) +
     (a.url ? ' · <a class="rlink" href="' + esc(a.url) + '" target="_blank" rel="noreferrer noopener">原文地址</a>' : "") + "</div>";
   if (a.cut) h += '<p class="rmuted" style="font-size:12px">正文较长，这里收录了前面的约 ' + prof.total + " 词（按完整段落截断）。想看更多可以调高设置里的「单篇词数上限」。</p>";
-  /* ---- 语言画像 ---- */
-  h += rdProfBar(prof);
+  /* 画像收纳为详情，正文不再被统计淹没。 */
+  h += '<details class="reader-info"><summary>' + prof.total + " 词 · " + prof.newN + ' 个生词 · 查看语言画像</summary><div class="read-details-body">' + rdProfBar(prof) + "</div></details>";
+  h += "</div><div class=\"reader-tools\">";
   /* ---- 辅助档位 ---- */
-  h += '<div class="rrow rassist"><span class="rlab">阅读辅助</span>';
+  h += '<div class="rrow rassist" role="group" aria-label="阅读辅助">';
   for (var i = 0; i < 4; i++) {
-    h += '<button class="ras' + (cfg().readAssist === i ? " on" : "") + '" data-assist="' + i + '">' + assistName(i) + "</button>";
+    h += '<button class="ras' + (cfg().readAssist === i ? " on" : "") + '" aria-pressed="' + (cfg().readAssist === i) + '" data-assist="' + i + '">' + assistName(i) + "</button>";
   }
-  h += '<span class="sp"></span>' +
+  h += '</div><details class="reader-options"><summary>字号与朗读</summary><div class="rrow">' +
+    '<button class="btn sm" data-read-size="-1" aria-label="缩小字号">A−</button>' +
+    '<span id="readerSize" class="tiny">' + readerFontSize() + 'px</span>' +
+    '<button class="btn sm" data-read-size="1" aria-label="放大字号">A＋</button>' +
     '<button class="btn ghost sm" id="rdRead">朗读全文</button>' +
-    '<button class="btn ghost sm" id="rdStop">停止</button>' +
-    "</div>";
+    '<button class="btn ghost sm" id="rdStop">停止</button></div></details>';
   h += '<p class="rmuted rtip" style="font-size:12px;margin:4px 0 0">' + esc(assistTip(cfg().readAssist)) + "</p>";
   h += '<p class="rmuted" style="font-size:12px;margin:2px 0 0">点任意英文单词都能查释义（带词形还原，点 <b>studies</b> 也能查到 <b>study</b>）。</p>';
   h += "</div>";
   /* ---- 正文 ---- */
-  h += '<div class="card" id="rdBody">' + rdBodyInner(a, prof) + "</div>";
+  h += '<div class="card" id="rdBody" style="--reader-size:' + readerFontSize() + 'px">' + rdBodyInner(a, prof) + "</div>";
   /* ---- 收尾动作 ---- */
   h += '<div class="card"><div class="rrow">' +
     '<button class="btn" id="rdDone">' + (a.rd && a.rd.done ? "重读完了" : "读完了") + "</button>" +
@@ -5545,6 +5741,7 @@ function rdProfBar(prof) {
 /* 正文渲染：每个英文词包成可点的 span。
    「哪个词是生词」提前算好放画像里，不在渲染时现查 —— 一篇近千词，现查会明显卡。
    外层 .rbody 是行宽容器（max-width:62ch），排版规则见 CSS 里那一段注释。 */
+function readerFontSize() { return clamp(Number(cfg().readFontSize) || 17, 16, 24); }
 function rdBodyInner(a, prof) {
   var assist = clamp(cfg().readAssist || 0, 0, 3);
   var h = '<div class="rbody">';
@@ -5637,6 +5834,7 @@ function rdWordPop(key) {
     '<button class="btn" id="wpAdd">加入精读生词</button>' +
     '<button class="btn ghost" id="wpFull">完整词条 ›</button>',
     function () {
+      $("mask").classList.add("word-sheet");
       $("wpSpeak").onclick = function () { speak(w); };
       $("wpAdd").onclick = function () {
         var bk = readBook(), have = false, i2;
@@ -5653,6 +5851,21 @@ function rdWordPop(key) {
 function rdBindArt(id) {
   var a = artGet(id);
   if (!a) return;
+  DB.read.last = id;
+  save();
+  var view = $("view");
+  if (view) view.onscroll = function () {
+    var range = view.scrollHeight - view.clientHeight;
+    if (range > 0) { a.rd = a.rd || {}; a.rd.pos = clamp(view.scrollTop / range, 0, 1); save(); }
+  };
+  document.querySelectorAll("[data-read-size]").forEach(function (b) {
+    b.onclick = function () {
+      cfg().readFontSize = clamp(readerFontSize() + Number(b.getAttribute("data-read-size")), 16, 24);
+      var body = $("rdBody"); if (body) body.style.setProperty("--reader-size", readerFontSize() + "px");
+      var label = $("readerSize"); if (label) label.textContent = readerFontSize() + "px";
+      save(true);
+    };
+  });
   document.querySelectorAll("[data-assist]").forEach(function (b) {
     b.onclick = function () {
       var n = Number(b.getAttribute("data-assist"));
@@ -5661,6 +5874,7 @@ function rdBindArt(id) {
       if (body) body.innerHTML = rdBodyInner(a, profOf(a));
       document.querySelectorAll("[data-assist]").forEach(function (x) {
         x.classList.toggle("on", Number(x.getAttribute("data-assist")) === n);
+        x.setAttribute("aria-pressed", String(Number(x.getAttribute("data-assist")) === n));
       });
       var tip = document.querySelector(".rtip");
       if (tip) tip.textContent = assistTip(n);
@@ -5684,15 +5898,20 @@ function rdBindArt(id) {
   var sp = $("rdRead"); if (sp) sp.onclick = function () { rdSpeakAll(a); };
   var st = $("rdStop");
   if (st) st.onclick = function () {
-    try { window.speechSynthesis.cancel(); } catch (e) { }
+    rdStopSpeaking();
     toast("已停止朗读", "info");
   };
 }
 /* 分段朗读而不是整篇一次性灌进去：整篇一口气念完既没法停，也常被浏览器截断 */
-var RSPK = { i: -1, on: false };
+var RSPK = { i: -1, on: false, timer: null };
+function rdStopSpeaking() {
+  RSPK.on = false; RSPK.i = -1;
+  clearTimeout(RSPK.timer); RSPK.timer = null;
+  try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) { }
+}
 function rdSpeakAll(a) {
   if (!window.speechSynthesis) { toast("当前浏览器不支持语音朗读", "bad"); return; }
-  try { window.speechSynthesis.cancel(); } catch (e) { }
+  rdStopSpeaking();
   RSPK.i = 0; RSPK.on = true;
   var next = function () {
     if (!RSPK.on || RSPK.i >= a.ps.length) { RSPK.on = false; RSPK.i = -1; return; }
@@ -5700,7 +5919,7 @@ function rdSpeakAll(a) {
     RSPK.i++;
     try { speak(sent); } catch (e) { return; }
     /* 按字符数粗估这一句念完要多久，念完再接下句 */
-    setTimeout(next, Math.max(1200, Math.min(20000, sent.length * 62)));
+    RSPK.timer = setTimeout(next, Math.max(1200, Math.min(20000, sent.length * 62)));
   };
   toast("开始朗读全文（可随时点停止）", "info");
   next();
@@ -7925,6 +8144,7 @@ function init() {
       var mask = $("mask");
       if (mask && mask.classList.contains("on")) { closeModal(); return true; }
       if (JSTACK.length) { jumpBack(); return true; }
+      if (cur === "study" && S && $("quitSes")) { $("quitSes").click(); return true; }
       if (cur !== "today") { go("today"); return true; }
     } catch (e) { }
     return false;
@@ -7934,6 +8154,7 @@ function init() {
      保存本身带 350ms 防抖，正常使用没问题；但切后台时系统可能在防抖到点之前就把进程回收掉，
      最后几次评价就留在内存里没了。原生壳在 onPause 里先调这个催一次同步保存，再暂停 WebView。 */
   window.__wfFlushSave = function () { try { save(true); } catch (e) { } };
+  window.__wfPause = rdStopSpeaking;
 }
 window.__WFAPI = {
   defaultBookPickerOrder: defaultBookPickerOrder,

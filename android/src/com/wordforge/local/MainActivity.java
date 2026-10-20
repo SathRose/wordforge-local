@@ -187,11 +187,11 @@ public final class MainActivity extends Activity {
         }
     }
     @Override public void onBackPressed() {
-        web.evaluateJavascript("(function(){var m=document.getElementById('mask');if(m&&m.classList.contains('on')){var b=document.getElementById('mClose');if(b)b.click();return 'modal';}if(window.__WFAPI&&__WFAPI.curView()!=='today'){__WFAPI.go('today');return 'home';}if(window.__wfFlushSave)__wfFlushSave();return 'exit';})()",
+        web.evaluateJavascript("(function(){if(window.__wfBack&&window.__wfBack())return 'handled';if(window.__wfFlushSave)__wfFlushSave();return 'exit';})()",
             result -> { if ("\"exit\"".equals(result) || "null".equals(result)) finish(); });
     }
     @Override protected void onPause() {
-        if (web != null) web.evaluateJavascript("if(window.__wfFlushSave)__wfFlushSave();", null);
+        if (web != null) web.evaluateJavascript("if(window.__wfPause)__wfPause();if(window.__wfFlushSave)__wfFlushSave();", null);
         if (tts != null) tts.stop();
         super.onPause();
     }

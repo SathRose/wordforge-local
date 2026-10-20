@@ -29,6 +29,11 @@ node checks/test-book-picker.cjs
 见 [android/README.md](android/README.md)。运行 `node android/build-apk.cjs`；仅调试验证使用 `--qa`。
 签名文件仅保存在本机，第一次构建会生成独立签名。不同开发者签名的 APK 不能互相覆盖安装。
 
+## 移动交互优化
+
+`1.1.1-local.3` 将开始学习放到手机首页首屏，增加明确的上一张/下一张操作，修复从首页进入精读的事件绑定，并优化点词抽屉、阅读位置、字号及 Android 返回键。
+设计参考与回归方法见 [移动端修复说明](docs/MOBILE-UI.md)。安装包在本仓库的 [Releases](https://github.com/SathRose/wordforge-local/releases) 发布；覆盖安装前请先导出完整备份。
+
 ## 数据与公开范围
 
 - 学习进度在浏览器或 APK 私有存储中；更新前请在设置中导出完整备份。
