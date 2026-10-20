@@ -57,7 +57,7 @@ node checks/test-android-ui.cjs
 ## 兼容性边界
 
 - 仍支持 Android 8.0+，Android 12 位于支持范围内，不使用高于 API 30 的新调用。
-- 原生验证使用 API 36 模拟器；不等同于 iQOO Neo9 / OriginOS 真机验收。
+- 原生验证使用 API 36 与 API 31 AOSP 模拟器；均不等同于 iQOO Neo9 / OriginOS 真机验收。API 31 的 WebView CDP 触摸/截图不可用，测试以 DOM click 回退并跳过 IME 打开断言。
 - 曾尝试补装 API 31 / Android 12 系统镜像，但下载未得到完整有效的 ZIP，未完成该版本模拟器验收。现有 API 34/36 镜像不需要升级，未替换或清空原有模拟器数据。
 - 阅读来源的可达性与 UI 修复分开：检查使用隔离测试文本，不宣称所有新闻源在所有手机网络都能连接。
 - 更新使用同包名、同签名、递增 versionCode。不要通过卸载旧版来更新；先导出备份再覆盖安装。
@@ -69,3 +69,4 @@ node checks/test-android-ui.cjs
 - QA 包内验证中文选英文、无拼写输入框、`anim-next` / `wfCardNext` 切词动画生效。
 - 正式包签名证书 SHA-256 与 1.1.1-local.3 一致，同签名覆盖安装成功且 `firstInstallTime` 未变。
 - 移动端 Playwright 回归 238 项通过、0 失败（临时 `playwright-core` + 系统 Chrome，七种尺寸）；上一轮逻辑/导入结果继续有效。
+- Android 12 API 31 AOSP 模拟器（`WordForge_API31`）原生检查 15 项通过；CDP 触摸/截图不可用，使用 DOM click 回退，IME 断言跳过；API 36 真实触摸 16 项仍有效。

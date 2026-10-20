@@ -4,6 +4,7 @@
 
 | 日期（北京时间） | 更新 | 应用版本 | 详细日志 |
 | --- | --- | --- | --- |
+| 2026-10-20 · 07 | Android 12 API 31 模拟器完成 15 项原生测试 | 不变：1.1.1-local.4，无新 APK | [Android 12 模拟器验证](docs/updates/2026-10-20-07-android12-emulator.md) |
 | 2026-10-20 · 06 | 发布 v1.1.1-local.4 Release，Playwright 238 项通过 | 1.1.1-local.4，versionCode 4 | [发布与浏览器回归](docs/updates/2026-10-20-06-release-and-playwright.md) |
 | 2026-10-20 · 05 | 重新打包 1.1.1-local.4，安卓原生测试 16 项通过 | 1.1.1-local.4，versionCode 4 | [重新打包与安卓测试](docs/updates/2026-10-20-05-apk-1.1.1-local.4.md) |
 | 2026-10-20 · 04 | 切词动画，保留中文选英文选择题 | 不变：1.1.1-local.3，无新 APK | [切词动画与中文选英文](docs/updates/2026-10-20-04-study-animation-and-recall-choice.md) |

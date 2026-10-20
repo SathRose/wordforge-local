@@ -28,7 +28,15 @@ async function connect() {
     const m=JSON.parse(e.data);
     if(m.id&&pending.has(m.id)){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result);}
   });
-  const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
+  const call=(method,params={})=>new Promise((resolve,reject)=>{
+    const id=++seq;
+    const timer=setTimeout(()=>{ pending.delete(id); reject(new Error(method+' timed out after 20s')); }, 20000);
+    pending.set(id,{
+      resolve:(v)=>{ clearTimeout(timer); resolve(v); },
+      reject:(e)=>{ clearTimeout(timer); reject(e); }
+    });
+    ws.send(JSON.stringify({id,method,params}));
+  });
   async function evaluate(expression) {
     const r=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true,userGesture:true});
     if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));

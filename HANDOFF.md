@@ -5,8 +5,8 @@
 ## 必读顺序
 
 1. [项目工作规范](AGENTS.md)。用户要求：**每次更新后新增一篇中文更新日志，并同步本交接说明。**
-2. [最近一轮：发布 1.1.1-local.4 并补跑 Playwright](docs/updates/2026-10-20-06-release-and-playwright.md)。Release 已发布，Playwright 238 项通过；真机验收仍待用户。
-3. [上一轮：重新打包 1.1.1-local.4](docs/updates/2026-10-20-05-apk-1.1.1-local.4.md)；[更早：切词动画与中文选英文](docs/updates/2026-10-20-04-study-animation-and-recall-choice.md) 与 [选择题自动推进](docs/updates/2026-10-20-03-study-choice-autoadvance.md)。
+2. [最近一轮：Android 12 API 31 模拟器验证](docs/updates/2026-10-20-07-android12-emulator.md)。AOSP 模拟器 15 项通过；不是 OriginOS / 真机验收。
+3. [上一轮：发布 1.1.1-local.4 并补跑 Playwright](docs/updates/2026-10-20-06-release-and-playwright.md)；[更早：重新打包 1.1.1-local.4](docs/updates/2026-10-20-05-apk-1.1.1-local.4.md) 与 [切词动画/中文选英文](docs/updates/2026-10-20-04-study-animation-and-recall-choice.md)。
 4. 运行 `git status --short --branch`、`git log -5 --oneline`，以实际工作区和远端状态为准。
 
 ## 当前可用版本
@@ -29,13 +29,15 @@
 - 切词时增加轻量滑入动画：下一词从右、上一词从左，尊重系统“减少动态效果”；中文选英文选择题保留，只停用拼写/填空输入。
 - 已重新打包 `1.1.1-local.4`（versionCode 4）：正式包与 QA 包构建成功，隔离模拟器原生 UI 回归 16 项通过；正式包同签名覆盖安装并保留数据。
 - `v1.1.1-local.4` 已发布 GitHub Release，上传 APK 与 HTML；下载校验和与本地构建一致。移动端 Playwright 回归 238 项通过。
+- 已在 Android 12 API 31 AOSP 模拟器（`WordForge_API31`）完成 15 项原生回归；API 31 WebView 的 CDP 触摸/截图不可用，测试用 DOM click 回退并跳过 IME 断言。
 - 修复从首页进入精读时事件未挂载；支持点词底部抽屉、辅助档位、字号、阅读位置恢复和导入草稿保留。
 - Android 返回键按栈逐层返回，底部导航避让系统栏和软键盘；停止朗读会取消分段任务。
 - 电脑本地服务已在该次功能更新后重启；新旧 APK 签名一致，并完成覆盖安装后的数据保留检查。
 
 ## 最近功能版本的验证证据
 
-- 本轮原生 UI 回归 16 项通过、0 失败（API 36 隔离模拟器 `emulator-5556`）；覆盖选择题自动推进、撤销、返回键、软键盘、粘贴导入和重载持久化。
+- API 36 原生 UI 回归 16 项通过、0 失败（`emulator-5556`）；覆盖选择题自动推进、撤销、返回键、软键盘、粘贴导入和重载持久化。
+- Android 12 API 31 AOSP 模拟器（`WordForge_API31`）原生回归 15 项通过、0 失败；CDP 触摸/截图不可用，使用 DOM click 回退，IME 断言跳过。
 - QA 包内验证：中文选英文、无拼写输入框、`anim-next` / `wfCardNext` 均生效。
 - 正式包 `versionCode=4`、`versionName=1.1.1-local.4`，签名证书 SHA-256 与旧版一致；同签名覆盖安装成功，`firstInstallTime` 保持原值。
 - 上一轮逻辑回归与导入 10/16/14 项通过、结构检查 0 错误；本轮 `wordforge.html` 未再修改，这些结果继续有效。
@@ -45,8 +47,8 @@
 
 ## 尚未完成 / 优先下一步
 
-1. **等待用户在 iQOO Neo9 上反馈 1.1.1-local.4 的实际体验。** 本轮是 API 36 隔离模拟器 + 桌面 Chrome 七尺寸测试，不能写成 Android 12 / 真机通过；动画流畅度与触控手感需真机确认。
-2. 如继续兼容性验证，可补装 API 31 / Android 12 镜像；上一轮下载损坏未安装成功，**不能声称已通过 Android 12 模拟器或真机验收**。
+1. **等待用户在 iQOO Neo9 上反馈 1.1.1-local.4 的实际体验。** 本轮已在 Android 12 AOSP 模拟器跑通 15 项，但它不是 OriginOS 真机；动画流畅度、触控手感仍需真机确认。
+2. **API 31 的触摸/IME 未用 CDP 真实验证**：该 WebView 的 CDP 触摸/截图不可用，测试用 DOM click 回退并跳过 IME 断言；API 36 真实触摸/键盘 16 项仍有效。不要声称 OriginOS 真机通过。
 3. 依据真机截图、操作路径和屏幕/字体设置复现剩余问题，优先检查首页、精读、系统返回与键盘。没有反馈时不要编造新的故障。
 4. 新闻源在具体手机网络下的可达性未全面验收；目前交互测试使用隔离文本，网络问题与布局问题要分开定位。
 
@@ -60,4 +62,4 @@
 
 ## 可直接发给新对话的一句话
 
-> 请先阅读本项目 AGENTS.md、HANDOFF.md、CHANGELOG.md 和其中最近的功能更新日志，检查 Git 现场后继续。当前已发布 1.1.1-local.4，API 36 隔离模拟器原生测试 16 项与 Playwright 238 项通过；真机验收仍待我的 iQOO Neo9 反馈。每轮完成后新增更新日志并更新交接说明。
+> 请先阅读本项目 AGENTS.md、HANDOFF.md、CHANGELOG.md 和其中最近的功能更新日志，检查 Git 现场后继续。当前已发布 1.1.1-local.4；API 36 原生 16 项、Android 12 AOSP 模拟器 15 项、Playwright 238 项通过，但都不是 OriginOS 真机验收。真机体验仍待我的 iQOO Neo9 反馈。每轮完成后新增更新日志并更新交接说明。
