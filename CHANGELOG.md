@@ -4,6 +4,7 @@
 
 | 日期（北京时间） | 更新 | 应用版本 | 详细日志 |
 | --- | --- | --- | --- |
+| 2026-10-20 · 04 | 切词动画，保留中文选英文选择题 | 不变：1.1.1-local.3，无新 APK | [切词动画与中文选英文](docs/updates/2026-10-20-04-study-animation-and-recall-choice.md) |
 | 2026-10-20 · 03 | 选择题自动判分推进，移除拼写/填空输入题 | 不变：1.1.1-local.3，无新 APK | [选择题自动推进与移除打字题](docs/updates/2026-10-20-03-study-choice-autoadvance.md) |
 | 2026-10-20 · 02 | 建立每次更新必写日志与跨对话交接规范 | 不变：1.1.1-local.3，无新 APK | [更新记录与交接机制](docs/updates/2026-10-20-02-update-workflow.md) |
 | 2026-10-20 · 01 | 公开仓库、本地 Git 与安卓首页/学习/精读交互修复 | 1.1.1-local.3，versionCode 3 | [安卓交互修复与首次公开发布](docs/updates/2026-10-20-01-android-ui.md) |

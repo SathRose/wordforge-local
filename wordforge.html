@@ -245,6 +245,14 @@ label.fld .desc{font-size:11.5px;color:var(--text-faint);margin-top:5px;line-hei
      加了会把它的横向滚动一起废掉。 */
   touch-action:pan-y;
 }
+/* 切词动画：下一词从右侧轻滑入，上一词从左侧轻滑入。
+   只动 transform / opacity，不改变布局；卡片自己 overflow:hidden，不会撑出横向滚动。
+   系统开启「减少动态效果」时完全关闭。 */
+@keyframes wfCardNext{from{opacity:0;transform:translateX(26px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes wfCardPrev{from{opacity:0;transform:translateX(-26px) scale(.985)}to{opacity:1;transform:none}}
+.wcard.anim-next{animation:wfCardNext .22s cubic-bezier(.2,.8,.3,1)}
+.wcard.anim-prev{animation:wfCardPrev .22s cubic-bezier(.2,.8,.3,1)}
+@media(prefers-reduced-motion:reduce){.wcard.anim-next,.wcard.anim-prev{animation:none}}
 .wcard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent 70%)}
 .wcard-top{display:flex;align-items:center;gap:8px;margin-bottom:18px;flex-wrap:wrap}
 .w-word{font-family:var(--word-font);font-size:clamp(32px,6.4vw,54px);font-weight:700;letter-spacing:-.5px;line-height:1.12;word-break:break-word}
@@ -2750,6 +2758,7 @@ function startSession(kind) {
     kind: kind, queue: q, i: 0, modes: modes,
     pool: pool, results: [], start: now(), answered: false,
     pending: null, typed: "", revealed: false, correct: 0, wrong: 0, newCount: 0, revCount: 0,
+    anim: "",   /* 切词方向：next / prev，仅用于下一张卡的进入动画 */
     quiz: null,
     steps: []   /* 滑动翻词的撤销栈：每前进一步压一份现场快照，向右滑时整份还原 */
   };
@@ -2960,6 +2969,9 @@ function renderSession() {
   if (S.i >= S.queue.length) { v.setAttribute("data-screen", "summary"); v.onscroll = null; v.innerHTML = sessionSummaryHTML(); v.scrollTop = 0; bindCommon(); bindSession(); updateChrome(); return; }
   var r = curWord();
   var mode = pickMode();
+  /* 方向标记只消费一次：局部刷新（评分条等）不会重复播放动画。 */
+  var anim = S.anim || "";
+  S.anim = "";
   if (S.renderedIdx !== S.i) {
     S.renderedIdx = S.i;
     S.answered = false; S.pending = null; S.typed = ""; S.revealed = false;
@@ -2974,7 +2986,7 @@ function renderSession() {
     (S.revCount ? '<span style="color:var(--warn)">复习 ' + S.revCount + "</span>" : "") +
     '<span class="sp"></span><button class="btn ghost sm" id="quitSes">结束</button></div>';
 
-  h += '<div class="wcard" id="wcard">';
+  h += '<div class="wcard' + (anim === "next" ? " anim-next" : anim === "prev" ? " anim-prev" : "") + '" id="wcard">';
   h += '<div class="wcard-top">' + modeTag(mode) + statusTag(r) + '<span class="sp"></span>' +
     (r[F.FRQ] || r[F.BNC] ? '<span class="tag">词频 ' + fmtNum(r[F.FRQ] || r[F.BNC]) + "</span>" : "") + "</div>";
   h += cardBody(r, mode);
@@ -3182,6 +3194,7 @@ function commitAndNext() {
   grade(r[F.W], g);
   S.results[S.i] = g;
   if (g === 0) S.wrong++; else S.correct++;
+  S.anim = "next";
   S.i++;
   save();
   if (S.i >= S.queue.length) { finishSession(); renderSession(); return; }
@@ -3253,6 +3266,7 @@ function prevWord() {
     if (st.g === 0) S.wrong = Math.max(0, S.wrong - 1); else S.correct = Math.max(0, S.correct - 1);
     S.results[st.i] = undefined;
   }
+  S.anim = "prev";
   S.i = st.i;
   save();
   renderSession();
@@ -3265,6 +3279,7 @@ function nextWord() {
   if (S.i >= S.queue.length - 1) { toast("已经是这一轮的最后一条了", "ok"); return; }
   var r = curWord();
   pushStep(snapStep(r ? r[F.W] : "", undefined));
+  S.anim = "next";
   S.i++;
   save();
   renderSession();

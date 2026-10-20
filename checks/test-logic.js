@@ -1445,6 +1445,18 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
 
   t("pickMode 只会返回配置里的题型（不会凭空造一个）", S.modes.indexOf(API.pickMode()) >= 0, API.pickMode());
 
+  /* ---- 切词动画：CSS 负责表现，这里钉住「方向标记真的挂到了新卡上」 ---- */
+  API.setCfg("activeModes", ["recog", "recall", "card"]);
+  API.startSession("auto");
+  API.nextWord();
+  t("切到下一词时卡片带进入动画标记",
+    String(document.getElementById("view").innerHTML).indexOf("anim-next") >= 0);
+  API.prevWord();
+  t("回到上一词时卡片带反向动画标记",
+    String(document.getElementById("view").innerHTML).indexOf("anim-prev") >= 0);
+  t("切词动画尊重系统的减少动态效果设置",
+    html.indexOf("prefers-reduced-motion") >= 0);
+
   /* ---- 自动回退：轮到的题型做不了时顺延到下一个能做的 ---- */
   API.setCfg("activeModes", ["listen", "recog", "card"]);
   API.resetPreview();
@@ -2201,6 +2213,22 @@ p("[23] 词汇量测试（阶梯自适应 · 自评二选一 + 假词陷阱）")
     API.setCfg("vask", "spell");
     const mC = API.pickModeIdx(0);
     t("旧拼写动作实际回退卡片，不生成输入题", mC === "card", mC);
+
+    /* ---- 中文选英文仍然保留：题干是中文释义，选项是英文单词，不是拼写输入 ---- */
+    API.setCfg("vmode", "m2w"); API.setCfg("vask", "choice");
+    const cnWord = API.words().find((w) => API.hasCnDef(w));
+    t("词库里有可用于中文选英文的词", !!cnWord);
+    if (cnWord) {
+      const Sx = API.session();
+      Sx.queue[0] = cnWord[API.F.W];
+      Sx.i = 0;
+      Sx.modes = ["recall"];
+      API.render();
+      const cnHTML = String(document.getElementById("view").innerHTML);
+      t("中文选英文仍可用（题干是释义、选项是单词）",
+        cnHTML.indexOf("根据释义选择单词") >= 0 && cnHTML.indexOf("data-pick") >= 0);
+      t("中文选英文没有拼写输入框", cnHTML.indexOf("spellIn") < 0);
+    }
     API.setCfg("vask", "auto"); API.setCfg("vmode", API.CFG_DEF.vmode);
   }
 
