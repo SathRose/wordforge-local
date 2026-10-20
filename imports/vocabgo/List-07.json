@@ -1,0 +1,1027 @@
+{
+  "name": "词达人｜CET4（第二版）｜List 07",
+  "sourceName": "词达人",
+  "words": [
+    {
+      "w": "assess",
+      "us": "əˈsɛs",
+      "uk": "əˈses",
+      "pos": "vt.",
+      "cn": "vt. 评估、评价；估价；确定税额、罚款额。",
+      "en": "v. charge (a person or a property) with a payment, such as a tax or a fine\nv. estimate the value of (property) for taxation",
+      "ex": "She can assess investments very accurately.",
+      "exz": "她能很准确地评估投资。",
+      "fm": "过去分词:assessed|现在分词:assessing|第三人称单数:assesses|过去式:assessed",
+      "ph": "assess the damage 评估损失|assess sb. as 评价某人为",
+      "mn": "族:assessment n. 评估；assessor n. 评估员",
+      "dis": "【学习要点】\nassess 与 access“进入、通道”不同。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 181,
+      "list_order": 1,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 估定, 对...征税, 评定\n[经] 估计, 估价, 确定(税款罚款等)的金额",
+        "definition": "v. charge (a person or a property) with a payment, such as a tax or a fine\nv. estimate the value of (property) for taxation",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "disguise",
+      "us": "dɪsˈgaɪz",
+      "uk": "dɪsˈgaɪz",
+      "pos": "vt. n.",
+      "cn": "vt. 伪装、乔装；掩饰。n. 伪装、化装用品。",
+      "en": "n. an outward semblance that misrepresents the true nature of something\nn. any attire that modifies the appearance in order to conceal the wearer's identity\nn. the act of concealing the identity of something by modifying its appearance\nv. make unrecognizable",
+      "ex": "A hat can help disguise his appearance.",
+      "exz": "帽子可以帮助他伪装外貌。",
+      "fm": "过去分词:disguised|现在分词:disguising|过去式:disguised|第三人称单数:disguises|名词复数:disguises",
+      "ph": "in disguise 伪装着|disguise A as B 把A伪装成B",
+      "mn": "族:disguised adj. 伪装的",
+      "dis": "【学习要点】\na blessing in disguise 因祸得福。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 182,
+      "list_order": 2,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 假面目, 假装\nvt. 假装, 隐瞒",
+        "definition": "n. an outward semblance that misrepresents the true nature of something\nn. any attire that modifies the appearance in order to conceal the wearer's identity\nn. the act of concealing the identity of something by modifying its appearance\nv. make unrecognizable",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "exploration",
+      "us": ",ɛkspləˈreʃən",
+      "uk": "ekspləˈreɪʃ(ə)n",
+      "pos": "n.",
+      "cn": "n. 探索、探险；勘探；探究。",
+      "en": "n. to travel for the purpose of discovery\nn. a careful systematic search\nn. a systematic consideration",
+      "ex": "Space exploration requires careful planning.",
+      "exz": "太空探索需要周密计划。",
+      "fm": "名词复数:explorations",
+      "ph": "space exploration 太空探索|oil exploration 石油勘探",
+      "mn": "族:explore v. 探索；explorer n. 探险者",
+      "dis": "【学习要点】\nexplore 通常直接接宾语，不需接 into。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 183,
+      "list_order": 3,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 探险, 踏勘, 探测\n[医] 探察",
+        "definition": "n. to travel for the purpose of discovery\nn. a careful systematic search\nn. a systematic consideration",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "intent",
+      "us": "ɪnˈtɛnt",
+      "uk": "ɪnˈtent",
+      "pos": "n. adj.",
+      "cn": "n. 意图、目的。adj. 专心的；坚决要做的。",
+      "en": "n. the intended meaning of a communication",
+      "ex": "That wasn't my intent.",
+      "exz": "这不是我的初衷。",
+      "fm": "名词复数:intents",
+      "ph": "be intent on 专心于、决心做|with intent to 意图做",
+      "mn": "族:intention n. 意图；intentional adj. 故意的",
+      "dis": "【学习要点】\nintent on 后接名词或动名词。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 184,
+      "list_order": 4,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 意图, 含义, 故意\na. 专心的, 决心的, 热心的",
+        "definition": "n. the intended meaning of a communication",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "knit",
+      "us": "nɪt",
+      "uk": "nit",
+      "pos": "v. n.",
+      "cn": "v. 编织；使紧密结合；愈合；皱眉。n. 编织物。",
+      "en": "n. a fabric made by knitting\nn. a basic knitting stitch\nn. needlework created by interlacing yarn in a series of connected loops using straight eyeless needles or by machine\nv. make (textiles) by knitting",
+      "ex": "She knit him a sweater.",
+      "exz": "她给他织了件毛衣。",
+      "fm": "过去式:knitted / knit|过去分词:knitted / knit|现在分词:knitting|第三人称单数:knits",
+      "ph": "knit a sweater 织毛衣|a close-knit family 亲密家庭",
+      "mn": "族:knitting n. 编织；knitted adj. 针织的",
+      "dis": "【学习要点】\nknitted/knit 都可作过去式、过去分词；knitting 双写 t。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 185,
+      "list_order": 5,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "v. 编织, 结合",
+        "definition": "n. a fabric made by knitting\nn. a basic knitting stitch\nn. needlework created by interlacing yarn in a series of connected loops using straight eyeless needles or by machine\nv. make (textiles) by knitting",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "legal",
+      "us": "ˈligl",
+      "uk": "ˈliːgl",
+      "pos": "adj.",
+      "cn": "adj. 法律的；合法的；法定的。",
+      "en": "a. established by or founded upon law or official or accepted rules\na. of or relating to jurisprudence\ns. having legal efficacy or force\na. relating to or characteristic of the profession of law",
+      "ex": "Legal frameworks exist to hold war criminals accountable.",
+      "exz": "法律架构的存在，使战争罪犯的责任可以追究。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "legal advice 法律建议|take legal action 采取法律行动",
+      "mn": "族:legally adv. 合法地；illegal adj. 违法的",
+      "dis": "【学习要点】\nlawful 常强调合法；legal 也可泛指法律相关。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 186,
+      "list_order": 6,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 法律的, 法定的, 合法的\n[经] 法定权利; 法律(上)的, 合法的",
+        "definition": "a. established by or founded upon law or official or accepted rules\na. of or relating to jurisprudence\ns. having legal efficacy or force\na. relating to or characteristic of the profession of law",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "neutral",
+      "us": "ˈnʊtrəl",
+      "uk": "ˈnjuːtrəl",
+      "pos": "adj. n.",
+      "cn": "adj. 中立的；中性的；不带感情色彩的。n. 中立者；空挡。",
+      "en": "n. one who does not side with any party in a war or dispute\ns. not supporting or favoring either side in a war, dispute, or contest\na. possessing no distinctive quality or characteristics\ns. lacking distinguishing quality or characteristics",
+      "ex": "Switzerland is a neutral country.",
+      "exz": "瑞士是一个中立的国家。",
+      "fm": "名词复数:neutrals",
+      "ph": "remain neutral 保持中立|in neutral 挂空挡",
+      "mn": "族:neutrality n. 中立；neutralize v. 使中和",
+      "dis": "【学习要点】\n政治中立、化学中性和汽车空挡均可用。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 187,
+      "list_order": 7,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 中立者, 中立国, 非彩色, 空档\na. 中立的, 中性的, 无色的",
+        "definition": "n. one who does not side with any party in a war or dispute\ns. not supporting or favoring either side in a war, dispute, or contest\na. possessing no distinctive quality or characteristics\ns. lacking distinguishing quality or characteristics",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "overall",
+      "us": ",ovəˈrɔl",
+      "uk": "ˌəʊvərˈɔːl",
+      "pos": "adj. adv. n.",
+      "cn": "adj. 总体的、全部的。adv. 总的说来。n. 工作服、罩衫。",
+      "en": "n. (usually plural) work clothing consisting of denim trousers (usually with a bib and shoulder straps)\nn. a loose protective coverall or smock worn over ordinary clothing for dirty work\ns. involving only main features\ns. including everything",
+      "ex": "Overall, the movie was a success from script to screen.",
+      "exz": "总的来说，这部电影从剧本到银幕是成功的。",
+      "fm": "名词复数:overalls",
+      "ph": "overall performance 整体表现|overall cost 总成本",
+      "mn": "族:overalls n. 工装裤、工作服",
+      "dis": "【学习要点】\n副词可放句首对整体作评价。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 188,
+      "list_order": 8,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 全部的, 全体的, 从头至尾的, 一切在内的\nadv. 从头到尾, 总的说来\nn. 罩衫, 工作服",
+        "definition": "n. (usually plural) work clothing consisting of denim trousers (usually with a bib and shoulder straps)\nn. a loose protective coverall or smock worn over ordinary clothing for dirty work\ns. involving only main features\ns. including everything",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "parade",
+      "us": "pəˈred",
+      "uk": "pəˈreɪd",
+      "pos": "n. v.",
+      "cn": "n. 游行；阅兵；炫耀。v. 游行；列队行进；炫耀。",
+      "en": "n. a ceremonial procession including people marching\nn. an extended (often showy) succession of persons or things\nn. a visible display\nv. walk ostentatiously",
+      "ex": "I caught sight of a parade on my way home.",
+      "exz": "在回家的路上，我看到一场阅兵式。",
+      "fm": "名词复数:parades|现在分词:parading|过去式:paraded|过去分词:paraded|第三人称单数:parades",
+      "ph": "a military parade 阅兵|parade through 游行经过",
+      "mn": "",
+      "dis": "【学习要点】\non parade 受检阅、列队。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 189,
+      "list_order": 9,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 游行, 炫耀, 阅兵\nv. 游行, 炫耀, (使)列队行进",
+        "definition": "n. a ceremonial procession including people marching\nn. an extended (often showy) succession of persons or things\nn. a visible display\nv. walk ostentatiously",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "reside",
+      "us": "rɪˈzaɪd",
+      "uk": "riˈzaid",
+      "pos": "vi.",
+      "cn": "vi. 居住；存在、归于。",
+      "en": "v. make one's home in a particular place or community",
+      "ex": "She resides in New York.",
+      "exz": "她在纽约居住。",
+      "fm": "第三人称单数:resides|现在分词:residing|过去式:resided|过去分词:resided",
+      "ph": "reside in 居住于|reside with 与……同住",
+      "mn": "族:resident n. 居民；residence n. 住所；residential adj. 居住的",
+      "dis": "【学习要点】\n较正式；reside in 也可指权力等存在于。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 190,
+      "list_order": 10,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vi. 住, 居留, 属于\n[法] 居住",
+        "definition": "v. make one's home in a particular place or community",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "artificial",
+      "us": ",ɑrtɪˈfɪʃl",
+      "uk": "ˌɑːtɪˈfɪʃl",
+      "pos": "adj.",
+      "cn": "adj. 人造的、人工的；假的；不自然的、做作的。",
+      "en": "a. contrived by art rather than nature\ns. artificially formal\ns. not arising from natural growth or characterized by vital processes",
+      "ex": "Artificial leather can't compare with the real thing.",
+      "exz": "人造皮革是比不上真皮的。",
+      "fm": "名词复数:artificials",
+      "ph": "artificial intelligence 人工智能|artificial flowers 人造花",
+      "mn": "族:artificially adv. 人工地",
+      "dis": "【学习要点】\nartificial 不等于 artistic“艺术的”。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 191,
+      "list_order": 11,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 人造的, 假的, 非原地产的\n[医] 人工的, 人造的, 伟牟",
+        "definition": "a. contrived by art rather than nature\ns. artificially formal\ns. not arising from natural growth or characterized by vital processes",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "compromise",
+      "us": "ˈkɑmprəmaɪz",
+      "uk": "ˈkɒmprəmaɪz",
+      "pos": "n. v.",
+      "cn": "n. 妥协、折中方案。v. 妥协；危及、损害。",
+      "en": "n. a middle way between two extremes\nn. an accommodation in which both sides make concessions\nv. make a compromise; arrive at a compromise; we all must compromise\"\nv. settle by concession",
+      "ex": "He had refused to compromise on the issue.",
+      "exz": "他拒绝在这件事上作出妥协。",
+      "fm": "名词复数:compromises|过去分词:compromised|现在分词:compromising|过去式:compromised|第三人称单数:compromises",
+      "ph": "reach a compromise 达成妥协|compromise on 在……上让步",
+      "mn": "族:compromising adj. 有损名誉的",
+      "dis": "【学习要点】\ncompromise safety 表示危及安全，不是“与安全妥协”。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 192,
+      "list_order": 12,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 妥协, 折中, 折中方案, 和解\nvi. 妥协处理\nvt. 危害",
+        "definition": "n. a middle way between two extremes\nn. an accommodation in which both sides make concessions\nv. make a compromise; arrive at a compromise; we all must compromise\"\nv. settle by concession",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "council",
+      "us": "ˈkaʊnsl",
+      "uk": "ˈkaunsl",
+      "pos": "n.",
+      "cn": "n. 理事会、委员会；地方议会。",
+      "en": "n. a body serving in an administrative capacity\nn. (Christianity) an assembly of theologians and bishops and other representatives of different churches or dioceses that is convened to regulate matters of discipline or doctrine\nn. a meeting of people for consultation",
+      "ex": "You should run for city council.",
+      "exz": "你应该去竞选城市委员会。",
+      "fm": "名词复数:councils",
+      "ph": "a city council 市议会|a student council 学生会",
+      "mn": "族:councillor/councilor n. 议员",
+      "dis": "【学习要点】\ncouncil 委员会，counsel 建议、律师，注意同音异形。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 193,
+      "list_order": 13,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 会议, 委员会\n[经] 委员会",
+        "definition": "n. a body serving in an administrative capacity\nn. (Christianity) an assembly of theologians and bishops and other representatives of different churches or dioceses that is convened to regulate matters of discipline or doctrine\nn. a meeting of people for consultation",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "delicate",
+      "us": "ˈdɛlɪkɪt",
+      "uk": "ˈdelɪkət",
+      "pos": "adj.",
+      "cn": "adj. 易碎的、脆弱的；精致的；微妙难处理的；清淡柔和的。",
+      "en": "a. exquisitely fine and subtle and pleasing; susceptible to injury\ns. marked by great skill especially in meticulous technique\ns. easily broken or damaged or destroyed\ns. easily hurt",
+      "ex": "That's a delicate matter.",
+      "exz": "那是个微妙的局势。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "a delicate balance 微妙平衡|delicate skin 娇嫩皮肤",
+      "mn": "族:delicacy n. 精致、美味；delicately adv. 精细地",
+      "dis": "【学习要点】\n可指材料易碎、身体虚弱或问题棘手。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 194,
+      "list_order": 14,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 细致优雅的, 微妙的, 美味的\n[医] 柔弱的",
+        "definition": "a. exquisitely fine and subtle and pleasing; susceptible to injury\ns. marked by great skill especially in meticulous technique\ns. easily broken or damaged or destroyed\ns. easily hurt",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "diplomat",
+      "us": "ˈdɪpləmæt",
+      "uk": "ˈdipləmæt",
+      "pos": "n.",
+      "cn": "n. 外交官；善于交际、处理关系的人。",
+      "en": "n. an official engaged in international negotiations\nn. a person who deals tactfully with others",
+      "ex": "Diplomats are allowed various privileges.",
+      "exz": "外交官有多种特权。",
+      "fm": "名词复数:diplomats",
+      "ph": "a senior diplomat 高级外交官|a skilled diplomat 善交际的人",
+      "mn": "族:diplomacy n. 外交；diplomatic adj. 外交的、圆通的",
+      "dis": "【学习要点】\ndiploma 是文凭，diplomat 是外交官。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 195,
+      "list_order": 15,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 外交官, 有外交手腕的人\n[法] 外交家, 外交官, 有权谋的人",
+        "definition": "n. an official engaged in international negotiations\nn. a person who deals tactfully with others",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "exert",
+      "us": "ɪgˈzɝt",
+      "uk": "ɪgˈzɜːt",
+      "pos": "vt.",
+      "cn": "vt. 施加；运用、发挥；努力。",
+      "en": "v. put to use\nv. make a great effort at a mental or physical task",
+      "ex": "Parents can exert a strong influence on children.",
+      "exz": "父母会对孩子产生很大影响。",
+      "fm": "过去分词:exerted|第三人称单数:exerts|过去式:exerted|现在分词:exerting",
+      "ph": "exert influence on 对……施加影响|exert oneself 努力",
+      "mn": "族:exertion n. 努力、用力",
+      "dis": "【学习要点】\nexert pressure on 向……施压。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 196,
+      "list_order": 16,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 发挥, 运用, 施以影响\n[法] 施加, 产生, 行使",
+        "definition": "v. put to use\nv. make a great effort at a mental or physical task",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "hook",
+      "us": "hʊk",
+      "uk": "huk",
+      "pos": "n. v.",
+      "cn": "n. 钩子；钩状物。v. 钩住；吸引；使着迷。",
+      "en": "n. a catch for locking a door\nn. a sharp curve or crook; a shape resembling a hook\nn. a mechanical device that is curved or bent to suspend or hold or pull something\nn. a curved or bent implement for suspending or pulling something",
+      "ex": "Tom hooked his arm under John's shoulder and flipped him over.",
+      "exz": "汤姆把手臂勾进约翰的腋下，把他翻了过去。",
+      "fm": "名词复数:hooks|过去分词:hooked|过去式:hooked|现在分词:hooking|第三人称单数:hooks",
+      "ph": "hook up 连接|be hooked on 对……着迷",
+      "mn": "族:hooked adj. 钩状的、着迷的",
+      "dis": "【学习要点】\noff the hook 摆脱困境、责任。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 197,
+      "list_order": 17,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 钩, 钩状, 镰刀, 陷阱\nvt. 挂...于钩上, 钩住, 引上钩, 偷窃\nvi. 弯成钩状, 钩紧\n[计] 钩",
+        "definition": "n. a catch for locking a door\nn. a sharp curve or crook; a shape resembling a hook\nn. a mechanical device that is curved or bent to suspend or hold or pull something\nn. a curved or bent implement for suspending or pulling something",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "proverb",
+      "us": "ˈprɒvɜːb",
+      "uk": "ˈprɑːvɜːrb",
+      "pos": "n.",
+      "cn": "n. 谚语、格言。",
+      "en": "n. a condensed but memorable saying embodying some important fact of experience that is taken as true by many people",
+      "ex": "What is your favorite proverb?",
+      "exz": "你最喜欢的谚语是什么？",
+      "fm": "名词复数:proverbs",
+      "ph": "as the proverb goes 正如谚语所说|an old proverb 一句古谚",
+      "mn": "族:proverbial adj. 谚语中的、众所周知的",
+      "dis": "【学习要点】\nproverb 通常是表达普遍经验的固定语句。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 198,
+      "list_order": 18,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 谚语, 格言, 箴言\nvt. 使众所周知, 用谚语表达",
+        "definition": "n. a condensed but memorable saying embodying some important fact of experience that is taken as true by many people",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "scratch",
+      "us": "skrætʃ",
+      "uk": "skrætʃ",
+      "pos": "v. n. adj.",
+      "cn": "v. 抓、搔；划伤；刮去、删除。n. 抓痕、划痕。adj. 草稿用的、临时拼凑的。",
+      "en": "n. a competitor who has withdrawn from competition\nn. (golf) a handicap of zero strokes\nn. an indication of damage\nv. cut the surface of; wear away the surface of",
+      "ex": "The boy scratched his ear.",
+      "exz": "那男孩搔了搔耳朵。",
+      "fm": "现在分词:scratching|过去式:scratched|名词复数:scratches|过去分词:scratched|第三人称单数:scratches",
+      "ph": "from scratch 从零开始|scratch out 划掉",
+      "mn": "",
+      "dis": "【学习要点】\nfrom scratch、up to scratch 是常见习语。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 199,
+      "list_order": 19,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 抓痕, 搔, 抓, 擦伤, 刮擦声, 乱写, 零分, 起跑线\nvt. 搔, 抓, 挖出, 擦, 刮, 乱涂, 勾抹掉\nvi. 搔, 抓, 发刮擦声, 勉强糊口\na. 碰巧的, 凑合的, 打草稿用的\n[计] 擦除",
+        "definition": "n. a competitor who has withdrawn from competition\nn. (golf) a handicap of zero strokes\nn. an indication of damage\nv. cut the surface of; wear away the surface of",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "symbol",
+      "us": "ˈsɪmbl",
+      "uk": "ˈsimbl",
+      "pos": "n.",
+      "cn": "n. 象征；符号、标志。",
+      "en": "n. an arbitrary sign (written or printed) that has acquired a conventional significance\nn. something visible that by association or convention represents something else that is invisible",
+      "ex": "The belt became a symbol of fear for me.",
+      "exz": "这条腰带对我来说成为了恐惧的象征。",
+      "fm": "名词复数:symbols",
+      "ph": "a symbol of ……的象征|a mathematical symbol 数学符号",
+      "mn": "族:symbolic adj. 象征的；symbolize v. 象征",
+      "dis": "【学习要点】\nsymbol 后多用 of 表所象征的事物。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 200,
+      "list_order": 20,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 符号, 象征, 代号, 信条\n[计] 符号; 码元",
+        "definition": "n. an arbitrary sign (written or printed) that has acquired a conventional significance\nn. something visible that by association or convention represents something else that is invisible",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "bloom",
+      "us": "blum",
+      "uk": "bluːm",
+      "pos": "n. vi.",
+      "cn": "n. 花、开花；繁盛、青春焕发。vi. 开花；繁荣。",
+      "en": "n. the best time of youth\nn. a rosy color (especially in the cheeks) taken as a sign of good health\nv. produce or yield flowers",
+      "ex": "These flowers bloom earlier than the others do.",
+      "exz": "这些花比别的花早开花。",
+      "fm": "名词复数:blooms|过去式:bloomed|现在分词:blooming|过去分词:bloomed|第三人称单数:blooms",
+      "ph": "in full bloom 盛开|come into bloom 开花",
+      "mn": "族:blooming adj. 盛开的",
+      "dis": "【学习要点】\nbloom 与 blossom 语义相近，但不必处处互换。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 201,
+      "list_order": 21,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 花, 开花, 青春, 钢块\nvi. 开花, 焕发青春, 茂盛\nvt. 使茂盛, 把...轧成钢坯",
+        "definition": "n. the best time of youth\nn. a rosy color (especially in the cheeks) taken as a sign of good health\nv. produce or yield flowers",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "bold",
+      "us": "boʊld",
+      "uk": "bəʊld",
+      "pos": "adj. n.",
+      "cn": "adj. 大胆的、勇敢的；醒目的；粗体的。n. 粗体字。",
+      "en": "a. fearless and daring\ns. clear and distinct",
+      "ex": "It was a bold decision to start again.",
+      "exz": "重新开始是一个大胆的决定。",
+      "fm": "比较级:bolder|最高级:boldest",
+      "ph": "a bold decision 大胆决定|in bold 用粗体",
+      "mn": "族:boldly adv. 大胆地；boldness n. 大胆",
+      "dis": "【学习要点】\n排版语境 bold 指粗体。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 202,
+      "list_order": 22,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 大胆的\nn. 粗体\n[计] 粗体",
+        "definition": "a. fearless and daring\ns. clear and distinct",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "debate",
+      "us": "dɪˈbet",
+      "uk": "dɪˈbeɪt",
+      "pos": "n. v.",
+      "cn": "n. 辩论、讨论。v. 辩论、讨论；仔细考虑。",
+      "en": "n. the formal presentation of a stated proposition and the opposition to it (usually followed by a vote)\nv. argue with one another\nv. discuss the pros and cons of an issue",
+      "ex": "We debated on the question of world population.",
+      "exz": "我们在世界人口问题上争辩了一番。",
+      "fm": "名词复数:debates|过去分词:debated|现在分词:debating|过去式:debated|第三人称单数:debates",
+      "ph": "a debate on 关于……的辩论|debate whether 讨论是否",
+      "mn": "族:debatable adj. 有争议的；debater n. 辩手",
+      "dis": "【学习要点】\ndebate 作为动词可直接接议题。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 203,
+      "list_order": 23,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 辩论, 讨论\nv. 争论, 辩论",
+        "definition": "n. the formal presentation of a stated proposition and the opposition to it (usually followed by a vote)\nv. argue with one another\nv. discuss the pros and cons of an issue",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "distract",
+      "us": "dɪˈstrækt",
+      "uk": "disˈtrækt",
+      "pos": "vt.",
+      "cn": "vt. 分散注意力；使分心；使烦扰。",
+      "en": "v. draw someone's attention away from something",
+      "ex": "Don't distract me while I am studying.",
+      "exz": "当我学习的时候不要打扰我。",
+      "fm": "过去分词:distracted|现在分词:distracting|过去式:distracted|第三人称单数:distracts",
+      "ph": "distract sb. from 使某人从……分心|be distracted by 因……分心",
+      "mn": "族:distraction n. 干扰、消遣；distracted adj. 分心的",
+      "dis": "【学习要点】\nfrom 后可接 doing sth.。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 204,
+      "list_order": 24,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 转移, 分心, 使发狂",
+        "definition": "v. draw someone's attention away from something",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "liberate",
+      "us": "ˈlɪbəˈret",
+      "uk": "ˈlɪbəreɪt",
+      "pos": "vt.",
+      "cn": "vt. 解放；释放；使摆脱束缚。",
+      "en": "v. grant freedom to",
+      "ex": "Education can liberate people from ignorance.",
+      "exz": "教育能使人摆脱无知。",
+      "fm": "过去分词:liberated|过去式:liberated|第三人称单数:liberates|现在分词:liberating",
+      "ph": "liberate A from B 把A从B中解放|liberate a country 解放国家",
+      "mn": "族:liberation n. 解放；liberator n. 解放者",
+      "dis": "【学习要点】\nliberation 不同于 liberty“自由”，但意义相关。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 205,
+      "list_order": 25,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 解放, 释放, 使自由\n[机] 释出, 放出",
+        "definition": "v. grant freedom to",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "minor",
+      "us": "ˈmaɪnɚ",
+      "uk": "ˈmaɪnə",
+      "pos": "adj. n. vi.",
+      "cn": "adj. 较小的、次要的；较轻的；小调的。n. 未成年人；辅修科目。vi. 辅修。",
+      "en": "a. of lesser importance or stature or rank\na. lesser in scope or effect\na. inferior in number or size or amount\na. of a scale or mode",
+      "ex": "He played a minor part in the play.",
+      "exz": "他在剧中演了一个小角色。",
+      "fm": "名词复数:minors",
+      "ph": "a minor problem 小问题|minor in 辅修",
+      "mn": "族:minority n. 少数、少数群体",
+      "dis": "【学习要点】\n专业主修 major in，与 minor in 相对。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 206,
+      "list_order": 26,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 未成年人, 副修科目\na. 较小的, 二流的, 未成年的\nvi. 副修\n[计] 次要",
+        "definition": "a. of lesser importance or stature or rank\na. lesser in scope or effect\na. inferior in number or size or amount\na. of a scale or mode",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "necessity",
+      "us": "nəˈsɛsəti",
+      "uk": "nəˈsesəti",
+      "pos": "n.",
+      "cn": "n. 必要、必然性；必需品。",
+      "en": "n. the condition of being essential or indispensable\nn. anything indispensable",
+      "ex": "Clean water is a basic necessity.",
+      "exz": "干净的水是基本必需品。",
+      "fm": "名词复数:necessities",
+      "ph": "the necessity of ……的必要性|basic necessities 基本必需品",
+      "mn": "族:necessary adj. 必要的；necessarily adv. 必然地",
+      "dis": "【学习要点】\nnot necessarily 不一定；不等于“不必要”。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 207,
+      "list_order": 27,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 需要, 必需品, 必然\n[法] 必要性, 必然性, 必要",
+        "definition": "n. the condition of being essential or indispensable\nn. anything indispensable",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "recreation",
+      "us": ",rɛkrɪˈeʃən",
+      "uk": "ˌrekriˈeɪʃn",
+      "pos": "n.",
+      "cn": "n. 娱乐、消遣；休养。",
+      "en": "n an activity that diverts or amuses or stimulates\nn activity that refreshes and recreates; activity that renews your health and spirits by enjoyment and relaxation",
+      "ex": "The park provides space for recreation.",
+      "exz": "这座公园提供休闲娱乐场所。",
+      "fm": "名词复数:recreations",
+      "ph": "recreation facilities 娱乐设施|for recreation 为了消遣",
+      "mn": "族:recreational adj. 娱乐的",
+      "dis": "【学习要点】\nre-creation 可指重新创造；与 recreation 娱乐区分。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 208,
+      "list_order": 28,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 娱乐, 消遣, 休息, 再创造\n[医] 娱乐, 休养",
+        "definition": "n an activity that diverts or amuses or stimulates\nn activity that refreshes and recreates; activity that renews your health and spirits by enjoyment and relaxation",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "resume",
+      "us": "v. rɪˈzuːm；n. ˈrezəmeɪ",
+      "uk": "v. rɪˈzjuːm；n. ˈrezəmeɪ",
+      "pos": "v. n.",
+      "cn": "v. 重新开始、继续；恢复。n.（亦作résumé）简历；摘要。",
+      "en": "v. take up or begin anew\nv. return to a previous location or condition\nv. assume anew",
+      "ex": "We will resume the discussion after lunch.",
+      "exz": "我们午饭后将继续讨论。",
+      "fm": "过去式:resumed|过去分词:resumed|现在分词:resuming|第三人称单数:resumes|名词复数:resumes",
+      "ph": "resume doing sth. 继续做某事|send a résumé 投递简历",
+      "mn": "族:resumption n. 恢复、重新开始",
+      "dis": "【学习要点】\n动词 /rɪˈzjuːm/（英）；名词 résumé /ˈrezəmeɪ/，不要混读。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 209,
+      "list_order": 29,
+      "references": [
+        "https://github.com/skywind3000/ECDICT",
+        "https://dictionary.cambridge.org/dictionary/learner-english/resume"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 重新开始, 取回, 恢复\nvi. 再开始\nn. 摘要, 个人简历\n[计] 继续执行",
+        "definition": "v. take up or begin anew\nv. return to a previous location or condition\nv. assume anew",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "stiff",
+      "us": "stɪf",
+      "uk": "stif",
+      "pos": "adj. v.",
+      "cn": "adj. 僵硬的；难弯的；严厉的；困难的；强烈的。v.（非正式）不给应付款。",
+      "en": "n. an ordinary man\ns. not moving or operating freely\ns. powerful\nr. extremely",
+      "ex": "After standing for 6 hours, Antonio's legs became stiff.",
+      "exz": "Antonio站了六个小时后，腿变得僵硬。",
+      "fm": "比较级:stiffer|名词复数:stiffs|最高级:stiffest",
+      "ph": "a stiff neck 脖子僵硬|stiff competition 激烈竞争",
+      "mn": "族:stiffen v. 使僵硬；stiffness n. 僵硬",
+      "dis": "【学习要点】\n考试优先掌握身体僵硬、物体硬挺和竞争激烈等形容词义。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 07|学习整理版",
+      "source_list": 7,
+      "source_order": 210,
+      "list_order": 30,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 坚硬的, 严厉的, 呆板的, 生硬的, 刚强的, 强烈的, 粘的, 稠的, 艰难的\nn. 死尸, 醉鬼, 钞票\nvt. 不肯付...小费",
+        "definition": "n. an ordinary man\ns. not moving or operating freely\ns. powerful\nr. extremely",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    }
+  ]
+}

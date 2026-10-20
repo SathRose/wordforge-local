@@ -1,0 +1,1027 @@
+{
+  "name": "词达人｜CET4（第二版）｜List 08",
+  "sourceName": "词达人",
+  "words": [
+    {
+      "w": "alternative",
+      "us": "ɔlˈtɝnətɪv",
+      "uk": "ɔːlˈtɜːnətɪv",
+      "pos": "n. adj.",
+      "cn": "n. 替代方案、选择。adj. 可供选择的；非传统的。",
+      "en": "s. necessitating a choice between mutually exclusive possibilities\ns. pertaining to unconventional choices",
+      "ex": "Don't include multiple alternative words inside the same sentence.",
+      "exz": "在同一句中不要包含多个可选单词。",
+      "fm": "名词复数:alternatives",
+      "ph": "an alternative to ……的替代品|have no alternative 别无选择",
+      "mn": "族:alternatively adv. 或者、另一选择是",
+      "dis": "【学习要点】\nalternative to 中 to 是介词。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 211,
+      "list_order": 1,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 两者择一, 供替代的选择\na. 两者择一的, 供选择的\n[计] 选择对象",
+        "definition": "s. necessitating a choice between mutually exclusive possibilities\ns. pertaining to unconventional choices",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "burden",
+      "us": "ˈbɝdn",
+      "uk": "ˈbɜːdn",
+      "pos": "n. vt.",
+      "cn": "n. 负担、重担；责任。vt. 使负担、使烦恼。",
+      "en": "n. an onerous or difficult concern\nn. the central idea that is expanded in a document or discourse\nv. weight down with a load",
+      "ex": "I know I'm a burden; you don't have to repeat it.",
+      "exz": "我知道自己是个累赘，你没必要反复提。",
+      "fm": "名词复数:burdens|过去分词:burdened|现在分词:burdening|过去式:burdened|第三人称单数:burdens",
+      "ph": "a heavy burden 沉重负担|burden sb. with 使某人负担",
+      "mn": "族:burdensome adj. 繁重的",
+      "dis": "【学习要点】\nbear the burden of 承担……的重担。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 212,
+      "list_order": 2,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 负担, 重载, 担子, 责任\nvt. 装货于, 烦扰, 使负担",
+        "definition": "n. an onerous or difficult concern\nn. the central idea that is expanded in a document or discourse\nv. weight down with a load",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "dim",
+      "us": "dɪm",
+      "uk": "dim",
+      "pos": "adj. v.",
+      "cn": "adj. 昏暗的；模糊的；不明朗的。v. 变暗、使暗淡。",
+      "en": "v. switch (a car's headlights) from a higher to a lower beam\nv. become dim or lusterless\nv. make dim or lusterless\ns. lacking in light; not bright or harsh",
+      "ex": "The room was lit by a dim lamp.",
+      "exz": "房间由一盏昏暗的灯照亮。",
+      "fm": "过去分词:dimmed|比较级:dimmer|过去式:dimmed|现在分词:dimming|最高级:dimmest|第三人称单数:dims",
+      "ph": "dim light 昏暗灯光|a dim memory 模糊记忆",
+      "mn": "族:dimly adv. 昏暗地；dimness n. 昏暗",
+      "dis": "【学习要点】\ndimmed、dimming 双写 m。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 213,
+      "list_order": 3,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 暗淡的, 模糊的\nvt. 使暗淡\n[计] 数据解释模块",
+        "definition": "v. switch (a car's headlights) from a higher to a lower beam\nv. become dim or lusterless\nv. make dim or lusterless\ns. lacking in light; not bright or harsh",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "evident",
+      "us": "ˈɛvɪdənt",
+      "uk": "ˈevɪdənt",
+      "pos": "adj.",
+      "cn": "adj. 明显的、清楚的。",
+      "en": "s clearly revealed to the mind or the senses or judgment\ns capable of being seen or noticed",
+      "ex": "It is evident that he has made a mistake.",
+      "exz": "很明显的是他犯了错。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "it is evident that 显然……|be evident from 从……可见",
+      "mn": "族:evidence n. 证据；evidently adv. 显然",
+      "dis": "【学习要点】\nevidence 通常不可数，a piece of evidence 一条证据。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 214,
+      "list_order": 4,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 显然的, 明显的",
+        "definition": "s clearly revealed to the mind or the senses or judgment\ns capable of being seen or noticed",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "fulfill",
+      "us": "fulˈfil",
+      "uk": "fulˈfɪl",
+      "pos": "vt.",
+      "cn": "vt. 履行；完成、实现；满足。",
+      "en": "v put in effect\nv meet the requirements or expectations of\nv fill or meet a want or need",
+      "ex": "Do we all have a destiny to fulfill?",
+      "exz": "我们都有要实现的命运吗？",
+      "fm": "英式拼写:fulfil|过去式:fulfilled|过去分词:fulfilled|现在分词:fulfilling|第三人称单数:fulfills",
+      "ph": "fulfill a promise 履行承诺|fulfill one's potential 发挥潜力",
+      "mn": "族:fulfillment/fulfilment n. 履行、满足",
+      "dis": "【学习要点】\n美式 fulfill，英式常用 fulfil；fulfilled、fulfilling。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 215,
+      "list_order": 5,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 实践, 履行, 实行, 完成, 结束, 满足\n[法] 履行, 完成, 达到",
+        "definition": "v put in effect\nv meet the requirements or expectations of\nv fill or meet a want or need",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "grief",
+      "us": "grif",
+      "uk": "griːf",
+      "pos": "n.",
+      "cn": "n. 悲痛、悲伤；令人悲伤的事。",
+      "en": "n. intense sorrow caused by loss of a loved one (especially by death)\nn. something that causes great unhappiness",
+      "ex": "She was filled with deep grief to hear of her father's sudden death.",
+      "exz": "她得知父亲突然离世，不禁心如刀割。",
+      "fm": "名词复数:griefs",
+      "ph": "overcome with grief 悲痛欲绝|grief over 因……悲伤",
+      "mn": "族:grieve v. 悲痛；grieving adj. 悲伤的",
+      "dis": "【学习要点】\n通常强调失去亲人等造成的深切悲痛。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 216,
+      "list_order": 6,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 伤心, 忧愁, 悲痛, 不幸, 灾难",
+        "definition": "n. intense sorrow caused by loss of a loved one (especially by death)\nn. something that causes great unhappiness",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "inspect",
+      "us": "ɪnˈspɛkt",
+      "uk": "ɪnˈspekt",
+      "pos": "vt.",
+      "cn": "vt. 检查、检验；视察。",
+      "en": "v. look over carefully",
+      "ex": "Sir, can we quickly inspect your luggage please?",
+      "exz": "先生，我们可以检查一下您的行李吗？",
+      "fm": "过去分词:inspected|现在分词:inspecting|过去式:inspected|第三人称单数:inspects",
+      "ph": "inspect goods 检验货物|inspect for 检查有无",
+      "mn": "族:inspection n. 检查；inspector n. 检查员",
+      "dis": "【学习要点】\ninspect 的宾语是被检查的事物。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 217,
+      "list_order": 7,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 检查, 检阅, 检验\nvi. 检查",
+        "definition": "v. look over carefully",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "notable",
+      "us": "ˈnotəbl",
+      "uk": "ˈnəʊtəbl",
+      "pos": "adj. n.",
+      "cn": "adj. 值得注意的、显著的；著名的。n. 名人、要人。",
+      "en": "n a celebrity who is an inspiration to others\ns worthy of notice\ns widely known and esteemed",
+      "ex": "This is a notable improvement.",
+      "exz": "这是一次显著的改进。",
+      "fm": "名词复数:notables|第三人称单数:notables",
+      "ph": "a notable achievement 显著成就|be notable for 因……闻名",
+      "mn": "族:notably adv. 尤其、显著地",
+      "dis": "【学习要点】\nnotable 强调值得注意，而 noticeable 强调容易察觉。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 218,
+      "list_order": 8,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 著名人士, 值得注意之事物\na. 值得注意的, 显著的",
+        "definition": "n a celebrity who is an inspiration to others\ns worthy of notice\ns widely known and esteemed",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "tremendous",
+      "us": "trəˈmɛndəs",
+      "uk": "trəˈmendəs",
+      "pos": "adj.",
+      "cn": "adj. 巨大的；极大的；极好的。",
+      "en": "s extraordinarily large in size or extent or amount or power or degree; that a whole civilization should be dependent on technology\"- Walter Lippman\ns extraordinarily good or great; used especially as intensifiers\ns extreme in degree or extent or amount or impact",
+      "ex": "The pressure was tremendous.",
+      "exz": "压力很巨大。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "tremendous pressure 巨大压力|tremendous progress 巨大进步",
+      "mn": "族:tremendously adv. 极其地",
+      "dis": "【学习要点】\n语气较强，不仅仅表示大小。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 219,
+      "list_order": 9,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 巨大的, 非常的, 可怕的",
+        "definition": "s extraordinarily large in size or extent or amount or power or degree; that a whole civilization should be dependent on technology\"- Walter Lippman\ns extraordinarily good or great; used especially as intensifiers\ns extreme in degree or extent or amount or impact",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "overlook",
+      "us": ",ovɚˈlʊk",
+      "uk": "ˌəʊvəˈluk",
+      "pos": "vt.",
+      "cn": "vt. 忽视、未注意；俯瞰；宽容、不计较。",
+      "en": "n. a high place affording a good view\nv. look past, fail to notice\nv. watch over",
+      "ex": "We have overlooked this important fact.",
+      "exz": "我们看漏了这件重要的事。",
+      "fm": "现在分词:overlooking|过去分词:overlooked|第三人称单数:overlooks|过去式:overlooked",
+      "ph": "overlook a mistake 忽略错误|overlook the sea 俯瞰大海",
+      "mn": "",
+      "dis": "【学习要点】\noverlook 与 oversee“监督”不同。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 220,
+      "list_order": 10,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 俯瞰, 远眺, 没注意到\nn. 眺望, 俯瞰到的景色",
+        "definition": "n. a high place affording a good view\nv. look past, fail to notice\nv. watch over",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "attribute",
+      "us": "n. ˈætrɪbjuːt；v. əˈtrɪbjuːt",
+      "uk": "n. ˈætrɪbjuːt；v. əˈtrɪbjuːt",
+      "pos": "vt. n.",
+      "cn": "vt. 把……归因于；认为……属于。n. 属性、特征。",
+      "en": "n. an abstraction belonging to or characteristic of an entity",
+      "ex": "Never attribute to malice that which is adequately explained by stupidity.",
+      "exz": "能解释为愚蠢的，就不要解释为恶意。",
+      "fm": "过去分词:attributed|名词复数:attributes|过去式:attributed|第三人称单数:attributes|现在分词:attributing",
+      "ph": "attribute A to B 把A归因于B|a personal attribute 个人特质",
+      "mn": "族:attribution n. 归因；attributable adj. 可归因于的",
+      "dis": "【学习要点】\n动词 /əˈtrɪbjuːt/；名词 /ˈætrɪbjuːt/。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 221,
+      "list_order": 11,
+      "references": [
+        "https://github.com/skywind3000/ECDICT",
+        "https://dictionary.cambridge.org/dictionary/english/attribute"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 属性, 标志, 定语\nvt. 把...归于, 认为...属于\n[计] 属性",
+        "definition": "n. an abstraction belonging to or characteristic of an entity",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "deputy",
+      "us": "ˈdɛpjuti",
+      "uk": "ˈdepjuti",
+      "pos": "n. adj.",
+      "cn": "n. 副手、代理人；议员；副警长。adj. 副的、代理的。",
+      "en": "n. someone authorized to exercise the powers of sheriff in emergencies\nn. an assistant with power to act when his superior is absent\nn. a member of the lower chamber of a legislative assembly (such as in France)\nn. a person appointed to represent or act on behalf of others",
+      "ex": "He will be my deputy while I am away.",
+      "exz": "我不在的时候，他将是我的代理人。",
+      "fm": "名词复数:deputies",
+      "ph": "deputy director 副主任|act as deputy 充当代理人",
+      "mn": "族:deputize v. 代理",
+      "dis": "【学习要点】\ndeputy 可直接用在职位名称前。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 222,
+      "list_order": 12,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 副手，代理人",
+        "definition": "n. someone authorized to exercise the powers of sheriff in emergencies\nn. an assistant with power to act when his superior is absent\nn. a member of the lower chamber of a legislative assembly (such as in France)\nn. a person appointed to represent or act on behalf of others",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "gear",
+      "us": "gɪr",
+      "uk": "gɪə",
+      "pos": "n. v.",
+      "cn": "n. 齿轮、挡位；设备、用具；衣物。v. 使适合；调整。",
+      "en": "n. a toothed wheel that engages another toothed mechanism in order to change the speed or direction of transmitted motion\nn. a mechanism for transmitting motion for some specific purpose (as the steering gear of a vehicle)\nn. equipment consisting of miscellaneous articles needed for a particular operation or sport etc.\nv. set the level or character of",
+      "ex": "Do you have rain gear with you?",
+      "exz": "你有没有带雨具？",
+      "fm": "过去分词:geared|名词复数:gears|过去式:geared|现在分词:gearing|第三人称单数:gears",
+      "ph": "gear up for 为……准备|be geared to 适应、针对",
+      "mn": "",
+      "dis": "【学习要点】\ngear 泛指装备时常不可数。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 223,
+      "list_order": 13,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 齿轮, 工具\nvt. 以齿轮连起, 开动, 使适应, 安排\nvi. 连接上, 适合",
+        "definition": "n. a toothed wheel that engages another toothed mechanism in order to change the speed or direction of transmitted motion\nn. a mechanism for transmitting motion for some specific purpose (as the steering gear of a vehicle)\nn. equipment consisting of miscellaneous articles needed for a particular operation or sport etc.\nv. set the level or character of",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "imperial",
+      "us": "ɪmˈpɪrɪəl",
+      "uk": "ɪmˈpɪəriəl",
+      "pos": "adj. n.",
+      "cn": "adj. 帝国的；皇帝的；英制的。n. 特等品。",
+      "en": "n. a small tufted beard worn by Emperor Napoleon III\nn. a piece of luggage carried on top of a coach\na. relating to or associated with an empire\na. of or belonging to the British Imperial System of weights and measures",
+      "ex": "The museum contains imperial treasures.",
+      "exz": "博物馆收藏着皇室珍宝。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "imperial power 帝国权力|imperial units 英制单位",
+      "mn": "族:imperialism n. 帝国主义；imperialist n./adj. 帝国主义者、的",
+      "dis": "【学习要点】\n英制计量也可用 imperial。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 224,
+      "list_order": 14,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 帝王的, 宗主国的, 至尊的, 壮丽的\nn. 特等品",
+        "definition": "n. a small tufted beard worn by Emperor Napoleon III\nn. a piece of luggage carried on top of a coach\na. relating to or associated with an empire\na. of or belonging to the British Imperial System of weights and measures",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "incline",
+      "us": "ɪnˈklaɪn",
+      "uk": "inˈklain",
+      "pos": "v. n.",
+      "cn": "v. 倾向；倾斜；使倾向。n. 斜坡。",
+      "en": "v. bend or turn (one's ear) towards a speaker in order to listen well\nv. lower or bend (the head or upper body), as in a nod or bow\nv. feel favorably disposed or willing",
+      "ex": "I incline to agree with your view.",
+      "exz": "我倾向于同意你的观点。",
+      "fm": "过去式:inclined|现在分词:inclining|过去分词:inclined|第三人称单数:inclines|名词复数:inclines",
+      "ph": "be inclined to 倾向于|incline towards 倾向",
+      "mn": "族:inclination n. 倾向、倾斜",
+      "dis": "【学习要点】\nbe inclined to do sth. 想做、倾向于做。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 225,
+      "list_order": 15,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 倾斜, 斜坡, 斜面\nvt. 使倾向于, 使倾斜\nvi. 倾向, 倾斜, 爱好, 易于",
+        "definition": "v. bend or turn (one's ear) towards a speaker in order to listen well\nv. lower or bend (the head or upper body), as in a nod or bow\nv. feel favorably disposed or willing",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "overhear",
+      "us": ",ovɚˈhɪr",
+      "uk": "ˌəʊvəˈhɪə",
+      "pos": "vt.",
+      "cn": "vt. 偶然听到、无意中听到。",
+      "en": "v hear, usually without the knowledge of the speakers",
+      "ex": "I did not mean to overhear your conversation.",
+      "exz": "我并非有意听到你们的谈话。",
+      "fm": "过去分词:overheard|过去式:overheard|现在分词:overhearing|第三人称单数:overhears",
+      "ph": "overhear sb. doing 偶然听见某人在做|overhear a conversation 无意中听见谈话",
+      "mn": "",
+      "dis": "【学习要点】\n过去式、过去分词 overheard。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 226,
+      "list_order": 16,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 无意中听到, 偷听",
+        "definition": "v hear, usually without the knowledge of the speakers",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "petroleum",
+      "us": "pəˈtrolɪəm",
+      "uk": "pəˈtrəʊliəm",
+      "pos": "n.",
+      "cn": "n. 石油、原油。",
+      "en": "n. a dark oil consisting mainly of hydrocarbons",
+      "ex": "This factory processes petroleum.",
+      "exz": "这家工厂加工石油。",
+      "fm": "通常不可数:petroleum",
+      "ph": "petroleum products 石油产品|petroleum industry 石油工业",
+      "mn": "",
+      "dis": "【学习要点】\npetroleum 石油，petrol 英式汽油，gasoline 美式汽油。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 227,
+      "list_order": 17,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 石油\n[化] 石油",
+        "definition": "n. a dark oil consisting mainly of hydrocarbons",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "scandal",
+      "us": "ˈskændl",
+      "uk": "ˈskændəl",
+      "pos": "n.",
+      "cn": "n. 丑闻、丑事；令人愤慨的事；流言蜚语。",
+      "en": "n. disgraceful gossip about the private lives of other people\nn. a disgraceful event",
+      "ex": "That scandal cost him his reputation.",
+      "exz": "丑闻让他付出了失去声誉的代价。",
+      "fm": "名词复数:scandals",
+      "ph": "a political scandal 政治丑闻|cause a scandal 引起丑闻",
+      "mn": "族:scandalous adj. 可耻的；scandalize v. 使震惊愤慨",
+      "dis": "【学习要点】\n注意 scandal 与 candle 拼写不同。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 228,
+      "list_order": 18,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 丑闻, 中伤, 耻辱, 反感, 流言蜚语\n[法] 丑事, 丑闻, 干丑事的人",
+        "definition": "n. disgraceful gossip about the private lives of other people\nn. a disgraceful event",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "vacant",
+      "us": "ˈvekənt",
+      "uk": "ˈveɪkənt",
+      "pos": "adj.",
+      "cn": "adj. 空着的；职位空缺的；茫然的。",
+      "en": "s. void of thought or knowledge\ns. without an occupant or incumbent",
+      "ex": "He was standing there with a vacant look.",
+      "exz": "他站在那里,一脸茫然。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "a vacant seat 空座位|a vacant position 空缺职位",
+      "mn": "族:vacancy n. 空缺；vacantly adv. 茫然地",
+      "dis": "【学习要点】\nvacant 通常指本可被人占用的位置空着。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 229,
+      "list_order": 19,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 空的, 空白的, 空虚的, 空闲的, 茫然的, 空缺的\n[法] 空的, 空虚的, 闲暇的",
+        "definition": "s. void of thought or knowledge\ns. without an occupant or incumbent",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "vote",
+      "us": "vot; voʊt",
+      "uk": "vəʊt",
+      "pos": "n. v.",
+      "cn": "n. 投票、表决；选票；投票权。v. 投票；表决决定。",
+      "en": "n. a choice that is made by counting the number of people in favor of each alternative\nn. the opinion of a group as determined by voting\nn. a body of voters who have the same interests\nn. the total number of voters who participated",
+      "ex": "She voted for Mr Nishioka irrespective of party lines.",
+      "exz": "她不论党派把票投给了西冈先生。",
+      "fm": "名词复数:votes|过去分词:voted|过去式:voted|现在分词:voting|第三人称单数:votes",
+      "ph": "vote for 投票支持|vote against 投票反对",
+      "mn": "族:voter n. 选民；voting n. 投票",
+      "dis": "【学习要点】\nvote on 对某议题表决。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 230,
+      "list_order": 20,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 投票, 选举, 选票, 表决, 选举权, 得票数\nvi. 投票, 选举\nvt. 投票选举, 投票决定, 公认, 使投票",
+        "definition": "n. a choice that is made by counting the number of people in favor of each alternative\nn. the opinion of a group as determined by voting\nn. a body of voters who have the same interests\nn. the total number of voters who participated",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "caution",
+      "us": "ˈkɔʃən",
+      "uk": "ˈkɔːʃn",
+      "pos": "n. vt.",
+      "cn": "n. 小心、谨慎；警告。vt. 警告、提醒。",
+      "en": "n. the trait of being cautious; being attentive to possible danger\nn. a warning against certain acts\nn. judiciousness in avoiding harm or danger\nv. warn strongly; put on guard",
+      "ex": "Please use this tool with caution.",
+      "exz": "请谨慎使用这个工具。",
+      "fm": "过去分词:cautioned|过去式:cautioned|名词复数:cautions|第三人称单数:cautions|现在分词:cautioning",
+      "ph": "with caution 谨慎地|caution sb. against doing 警告别做",
+      "mn": "族:cautious adj. 谨慎的；cautiously adv. 谨慎地",
+      "dis": "【学习要点】\nexercise caution 谨慎行事。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 231,
+      "list_order": 21,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 小心, 慎重, 警示\nvt. 警告\n[计] 警告",
+        "definition": "n. the trait of being cautious; being attentive to possible danger\nn. a warning against certain acts\nn. judiciousness in avoiding harm or danger\nv. warn strongly; put on guard",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "clue",
+      "us": "klʊ",
+      "uk": "kluː",
+      "pos": "n. vt.",
+      "cn": "n. 线索、提示。vt. 提供线索、告知情况。",
+      "en": "n. evidence that helps to solve a problem\nv. roll into a ball",
+      "ex": "The note provided a useful clue.",
+      "exz": "这张便条提供了一条有用线索。",
+      "fm": "名词复数:clues|过去分词:clued|过去式:clued|现在分词:cluing|第三人称单数:clues",
+      "ph": "a clue to ……的线索|have no clue 毫无头绪",
+      "mn": "",
+      "dis": "【学习要点】\na clue to 中 to 为介词。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 232,
+      "list_order": 22,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 线索, 暗示\nvt. 暗示, 提供线索",
+        "definition": "n. evidence that helps to solve a problem\nv. roll into a ball",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "cooperate",
+      "us": "koʊˈɑːpəreɪt",
+      "uk": "kəʊˈɒpəreɪt",
+      "pos": "vi.",
+      "cn": "vi. 合作、配合。",
+      "en": "v work together on a common enterprise of project",
+      "ex": "We are working hard to cooperate more.",
+      "exz": "我们正在努力扩展合作。",
+      "fm": "现在分词:cooperating|过去式:cooperated|过去分词:cooperated|第三人称单数:cooperates",
+      "ph": "cooperate with 与……合作|cooperate in 在……方面合作",
+      "mn": "族:cooperation n. 合作；cooperative adj. 合作的",
+      "dis": "【学习要点】\ncooperate with sb. on sth. 就某事与某人合作。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 233,
+      "list_order": 23,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vi. 合作, 协力, 配合\n[化] 合作",
+        "definition": "v work together on a common enterprise of project",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "enormous",
+      "us": "ɪˈnɔrməs",
+      "uk": "ɪˈnɔːməs",
+      "pos": "adj.",
+      "cn": "adj. 巨大的、庞大的。",
+      "en": "s. extraordinarily large in size or extent or amount or power or degree; that a whole civilization should be dependent on technology\"- Walter Lippman",
+      "ex": "This will have enormous implications for Algeria.",
+      "exz": "这将会对阿尔及利亚产生巨大的影响。",
+      "fm": "词形提示:主要变化见同族词和用法；不机械生成变形",
+      "ph": "an enormous amount 大量|enormous changes 巨大变化",
+      "mn": "族:enormously adv. 极大地；enormity n. 巨大、严重性",
+      "dis": "【学习要点】\nenormity 在正式语境也强调罪行等的严重性。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 234,
+      "list_order": 24,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 巨大的, 庞大的",
+        "definition": "s. extraordinarily large in size or extent or amount or power or degree; that a whole civilization should be dependent on technology\"- Walter Lippman",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "handle",
+      "us": "ˈhændl",
+      "uk": "hændl",
+      "pos": "vt. n.",
+      "cn": "vt. 处理、应付；操作；触摸；搬动。n. 柄、把手；手柄。",
+      "en": "n. the appendage to an object that is designed to be held in order to use or move it\nv. touch, lift, or hold with the hands\nv. show and train",
+      "ex": "She knows how to handle this problem.",
+      "exz": "她知道如何处理这个问题。",
+      "fm": "过去分词:handled|现在分词:handling|过去式:handled|名词复数:handles|第三人称单数:handles",
+      "ph": "handle a problem 处理问题|handle with care 小心轻放",
+      "mn": "族:handling n. 处理、装卸",
+      "dis": "【学习要点】\n“处理问题”时可直接接宾语。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 235,
+      "list_order": 25,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "为本次学习材料编写的例句",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 柄, 把手, 把柄, 柄状物, 手感\nvt. 触摸, 运用, 买卖, 处理, 操作\nvi. 搬运, 易于操纵\nn. 句柄\n[计] 句柄",
+        "definition": "n. the appendage to an object that is designed to be held in order to use or move it\nv. touch, lift, or hold with the hands\nv. show and train",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "restrain",
+      "us": "rɪˈstren",
+      "uk": "rɪˈstreɪn",
+      "pos": "vt.",
+      "cn": "vt. 制止、限制；约束、克制。",
+      "en": "v. keep under control; keep in check\nv. to close within bounds, limit or hold back from movement\nv. hold back",
+      "ex": "You should learn to restrain yourself.",
+      "exz": "你应该学习控制自己的情绪。",
+      "fm": "过去分词:restrained|现在分词:restraining|过去式:restrained|第三人称单数:restrains",
+      "ph": "restrain sb. from doing 阻止某人做|restrain oneself 克制自己",
+      "mn": "族:restraint n. 克制、限制；restrained adj. 克制的",
+      "dis": "【学习要点】\nfrom 后用动名词。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 236,
+      "list_order": 26,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "vt. 抑制, 阻止, 束缚\n[法] 抑制, 遏制, 制止",
+        "definition": "v. keep under control; keep in check\nv. to close within bounds, limit or hold back from movement\nv. hold back",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "scarce",
+      "us": "skɛrs",
+      "uk": "skeəs",
+      "pos": "adj.",
+      "cn": "adj. 缺乏的、稀少的。",
+      "en": "a. deficient in quantity or number compared with the demand",
+      "ex": "Rain is scarce in this country.",
+      "exz": "这个国家降雨量少。",
+      "fm": "比较级:scarcer|最高级:scarcest",
+      "ph": "scarce resources 稀缺资源|make oneself scarce 溜走、躲开",
+      "mn": "族:scarcity n. 缺乏；scarcely adv. 几乎不",
+      "dis": "【学习要点】\nscarcely“几乎不”不是“稀少地”的简单直译。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 237,
+      "list_order": 27,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "a. 难得的, 稀罕的, 缺乏的",
+        "definition": "a. deficient in quantity or number compared with the demand",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "threat",
+      "us": "θrɛt",
+      "uk": "θret",
+      "pos": "n.",
+      "cn": "n. 威胁；构成威胁的人或事。",
+      "en": "n. a warning that something unpleasant is imminent\nn. declaration of an intention or a determination to inflict harm on another",
+      "ex": "The threat to Richmond was ended.",
+      "exz": "对里士满的威胁结束了。",
+      "fm": "名词复数:threats",
+      "ph": "pose a threat to 对……构成威胁|under threat 受到威胁",
+      "mn": "族:threaten v. 威胁；threatening adj. 威胁性的",
+      "dis": "【学习要点】\nthreat to 后接受到威胁的对象。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 238,
+      "list_order": 28,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 恐吓, 恶兆, 威胁\n[经] 威胁",
+        "definition": "n. a warning that something unpleasant is imminent\nn. declaration of an intention or a determination to inflict harm on another",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "toll",
+      "us": "tol",
+      "uk": "təʊl",
+      "pos": "n. v.",
+      "cn": "n. 通行费；伤亡或损失数；代价；钟声。v. 缓慢敲钟、鸣钟。",
+      "en": "n. a fee levied for the use of roads or bridges (used for maintenance)\nv. ring slowly\nv. charge a fee for using",
+      "ex": "We must pay a toll to drive on this road.",
+      "exz": "我们必得缴通行税才能在这条道路上行驶。",
+      "fm": "名词复数:tolls|过去式:tolled|现在分词:tolling|第三人称单数:tolls|过去分词:tolled",
+      "ph": "take a toll on 对……造成损害|the death toll 死亡人数",
+      "mn": "",
+      "dis": "【学习要点】\ntake its toll on 也很常见；不可仅记通行费。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 239,
+      "list_order": 29,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 通行费, 代价, 钟声\nvt. 征收, 敲钟, 鸣钟, 勾引, 引诱\nvi. 征税, 鸣钟",
+        "definition": "n. a fee levied for the use of roads or bridges (used for maintenance)\nv. ring slowly\nv. charge a fee for using",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    },
+    {
+      "w": "trap",
+      "us": "træp",
+      "uk": "træp",
+      "pos": "n. v.",
+      "cn": "n. 陷阱、圈套；困境；捕捉器。v. 困住；诱捕、使落入圈套。",
+      "en": "n. a device in which something (usually an animal) can be caught and penned\nn. drain consisting of a U-shaped section of drainpipe that holds liquid and so prevents a return flow of sewer gas\nn. something (often something deceptively attractive) that catches you unawares\nn. a device to hurl clay pigeons into the air for trapshooters",
+      "ex": "Using a trap, they caught the fox.",
+      "exz": "他们利用陷阱捕捉狐狸。",
+      "fm": "过去分词:trapped|名词复数:traps|过去式:trapped|现在分词:trapping|第三人称单数:traps",
+      "ph": "be trapped in 被困于|fall into a trap 落入陷阱",
+      "mn": "",
+      "dis": "【学习要点】\ntrapped、trapping 双写 p。\n资料说明：截图只提供词表；中文义项、搭配和同族词为学习整理，不是词达人官方逐字释义。",
+      "tg": "词达人|CET4（第二版）|List 08|学习整理版",
+      "source_list": 8,
+      "source_order": 240,
+      "list_order": 30,
+      "references": [
+        "https://github.com/skywind3000/ECDICT"
+      ],
+      "source_attribution": {
+        "wordlist": "用户词达人截图",
+        "chinese": "结合ECDICT及核对结果学习整理",
+        "english": "ECDICT原始英文释义（未截断）",
+        "example": "WordForge 本地例句（已核对语义）",
+        "phrases": "本次学习材料整理",
+        "officialVocabgoDefinition": false
+      },
+      "dictionary_reference": {
+        "translation": "n. 圈套, 陷阱, 诡计, 存水弯\nvi. 设圈套, 设陷阱\nvt. 诱捕, 诱骗, 抓住, 使受限制\n[计] 俘获; 陷井",
+        "definition": "n. a device in which something (usually an animal) can be caught and penned\nn. drain consisting of a U-shaped section of drainpipe that holds liquid and so prevents a return flow of sewer gas\nn. something (often something deceptively attractive) that catches you unawares\nn. a device to hurl clay pigeons into the air for trapshooters",
+        "source": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+      }
+    }
+  ]
+}

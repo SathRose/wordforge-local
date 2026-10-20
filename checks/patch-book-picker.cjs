@@ -1,0 +1,14 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const file = path.resolve(__dirname, '../wordforge.html');
+let html = fs.readFileSync(file, 'utf8');
+const helperStart = html.indexOf('/* 词书显示顺序独立于学习队列；只存词书 ID，取消编辑不写入数据库。 */');
+const start = helperStart >= 0 ? helperStart : html.indexOf('function showBookPicker() {');
+const end = html.indexOf('/* ===================== 词匠 WordForge · 文章精读引擎', start);
+if (start < 0 || end < start) throw new Error('Picker boundaries not found');
+const replacement = fs.readFileSync(path.join(__dirname, 'book-picker-implementation.js'), 'utf8');
+html = html.slice(0, start) + replacement + '\n\n' + html.slice(end);
+if (!html.includes('  defaultBookPickerOrder: defaultBookPickerOrder,')) html = html.replace('window.__WFAPI = {', 'window.__WFAPI = {\n  defaultBookPickerOrder: defaultBookPickerOrder,\n  normalizeBookPickerOrder: normalizeBookPickerOrder,\n  moveBookPickerItem: moveBookPickerItem,\n  showBookPicker: showBookPicker,\n  showBookOrderEditor: showBookOrderEditor,');
+fs.writeFileSync(file, html, 'utf8');
+console.log('Book picker updated');

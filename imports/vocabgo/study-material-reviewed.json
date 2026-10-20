@@ -1,0 +1,2702 @@
+{
+  "accent": {
+    "cn": "n. 口音；重音；强调、重点；特点。vt. 重读；强调。",
+    "phrases": [
+      "a strong accent 浓重的口音",
+      "put the accent on 强调"
+    ],
+    "family": "accented adj. 带口音的；有重音的",
+    "note": "名词通常首音节重读；重音与口音两义均要掌握。"
+  },
+  "clash": {
+    "cn": "n. 冲突；碰撞声。v. 冲突、抵触；撞击作响；颜色不协调。",
+    "phrases": [
+      "clash with 与……冲突",
+      "a clash of interests 利益冲突"
+    ],
+    "family": "",
+    "note": "与 clash with 搭配；会议时间冲突也可用 clash。"
+  },
+  "core": {
+    "cn": "n. 核心；中心部分；果核；地核。adj. 核心的；最基本的。vt. 去掉果核。",
+    "phrases": [
+      "at the core of 在……核心",
+      "core values 核心价值观"
+    ],
+    "family": "",
+    "note": "名词、形容词和“去果核”的动词义要分开。"
+  },
+  "decline": {
+    "cn": "n. 下降；衰退。v. 下降、衰退；婉言拒绝。",
+    "phrases": [
+      "on the decline 在衰退",
+      "decline to do sth. 婉拒做某事"
+    ],
+    "family": "declining adj. 下降的",
+    "note": "拒绝时常接 to do；下降可用 decline by 或 decline to。"
+  },
+  "dense": {
+    "cn": "adj. 密集的；浓密的；稠密的；晦涩难懂的。",
+    "phrases": [
+      "dense population 稠密人口",
+      "dense fog 浓雾"
+    ],
+    "family": "density n. 密度；densely adv. 密集地",
+    "note": "dense 强调密度高，不能一概替换 thick。"
+  },
+  "diploma": {
+    "cn": "n. 毕业文凭；资格证书。",
+    "phrases": [
+      "a college diploma 大学毕业文凭",
+      "obtain a diploma 获得文凭"
+    ],
+    "family": "diploma holder 持文凭者",
+    "note": "diploma 与 degree“学位”有区别；diplomat 是外交官。"
+  },
+  "emphasis": {
+    "cn": "n. 强调；重视；重点；语气加强。",
+    "phrases": [
+      "place emphasis on 强调",
+      "lay emphasis on 重视"
+    ],
+    "family": "emphasize v. 强调；emphatic adj. 强调的",
+    "note": "复数 emphases；搭配中的介词用 on。"
+  },
+  "estimate": {
+    "cn": "n. 估计；估价；估计数。v. 估计、估算；评价。",
+    "phrases": [
+      "estimate the cost 估算成本",
+      "a rough estimate 粗略估计"
+    ],
+    "family": "estimation n. 估计；overestimate v. 高估；underestimate v. 低估",
+    "note": "名词词尾 /mət/，动词词尾 /meɪt/。"
+  },
+  "pledge": {
+    "cn": "n. 承诺；誓言；保证；抵押物。vt. 承诺、保证；抵押；使保证。",
+    "phrases": [
+      "pledge to do sth. 承诺做某事",
+      "pledge support 承诺支持"
+    ],
+    "family": "pledged adj. 已承诺的",
+    "note": "常用 pledge sth. to sb. 或 pledge oneself to sth.。"
+  },
+  "triumph": {
+    "cn": "n. 胜利；成功；喜悦。vi. 获胜；成功。",
+    "phrases": [
+      "triumph over 战胜",
+      "a great triumph 巨大成功"
+    ],
+    "family": "triumphant adj. 得胜的",
+    "note": "动词接 over；名词可指一项显著成就。"
+  },
+  "abstract": {
+    "cn": "adj. 抽象的；理论性的。n. 摘要；抽象概念。vt. 提取；概括；使抽象化。",
+    "phrases": [
+      "in the abstract 抽象地",
+      "an abstract of 摘要"
+    ],
+    "family": "abstraction n. 抽象；abstractly adv. 抽象地",
+    "note": "名词、形容词首音节重读；动词通常后重音。"
+  },
+  "bullet": {
+    "cn": "n. 子弹；项目符号。",
+    "phrases": [
+      "a bullet wound 枪伤",
+      "bullet points 项目要点"
+    ],
+    "family": "",
+    "note": "bullet 指弹丸，不能与 gun“枪”混用。"
+  },
+  "counterpart": {
+    "cn": "n. 职位或作用相当的人；对应事物；相似物。",
+    "phrases": [
+      "a foreign counterpart 国外同行",
+      "the male counterpart 男性对应者"
+    ],
+    "family": "",
+    "note": "常指不同国家或组织中职位对应的人，不只是副本。"
+  },
+  "debt": {
+    "cn": "n. 债务；欠款；人情债。",
+    "phrases": [
+      "in debt 负债",
+      "get into debt 陷入债务"
+    ],
+    "family": "debtor n. 债务人；indebted adj. 负债的、感激的",
+    "note": "b 不发音；owe sb. a debt of gratitude 欠某人人情。"
+  },
+  "elect": {
+    "cn": "vt. 选举；选择、决定。adj. 当选但尚未就职的。n. 当选者。",
+    "phrases": [
+      "elect sb. as 选举某人为",
+      "elect to do sth. 选择做某事"
+    ],
+    "family": "election n. 选举；electoral adj. 选举的",
+    "note": "president-elect 指当选总统；elect 不等于 electronic。"
+  },
+  "excel": {
+    "cn": "v. 擅长；胜过、优于。",
+    "phrases": [
+      "excel in 在……方面擅长",
+      "excel at 擅长"
+    ],
+    "family": "excellence n. 卓越；excellent adj. 优秀的",
+    "note": "过去式 excelled，现在分词 excelling，双写 l。"
+  },
+  "formula": {
+    "cn": "n. 公式；配方；方法、方案；固定说法。",
+    "phrases": [
+      "a mathematical formula 数学公式",
+      "a formula for success 成功之道"
+    ],
+    "family": "formulate v. 制定、用公式表示",
+    "note": "复数 formulas 或 formulae。"
+  },
+  "gradual": {
+    "cn": "adj. 逐渐的；渐进的。",
+    "phrases": [
+      "a gradual increase 逐渐增加",
+      "a gradual change 渐变"
+    ],
+    "family": "gradually adv. 逐渐地",
+    "note": "与 sudden“突然的”形成对比。"
+  },
+  "novelty": {
+    "cn": "n. 新奇；新鲜感；新奇事物、小玩意儿。",
+    "phrases": [
+      "a sense of novelty 新鲜感",
+      "the novelty wears off 新鲜感消退"
+    ],
+    "family": "novel adj. 新颖的；novelty item 新奇小物",
+    "note": "novel 作名词还可表示小说，不是这里的派生词义。"
+  },
+  "panel": {
+    "cn": "n. 面板；嵌板；仪表板；专家组、评审组。vt. 给……装嵌板。",
+    "phrases": [
+      "a panel discussion 小组讨论",
+      "a control panel 控制面板"
+    ],
+    "family": "panelling n. 护墙板",
+    "note": "可指一组讨论或评判人员。"
+  },
+  "intellectual": {
+    "cn": "adj. 智力的；理性的；知识性的。n. 知识分子。",
+    "phrases": [
+      "intellectual property 知识产权",
+      "intellectual ability 智力"
+    ],
+    "family": "intellect n. 智力；intellectually adv. 智力上",
+    "note": "intellectual property 为固定搭配。"
+  },
+  "kit": {
+    "cn": "n. 成套工具；成套装备；配套部件。v. 装备。",
+    "phrases": [
+      "a first-aid kit 急救箱",
+      "kit out 装备"
+    ],
+    "family": "",
+    "note": "kit out sb. 或 kit sb. out 均可。"
+  },
+  "mild": {
+    "cn": "adj. 温和的；轻微的；温暖的；味淡的、不刺激的。",
+    "phrases": [
+      "mild weather 温和天气",
+      "mild symptoms 轻微症状"
+    ],
+    "family": "mildly adv. 温和地；mildness n. 温和",
+    "note": "形容病症或天气时不是同一种中文直译。"
+  },
+  "moist": {
+    "cn": "adj. 微湿的；湿润的。",
+    "phrases": [
+      "moist soil 湿润土壤",
+      "keep moist 保持湿润"
+    ],
+    "family": "moisture n. 水分；moisten v. 弄湿",
+    "note": "通常指略湿，不是 soaked“湿透的”。"
+  },
+  "pretend": {
+    "cn": "v. 假装；佯称。adj. 假想的、假装的。",
+    "phrases": [
+      "pretend to do sth. 假装做某事",
+      "pretend that 假装"
+    ],
+    "family": "pretence/pretense n. 假装；pretended adj. 假装的",
+    "note": "pretend to be doing 表正在假装的动作。"
+  },
+  "prospect": {
+    "cn": "n. 前景；可能性；景象；潜在客户。v. 勘探、勘察。",
+    "phrases": [
+      "the prospect of ……的可能",
+      "job prospects 就业前景"
+    ],
+    "family": "prospective adj. 预期的、未来的",
+    "note": "名词“前景”和动词“勘探”均需认识。"
+  },
+  "ripe": {
+    "cn": "adj. 成熟的；时机成熟的；充分准备好的。",
+    "phrases": [
+      "ripe fruit 成熟水果",
+      "be ripe for 适宜、时机成熟"
+    ],
+    "family": "ripen v. 成熟；ripeness n. 成熟",
+    "note": "be ripe for 后接名词，不接动词原形。"
+  },
+  "steep": {
+    "cn": "adj. 陡峭的；急剧升降的；价格过高的。n. 陡坡。v. 浸泡。",
+    "phrases": [
+      "a steep slope 陡坡",
+      "a steep rise 急剧上升"
+    ],
+    "family": "steeply adv. 急剧地；steepness n. 陡峭",
+    "note": "be steeped in 深受……影响、沉浸于……。"
+  },
+  "sympathy": {
+    "cn": "n. 同情；赞同、支持；同感。",
+    "phrases": [
+      "have sympathy for 同情",
+      "in sympathy with 赞同、支持"
+    ],
+    "family": "sympathetic adj. 同情的；sympathize v. 同情",
+    "note": "sympathy for sb.，但 sympathize with sb.。"
+  },
+  "twist": {
+    "cn": "v. 扭、拧；扭伤；歪曲；蜿蜒。n. 扭转；曲折；意外转折。",
+    "phrases": [
+      "twist an ankle 扭伤脚踝",
+      "a twist in the story 情节转折"
+    ],
+    "family": "twisted adj. 扭曲的",
+    "note": "twist the truth 歪曲事实。"
+  },
+  "consent": {
+    "cn": "n. 同意；许可。vi. 同意、准许。",
+    "phrases": [
+      "consent to 同意",
+      "with one's consent 经某人同意"
+    ],
+    "family": "consensual adj. 经双方同意的",
+    "note": "consent to doing sth. 中 to 是介词。"
+  },
+  "dominate": {
+    "cn": "v. 支配、控制；占主导地位；高耸于。",
+    "phrases": [
+      "dominate the market 主导市场",
+      "be dominated by 受……支配"
+    ],
+    "family": "dominant adj. 占主导的；domination n. 控制",
+    "note": "dominant 不等于 domestic“国内的”。"
+  },
+  "empire": {
+    "cn": "n. 帝国；大企业集团、商业王国。",
+    "phrases": [
+      "a business empire 商业帝国",
+      "the Roman Empire 罗马帝国"
+    ],
+    "family": "emperor n. 皇帝；imperial adj. 帝国的",
+    "note": "帝国的形容词是 imperial。"
+  },
+  "fluid": {
+    "cn": "n. 流体、液体。adj. 流动的；流畅的；易变的。",
+    "phrases": [
+      "body fluids 体液",
+      "a fluid situation 不断变化的局势"
+    ],
+    "family": "fluidity n. 流动性",
+    "note": "fluid 可同时指液体和气体这类流体。"
+  },
+  "ingredient": {
+    "cn": "n. 原料、成分；要素。",
+    "phrases": [
+      "a key ingredient 关键因素",
+      "list the ingredients 列出原料"
+    ],
+    "family": "",
+    "note": "食品原料和成功因素都可用此词。"
+  },
+  "miserable": {
+    "cn": "adj. 痛苦的、悲惨的；恶劣的；少得可怜的。",
+    "phrases": [
+      "feel miserable 感到痛苦",
+      "miserable conditions 恶劣条件"
+    ],
+    "family": "misery n. 痛苦；miserably adv. 悲惨地",
+    "note": "不是一般的“贫穷”，可指心情和处境。"
+  },
+  "precaution": {
+    "cn": "n. 预防措施；防备。",
+    "phrases": [
+      "take precautions 采取预防措施",
+      "as a precaution 作为预防措施"
+    ],
+    "family": "precautionary adj. 预防的",
+    "note": "常用复数 precautions。"
+  },
+  "sketch": {
+    "cn": "n. 草图、素描；概述；短剧。v. 画素描；概述。",
+    "phrases": [
+      "sketch out 概述",
+      "a rough sketch 草图"
+    ],
+    "family": "sketchy adj. 粗略的、不完整的",
+    "note": "sketch out a plan 为计划作概述。"
+  },
+  "sorrow": {
+    "cn": "n. 悲伤、悲痛；伤心事。vi. 悲伤。",
+    "phrases": [
+      "deep sorrow 深切悲痛",
+      "to one's sorrow 使某人悲伤的是"
+    ],
+    "family": "sorrowful adj. 悲伤的",
+    "note": "泛指悲伤不可数，具体伤心事可数。"
+  },
+  "trend": {
+    "cn": "n. 趋势、倾向；潮流。vi. 趋向；成为热点。",
+    "phrases": [
+      "an upward trend 上升趋势",
+      "a trend towards ……趋势"
+    ],
+    "family": "trendy adj. 时髦的",
+    "note": "注意 trend towards 与 tendency to 的结构。"
+  },
+  "allowance": {
+    "cn": "n. 津贴、零用钱；允许额度；免税额；考虑、体谅。",
+    "phrases": [
+      "make allowances for 考虑到、体谅",
+      "a travel allowance 差旅补贴"
+    ],
+    "family": "allow v. 允许；allowable adj. 可允许的",
+    "note": "make allowance(s) for 不是“发津贴”。"
+  },
+  "coward": {
+    "cn": "n. 胆小鬼；懦夫。",
+    "phrases": [
+      "a cowardly act 懦弱行为",
+      "act like a coward 表现怯懦"
+    ],
+    "family": "cowardly adj. 怯懦的；cowardice n. 胆怯",
+    "note": "cowardly 是形容词，不要当一般 -ly 副词。"
+  },
+  "dam": {
+    "cn": "n. 水坝；堤坝。vt. 筑坝拦住。",
+    "phrases": [
+      "build a dam 建坝",
+      "dam up 筑坝拦住"
+    ],
+    "family": "",
+    "note": "dam 与 damn 拼写、意义不同。"
+  },
+  "lag": {
+    "cn": "v. 落后；滞后；发展缓慢。n. 延迟、时间差。",
+    "phrases": [
+      "lag behind 落后于",
+      "a time lag 时间差"
+    ],
+    "family": "lagging adj. 落后的",
+    "note": "常用 lag behind sb. 或 lag behind schedule。"
+  },
+  "commit": {
+    "cn": "vt. 犯罪、犯错；承诺、保证；投入；交托。",
+    "phrases": [
+      "commit a crime 犯罪",
+      "commit oneself to 致力于"
+    ],
+    "family": "commitment n. 承诺；committed adj. 尽心尽力的",
+    "note": "commit to doing sth. 中 to 为介词；committed 双写 t。"
+  },
+  "duration": {
+    "cn": "n. 持续时间；期间。",
+    "phrases": [
+      "for the duration of 在……期间",
+      "the duration of a course 课程时长"
+    ],
+    "family": "",
+    "note": "duration 指一段持续时间，不等于具体日期。"
+  },
+  "haunt": {
+    "cn": "vt. 常去；萦绕、使困扰；鬼魂出没于。n. 常去的地方。",
+    "phrases": [
+      "be haunted by 受……困扰",
+      "a favourite haunt 常去之处"
+    ],
+    "family": "haunted adj. 鬼魂出没的；haunting adj. 萦绕心头的",
+    "note": "可用于回忆、恐惧等长久萦绕。"
+  },
+  "inevitable": {
+    "cn": "adj. 不可避免的；必然发生的。",
+    "phrases": [
+      "an inevitable result 必然结果",
+      "it is inevitable that ……不可避免"
+    ],
+    "family": "inevitably adv. 不可避免地；inevitability n. 必然性",
+    "note": "不等于 immediate“立即的”。"
+  },
+  "stale": {
+    "cn": "adj. 不新鲜的；陈旧乏味的；不新奇的。v. 使变陈旧；变质。",
+    "phrases": [
+      "stale bread 不新鲜的面包",
+      "go stale 变得不新鲜"
+    ],
+    "family": "staleness n. 不新鲜",
+    "note": "备考优先掌握食品、空气和观点的形容词义。"
+  },
+  "undermine": {
+    "cn": "vt. 逐渐削弱、破坏；侵蚀基础。",
+    "phrases": [
+      "undermine confidence 削弱信心",
+      "undermine authority 损害权威"
+    ],
+    "family": "",
+    "note": "常暗含逐步削弱，而非一次完全摧毁。"
+  },
+  "construct": {
+    "cn": "vt. 建造、构建；编制、构思。n. 构造物；概念、建构。",
+    "phrases": [
+      "construct a building 建造建筑",
+      "a social construct 社会建构"
+    ],
+    "family": "construction n. 建设；constructive adj. 建设性的",
+    "note": "动词后重音；名词通常首音节重读。"
+  },
+  "coordinate": {
+    "cn": "v. 协调、配合。adj. 同等的、并列的。n. 坐标；配套服装。",
+    "phrases": [
+      "coordinate with 与……协调",
+      "geographical coordinates 地理坐标"
+    ],
+    "family": "coordination n. 协调；coordinator n. 协调人",
+    "note": "名词坐标常用复数 coordinates。"
+  },
+  "frequent": {
+    "cn": "adj. 频繁的、经常发生的。vt. 常去、常光顾。",
+    "phrases": [
+      "a frequent visitor 常客",
+      "frequent a café 常去咖啡馆"
+    ],
+    "family": "frequency n. 频率；frequently adv. 经常地",
+    "note": "形容词首重音，动词后重音；不是“快速的”。"
+  },
+  "legend": {
+    "cn": "n. 传说、传奇；传奇人物；图例、说明。",
+    "phrases": [
+      "a local legend 当地传说",
+      "a living legend 活着的传奇人物"
+    ],
+    "family": "legendary adj. 传奇的",
+    "note": "地图上的 legend 指图例。"
+  },
+  "neglect": {
+    "cn": "vt. 忽视、疏于照顾；漏做。n. 疏忽、忽略。",
+    "phrases": [
+      "neglect to do sth. 疏忽未做",
+      "suffer from neglect 无人照料"
+    ],
+    "family": "neglectful adj. 疏忽的；neglected adj. 被忽视的",
+    "note": "neglect to do 常表示没有做应做的事。"
+  },
+  "overwhelm": {
+    "cn": "vt. 压倒、击败；使不知所措；淹没。",
+    "phrases": [
+      "be overwhelmed by 被……压倒",
+      "overwhelming evidence 压倒性证据"
+    ],
+    "family": "overwhelming adj. 压倒性的；overwhelmed adj. 不知所措的",
+    "note": "区分人的感受 overwhelmed 和事物的力量 overwhelming。"
+  },
+  "poll": {
+    "cn": "n. 民意调查；投票、票数。v. 对……民调；获得选票；投票。",
+    "phrases": [
+      "an opinion poll 民意调查",
+      "go to the polls 去投票"
+    ],
+    "family": "",
+    "note": "polls 可指投票地点或选举投票。"
+  },
+  "species": {
+    "cn": "n. 物种；种类。",
+    "phrases": [
+      "endangered species 濒危物种",
+      "a species of ……的一种"
+    ],
+    "family": "",
+    "note": "单复数同形：one species / many species。"
+  },
+  "strip": {
+    "cn": "n. 长条、条带；连环漫画；脱衣舞。v. 剥去；脱去；剥夺。",
+    "phrases": [
+      "strip sb. of 剥夺某人……",
+      "a strip of land 狭长地带"
+    ],
+    "family": "",
+    "note": "stripped、stripping 双写 p。"
+  },
+  "suspend": {
+    "cn": "vt. 暂停、中止；悬挂；使暂时停职、停学。",
+    "phrases": [
+      "suspend operations 暂停运作",
+      "be suspended from 被暂停参加"
+    ],
+    "family": "suspension n. 暂停、悬挂；suspended adj. 暂停的",
+    "note": "suspend 不一定表示永久结束。"
+  },
+  "adequate": {
+    "cn": "adj. 足够的；合格的、尚可的；适合需要的。",
+    "phrases": [
+      "be adequate for 足以满足",
+      "adequate resources 充足资源"
+    ],
+    "family": "adequacy n. 足够；adequately adv. 足够地；inadequate adj. 不足的",
+    "note": "adequate 可表示“合格但不特别好”。"
+  },
+  "affect": {
+    "cn": "vt. 影响；使感动；假装、装出。n. 情感、情绪表现（心理学）。",
+    "phrases": [
+      "affect one's health 影响健康",
+      "be deeply affected 深受触动"
+    ],
+    "family": "affected adj. 受影响的、做作的",
+    "note": "affect 通常是动词；effect 通常是名词“影响、效果”。"
+  },
+  "circumstance": {
+    "cn": "n. 情况、环境；境遇；事件。",
+    "phrases": [
+      "under the circumstances 在这种情况下",
+      "in no circumstances 决不"
+    ],
+    "family": "circumstantial adj. 间接的、依情况而定的",
+    "note": "通常用复数 circumstances；否定短语置于句首时常倒装。"
+  },
+  "cue": {
+    "cn": "n. 提示、暗示；信号；台球杆。vt. 给……提示。",
+    "phrases": [
+      "take one's cue from 从……得到提示",
+      "on cue 恰在适当时刻"
+    ],
+    "family": "",
+    "note": "cue 与 queue“队列”同音异义。"
+  },
+  "diverse": {
+    "cn": "adj. 多种多样的；不同的。",
+    "phrases": [
+      "diverse cultures 多元文化",
+      "a diverse range of 多种多样的"
+    ],
+    "family": "diversity n. 多样性；diversify v. 使多样化",
+    "note": "diversity 是名词，不能写作 diverseity。"
+  },
+  "invalid": {
+    "cn": "adj. 无效的；不成立的。n. 病弱者、需照护的病人（旧式用法）。vt. 使因病退役。",
+    "phrases": [
+      "an invalid ticket 无效票",
+      "an invalid argument 不成立的论点"
+    ],
+    "family": "invalidate v. 使无效；invalidity n. 无效",
+    "note": "adj. /ɪnˈvælɪd/；n./v. /ˈɪnvəlɪd/。人物名词是旧式用法。"
+  },
+  "occurrence": {
+    "cn": "n. 发生、出现；事件。",
+    "phrases": [
+      "a common occurrence 常见事件",
+      "the occurrence of ……的发生"
+    ],
+    "family": "occur v. 发生",
+    "note": "occurred、occurring、occurrence 均有双 r。"
+  },
+  "prevention": {
+    "cn": "n. 预防；防止、阻止。",
+    "phrases": [
+      "disease prevention 疾病预防",
+      "prevention of crime 预防犯罪"
+    ],
+    "family": "prevent v. 预防；preventive adj. 预防性的",
+    "note": "prevent sb. from doing sth. 阻止某人做某事。"
+  },
+  "settlement": {
+    "cn": "n. 解决、协议；定居点；移民、定居；结算、支付；沉降。",
+    "phrases": [
+      "reach a settlement 达成协议",
+      "a settlement of the dispute 争端解决"
+    ],
+    "family": "settle v. 解决、定居；settler n. 定居者",
+    "note": "多义词，要区分纠纷解决、定居点和付款。"
+  },
+  "tongue": {
+    "cn": "n. 舌头；语言；说话方式；鞋舌。v. 用舌触；用舌奏音。",
+    "phrases": [
+      "mother tongue 母语",
+      "hold one's tongue 不说话"
+    ],
+    "family": "",
+    "note": "have sth. on the tip of one's tongue 一时想不起某词。"
+  },
+  "bail": {
+    "cn": "n. 保释；保释金。v. 保释；舀水；帮助摆脱困境。",
+    "phrases": [
+      "on bail 获保释",
+      "bail out 救助、舀出积水"
+    ],
+    "family": "",
+    "note": "bail sb. out 可以指经济救助。"
+  },
+  "dual": {
+    "cn": "adj. 双重的；两部分的。n. 双数形式。",
+    "phrases": [
+      "dual citizenship 双重国籍",
+      "a dual role 双重角色"
+    ],
+    "family": "duality n. 双重性",
+    "note": "dual 与 duel“决斗”不同。"
+  },
+  "harsh": {
+    "cn": "adj. 严厉的；恶劣的；刺耳的；粗糙刺眼的。",
+    "phrases": [
+      "harsh criticism 严厉批评",
+      "harsh conditions 恶劣条件"
+    ],
+    "family": "harshly adv. 严厉地；harshness n. 严酷",
+    "note": "可描述声音、光线、气候和待遇。"
+  },
+  "preface": {
+    "cn": "n. 序言、前言。v. 为……写序；以……开头。",
+    "phrases": [
+      "in the preface 在前言中",
+      "preface sth. with 以……作为开场"
+    ],
+    "family": "",
+    "note": "preface 多为作者所写；foreword 常由他人撰写。"
+  },
+  "refine": {
+    "cn": "vt. 精炼、提纯；改进、完善；使精致。vi. 被精炼。",
+    "phrases": [
+      "refine oil 炼油",
+      "refine a method 改进方法"
+    ],
+    "family": "refinement n. 改进、精致；refinery n. 炼油厂",
+    "note": "refined 可指精炼的，也可指文雅的。"
+  },
+  "register": {
+    "cn": "v. 登记、注册；记录、显示；表达；被理解、被注意到。n. 登记簿；语体；音域；寄存器。",
+    "phrases": [
+      "register for 报名参加",
+      "register with 向……登记"
+    ],
+    "family": "registration n. 注册；registered adj. 注册的",
+    "note": "register a complaint 正式提出投诉。"
+  },
+  "subtract": {
+    "cn": "v. 减去、扣除；做减法。",
+    "phrases": [
+      "subtract A from B 从B中减去A",
+      "subtract the cost 扣除费用"
+    ],
+    "family": "subtraction n. 减法",
+    "note": "subtract 3 from 10 是 10−3，不是 3−10。"
+  },
+  "torture": {
+    "cn": "n. 酷刑；折磨、痛苦。vt. 拷打；折磨。",
+    "phrases": [
+      "mental torture 精神折磨",
+      "torture sb. into doing 折磨某人迫其做"
+    ],
+    "family": "tortured adj. 受折磨的",
+    "note": "不是仅指审讯，也可泛指严重折磨。"
+  },
+  "version": {
+    "cn": "n. 版本；译本、改编本；说法、描述。",
+    "phrases": [
+      "the latest version 最新版本",
+      "one's version of events 某人对事件的说法"
+    ],
+    "family": "",
+    "note": "同一事件不同人的叙述也叫 version。"
+  },
+  "witness": {
+    "cn": "n. 目击者、证人；证据。v. 目击；作证、见证。",
+    "phrases": [
+      "witness an accident 目击事故",
+      "bear witness to 证明、见证"
+    ],
+    "family": "",
+    "note": "witness 后可直接接事件，不能加 to 才构成及物用法。"
+  },
+  "emerge": {
+    "cn": "vi. 出现、显现；浮现；事实被知晓。",
+    "phrases": [
+      "emerge from 从……出现",
+      "emerge as 成为、显现为"
+    ],
+    "family": "emergence n. 出现；emerging adj. 新兴的",
+    "note": "emerge 是不及物动词，没有被动语态。"
+  },
+  "entire": {
+    "cn": "adj. 全部的、整个的；完整的。",
+    "phrases": [
+      "the entire world 整个世界",
+      "an entire day 一整天"
+    ],
+    "family": "entirely adv. 完全地；entirety n. 全部",
+    "note": "整个的一项通常用 the entire 加单数名词。"
+  },
+  "equivalent": {
+    "cn": "adj. 等值的；相当的。n. 对等物、等价物。",
+    "phrases": [
+      "be equivalent to 相当于",
+      "the equivalent of ……的等价物"
+    ],
+    "family": "equivalence n. 对等",
+    "note": "相当于用 equivalent to，不用 equivalent with。"
+  },
+  "flourish": {
+    "cn": "vi. 繁荣、茁壮成长。vt. 挥舞。n. 兴盛；挥舞；华丽笔画、夸张动作。",
+    "phrases": [
+      "a flourishing business 兴旺的企业",
+      "flourish a sword 挥剑"
+    ],
+    "family": "flourishing adj. 繁荣的",
+    "note": "区分“茁壮成长”和“挥舞”的主语、宾语。"
+  },
+  "native": {
+    "cn": "adj. 本地的、本国的；天生的。n. 本地人；当地生物。",
+    "phrases": [
+      "native language 母语",
+      "be native to 原产于"
+    ],
+    "family": "natively adv. 原生地",
+    "note": "native to 用于动植物原产地。"
+  },
+  "occupation": {
+    "cn": "n. 职业；占领、占用；消遣。",
+    "phrases": [
+      "one's occupation 某人的职业",
+      "military occupation 军事占领"
+    ],
+    "family": "occupy v. 占据、使忙于；occupational adj. 职业的",
+    "note": "profession 常指需要专业训练的职业，occupation 范围较广。"
+  },
+  "oversee": {
+    "cn": "vt. 监督；监管。",
+    "phrases": [
+      "oversee a project 监督项目",
+      "oversee operations 监管运作"
+    ],
+    "family": "oversight n. 监督、疏忽；overseer n. 监督者",
+    "note": "oversee 监督，overlook 忽视、俯瞰；不可混淆。"
+  },
+  "remark": {
+    "cn": "n. 言论、评论。v. 评论；谈到；注意到。",
+    "phrases": [
+      "remark on 评论",
+      "make a remark 发表意见"
+    ],
+    "family": "remarkable adj. 非凡的；remarkably adv. 显著地",
+    "note": "remarkable 不是简单的“可评论的”，常指非凡。"
+  },
+  "resent": {
+    "cn": "vt. 怨恨；对……不满。",
+    "phrases": [
+      "resent doing sth. 对做某事不满",
+      "resent being treated unfairly 怨恨不公待遇"
+    ],
+    "family": "resentment n. 怨恨；resentful adj. 不满的",
+    "note": "后接动名词而非不定式。"
+  },
+  "surge": {
+    "cn": "n. 激增；涌起；电流浪涌。vi. 激增；涌动、奔涌。",
+    "phrases": [
+      "a surge in demand 需求激增",
+      "surge forward 向前涌去"
+    ],
+    "family": "surging adj. 激增的",
+    "note": "surge in 后常接价格、数量等名词。"
+  },
+  "acute": {
+    "cn": "adj. 严重的；急性的；敏锐的；尖锐的；锐角的。",
+    "phrases": [
+      "acute pain 剧痛",
+      "an acute shortage 严重短缺"
+    ],
+    "family": "acutely adv. 强烈地；acuteness n. 敏锐",
+    "note": "疾病急性 acute 与慢性 chronic 相对。"
+  },
+  "arrange": {
+    "cn": "v. 安排、筹备；排列、整理；商定；改编音乐。",
+    "phrases": [
+      "arrange for 安排",
+      "arrange to do sth. 安排做某事"
+    ],
+    "family": "arrangement n. 安排",
+    "note": "arrange for sb. to do sth.，不用 arrange sb. to do。"
+  },
+  "concept": {
+    "cn": "n. 概念；观念、构想。",
+    "phrases": [
+      "the concept of ……的概念",
+      "a basic concept 基本概念"
+    ],
+    "family": "conceptual adj. 概念的；conception n. 概念、构想",
+    "note": "concept 强调抽象概念，不限于具体想法。"
+  },
+  "confine": {
+    "cn": "vt. 限制；禁闭。n.（常用复数）边界、范围。",
+    "phrases": [
+      "confine A to B 把A限制在B",
+      "be confined to 局限于"
+    ],
+    "family": "confinement n. 限制、监禁",
+    "note": "confine oneself to doing sth. 把自己限制于做某事。"
+  },
+  "contaminate": {
+    "cn": "vt. 污染；使受到毒害、感染。",
+    "phrases": [
+      "contaminated water 被污染的水",
+      "contaminate the environment 污染环境"
+    ],
+    "family": "contamination n. 污染；contaminant n. 污染物",
+    "note": "可涉及有害化学物、细菌或放射性物质。"
+  },
+  "gulf": {
+    "cn": "n. 海湾；巨大分歧、隔阂；深渊。",
+    "phrases": [
+      "a gulf between ……之间的鸿沟",
+      "bridge the gulf 弥合鸿沟"
+    ],
+    "family": "",
+    "note": "比喻巨大的差距时常与 between 连用。"
+  },
+  "legislation": {
+    "cn": "n. 法律、法规；立法。",
+    "phrases": [
+      "pass legislation 通过立法",
+      "environmental legislation 环保法规"
+    ],
+    "family": "legislate v. 立法；legislative adj. 立法的",
+    "note": "通常不可数，不写 a legislation 表一项法律。"
+  },
+  "illusion": {
+    "cn": "n. 错觉、幻觉；幻想、错误观念。",
+    "phrases": [
+      "under the illusion that 误以为",
+      "an optical illusion 视觉错觉"
+    ],
+    "family": "illusory adj. 虚幻的；disillusion v. 使幻想破灭",
+    "note": "illusion 是错觉，allusion 是暗指。"
+  },
+  "rare": {
+    "cn": "adj. 稀少的、罕见的；珍贵的；肉半熟的；空气稀薄的。",
+    "phrases": [
+      "a rare species 稀有物种",
+      "a rare opportunity 难得机会"
+    ],
+    "family": "rarely adv. 很少；rarity n. 稀有、珍品",
+    "note": "rare steak 为较生的牛排，不是稀有牛排。"
+  },
+  "thrive": {
+    "cn": "vi. 兴旺、繁荣；茁壮成长。",
+    "phrases": [
+      "thrive on 因……而兴旺",
+      "a thriving economy 繁荣的经济"
+    ],
+    "family": "thriving adj. 兴旺的",
+    "note": "过去式 thrived 或 throve；过去分词 thrived 或 thriven。"
+  },
+  "brag": {
+    "cn": "v. 吹嘘、自夸。n. 自夸的话。",
+    "phrases": [
+      "brag about 吹嘘",
+      "brag that 吹嘘说"
+    ],
+    "family": "",
+    "note": "bragged、bragging 双写 g。"
+  },
+  "comprehensive": {
+    "cn": "adj. 全面的；综合性的；详尽的。",
+    "phrases": [
+      "a comprehensive review 全面审查",
+      "comprehensive insurance 综合保险"
+    ],
+    "family": "comprehensively adv. 全面地",
+    "note": "不等于 comprehensible“可理解的”。"
+  },
+  "cruise": {
+    "cn": "n. 乘船游览；巡航。v. 巡航；轻松行进。",
+    "phrases": [
+      "go on a cruise 乘船旅行",
+      "cruise control 定速巡航"
+    ],
+    "family": "cruiser n. 巡洋舰、游艇",
+    "note": "可用于汽车轻松行驶或航空器巡航。"
+  },
+  "customs": {
+    "cn": "n. 海关；关税；（custom的复数）风俗、习惯。",
+    "phrases": [
+      "go through customs 过海关",
+      "customs duties 关税"
+    ],
+    "family": "custom n. 风俗；customary adj. 惯常的",
+    "note": "海关、关税用 customs；风俗也是 custom 的复数。"
+  },
+  "devote": {
+    "cn": "vt. 献身、致力；把时间或精力用于。",
+    "phrases": [
+      "devote oneself to 致力于",
+      "devote time to 把时间用于"
+    ],
+    "family": "devotion n. 奉献；devoted adj. 忠诚的",
+    "note": "to 为介词：devote time to doing sth.。"
+  },
+  "drill": {
+    "cn": "n. 钻子、钻机；训练、演习。v. 钻孔；训练。",
+    "phrases": [
+      "a fire drill 消防演习",
+      "drill a hole 钻孔"
+    ],
+    "family": "",
+    "note": "既有工具义，也有反复训练义。"
+  },
+  "index": {
+    "cn": "n. 索引；指数；指标。v. 编索引；使指数化。",
+    "phrases": [
+      "a price index 物价指数",
+      "an index to ……的索引"
+    ],
+    "family": "indexing n. 索引编制",
+    "note": "复数 indexes 或 indices；数学和指数语境常见 indices。"
+  },
+  "marine": {
+    "cn": "adj. 海洋的；海生的；海运的。n. 海军陆战队员。",
+    "phrases": [
+      "marine life 海洋生物",
+      "marine pollution 海洋污染"
+    ],
+    "family": "",
+    "note": "marine 不等于仅指海军的 naval。"
+  },
+  "prescribe": {
+    "cn": "v. 开处方；规定、指定。",
+    "phrases": [
+      "prescribe medicine 开药",
+      "prescribe A for B 为B开A药"
+    ],
+    "family": "prescription n. 处方；prescribed adj. 规定的",
+    "note": "prescribe 开药，describe 描述；注意拼写。"
+  },
+  "temporary": {
+    "cn": "adj. 暂时的、临时的。n. 临时雇员。",
+    "phrases": [
+      "a temporary job 临时工作",
+      "temporary accommodation 临时住所"
+    ],
+    "family": "temporarily adv. 暂时地",
+    "note": "与 permanent“永久的”相对。"
+  },
+  "alert": {
+    "cn": "adj. 警觉的；清醒敏捷的。n. 警报。vt. 提醒、使警觉。",
+    "phrases": [
+      "be alert to 警觉到",
+      "alert sb. to 提醒某人注意"
+    ],
+    "family": "alertness n. 警觉",
+    "note": "an alert for 对某危险的警报。"
+  },
+  "assure": {
+    "cn": "vt. 向……保证；使确信；确保。",
+    "phrases": [
+      "assure sb. of 向某人保证",
+      "assure sb. that 向某人保证……"
+    ],
+    "family": "assurance n. 保证、信心；assured adj. 自信的",
+    "note": "assure 常接人；ensure 强调确保某结果；insure 指保险。"
+  },
+  "conflict": {
+    "cn": "n. 冲突、矛盾；战争。vi. 冲突、抵触。",
+    "phrases": [
+      "conflict with 与……冲突",
+      "in conflict with 与……相冲突"
+    ],
+    "family": "conflicting adj. 相互矛盾的",
+    "note": "名词常首重音；动词通常后重音。"
+  },
+  "constitute": {
+    "cn": "vt. 构成、组成；被视为；设立、任命。",
+    "phrases": [
+      "constitute a threat 构成威胁",
+      "constitute a committee 组成委员会"
+    ],
+    "family": "constitution n. 宪法、构成；constitutional adj. 宪法的",
+    "note": "A constitutes B 强调A构成B。"
+  },
+  "discard": {
+    "cn": "vt. 丢弃、抛弃。n. 被丢弃的物品；弃牌。",
+    "phrases": [
+      "discard old habits 抛弃旧习惯",
+      "discard a card 弃牌"
+    ],
+    "family": "discarded adj. 被丢弃的",
+    "note": "不等于 disregard“忽视、不理会”。"
+  },
+  "disgust": {
+    "cn": "n. 厌恶、反感。vt. 使厌恶、使作呕。",
+    "phrases": [
+      "in disgust 厌恶地",
+      "be disgusted with 对……厌恶"
+    ],
+    "family": "disgusting adj. 令人厌恶的；disgusted adj. 感到厌恶的",
+    "note": "区分 -ing 描述事物与 -ed 描述感受。"
+  },
+  "locate": {
+    "cn": "vt. 找出位置；把……设置在。vi. 选址、定居。",
+    "phrases": [
+      "be located in 位于",
+      "locate the source 找出来源"
+    ],
+    "family": "location n. 地点；located adj. 位于的",
+    "note": "表示“位于”通常用被动形式 be located。"
+  },
+  "outset": {
+    "cn": "n. 开始、开端。",
+    "phrases": [
+      "at the outset 从一开始",
+      "from the outset 自始"
+    ],
+    "family": "",
+    "note": "一般用于 at/from the outset of sth.。"
+  },
+  "sting": {
+    "cn": "v. 叮、蜇；刺痛、使苦恼。n. 蜇伤；刺痛；讽刺的尖刻。",
+    "phrases": [
+      "be stung by 被……蜇",
+      "a bee sting 蜜蜂蜇伤"
+    ],
+    "family": "",
+    "note": "过去式、过去分词都是 stung。"
+  },
+  "zone": {
+    "cn": "n. 区域、地带。v. 划区、分区。",
+    "phrases": [
+      "a time zone 时区",
+      "an economic zone 经济区"
+    ],
+    "family": "zoning n. 分区规划",
+    "note": "常用作具体用途或条件不同的地带。"
+  },
+  "abundant": {
+    "cn": "adj. 丰富的；充裕的；大量的。",
+    "phrases": [
+      "be abundant in 富含",
+      "abundant resources 丰富资源"
+    ],
+    "family": "abundance n. 丰富；abundantly adv. 充足地",
+    "note": "in abundance 大量、丰富地。"
+  },
+  "accomplish": {
+    "cn": "vt. 完成；实现、达到。",
+    "phrases": [
+      "accomplish a task 完成任务",
+      "accomplish one's goal 实现目标"
+    ],
+    "family": "accomplishment n. 成就；accomplished adj. 技艺高超的",
+    "note": "完成有计划的任务常用 accomplish。"
+  },
+  "define": {
+    "cn": "vt. 给……下定义；界定、规定；明确说明。",
+    "phrases": [
+      "define A as B 把A定义为B",
+      "clearly defined 明确界定的"
+    ],
+    "family": "definition n. 定义；definite adj. 明确的",
+    "note": "define 与 definite、definition 拼写相关。"
+  },
+  "dimension": {
+    "cn": "n. 尺寸、维度；方面、层面；范围。vt. 标尺寸。",
+    "phrases": [
+      "a new dimension 新的层面",
+      "three dimensions 三维"
+    ],
+    "family": "dimensional adj. ……维的",
+    "note": "具体长宽高或范围常用复数 dimensions。"
+  },
+  "instance": {
+    "cn": "n. 例子、实例；情况。vt. 举例说明。",
+    "phrases": [
+      "for instance 例如",
+      "in the first instance 首先"
+    ],
+    "family": "",
+    "note": "for instance 相当于 for example，不等于 instant“瞬间”。"
+  },
+  "proceed": {
+    "cn": "vi. 继续进行；接着做；向前行进；源自。",
+    "phrases": [
+      "proceed with 继续进行",
+      "proceed to do 接着做某事"
+    ],
+    "family": "proceedings n. 会议记录、诉讼程序",
+    "note": "proceeds 是名词“收入、收益”，不要误作 proceed 单数义。"
+  },
+  "reap": {
+    "cn": "v. 收割；收获、获得；得到结果。",
+    "phrases": [
+      "reap the benefits 获益",
+      "reap a harvest 收获"
+    ],
+    "family": "",
+    "note": "you reap what you sow 种瓜得瓜。"
+  },
+  "resign": {
+    "cn": "v. 辞职；放弃职位；使听任、顺从。",
+    "phrases": [
+      "resign from 从……辞职",
+      "resign oneself to 听任、接受"
+    ],
+    "family": "resignation n. 辞职、顺从；resigned adj. 顺从的",
+    "note": "resign oneself to doing 中 to 是介词。"
+  },
+  "superior": {
+    "cn": "adj. 更好的、优越的；较高的；傲慢的。n. 上级、长官。",
+    "phrases": [
+      "be superior to 优于",
+      "a superior officer 上级军官"
+    ],
+    "family": "superiority n. 优越；superiorly adv. 傲慢地",
+    "note": "比较用 superior to，不用 superior than。"
+  },
+  "vanish": {
+    "cn": "vi. 消失；突然不见。",
+    "phrases": [
+      "vanish into thin air 消失得无影无踪",
+      "vanish from sight 从视野消失"
+    ],
+    "family": "vanishing adj. 消失中的",
+    "note": "不及物动词，通常不用被动。"
+  },
+  "ancestor": {
+    "cn": "n. 祖先、祖宗；原型、先驱。",
+    "phrases": [
+      "a common ancestor 共同祖先",
+      "worship one's ancestors 祭祖"
+    ],
+    "family": "ancestry n. 祖先、世系；ancestral adj. 祖传的",
+    "note": "后代为 descendant。"
+  },
+  "bankrupt": {
+    "cn": "adj. 破产的；完全缺乏的。n. 破产者。vt. 使破产。",
+    "phrases": [
+      "go bankrupt 破产",
+      "declare bankruptcy 宣告破产"
+    ],
+    "family": "bankruptcy n. 破产",
+    "note": "go bankrupt 为状态变化，不用 go bankruptcy。"
+  },
+  "convenience": {
+    "cn": "n. 方便、便利；便利设施；方便的时候。",
+    "phrases": [
+      "at one's convenience 在某人方便时",
+      "for convenience 为方便起见"
+    ],
+    "family": "convenient adj. 方便的；conveniently adv. 便利地",
+    "note": "it is convenient for sb.，通常不用 sb. is convenient 表人方便。"
+  },
+  "crisis": {
+    "cn": "n. 危机；紧要关头。",
+    "phrases": [
+      "a financial crisis 金融危机",
+      "in times of crisis 危机时刻"
+    ],
+    "family": "",
+    "note": "复数 crises，单复数读音不同。"
+  },
+  "deed": {
+    "cn": "n. 行为、事迹；契约、证书。vt. 立契转让。",
+    "phrases": [
+      "a good deed 善行",
+      "in word and deed 在言语和行动上"
+    ],
+    "family": "",
+    "note": "deeds 常与 words 对照。"
+  },
+  "flexibility": {
+    "cn": "n. 灵活性；弹性、柔韧性；适应能力。",
+    "phrases": [
+      "working flexibility 工作灵活性",
+      "flexibility in 在……方面的灵活性"
+    ],
+    "family": "flexible adj. 灵活的；flexibly adv. 灵活地",
+    "note": "flexible 的名词变为 flexibility。"
+  },
+  "generosity": {
+    "cn": "n. 慷慨、大方；宽宏大量。",
+    "phrases": [
+      "show generosity 表现慷慨",
+      "generosity towards 对……的慷慨"
+    ],
+    "family": "generous adj. 慷慨的；generously adv. 慷慨地",
+    "note": "generosity 不等于 generality。"
+  },
+  "haze": {
+    "cn": "n. 薄雾、霾；朦胧、迷糊状态。v. 使朦胧；欺辱新成员。",
+    "phrases": [
+      "a haze of smoke 烟雾",
+      "in a haze 迷迷糊糊"
+    ],
+    "family": "hazy adj. 朦胧的；haziness n. 朦胧",
+    "note": "气象 haze 通常指霾或烟尘造成的朦胧。"
+  },
+  "marathon": {
+    "cn": "n. 马拉松；持久且艰苦的活动。adj. 马拉松式的、长时间的。",
+    "phrases": [
+      "run a marathon 跑马拉松",
+      "a marathon meeting 马拉松式会议"
+    ],
+    "family": "",
+    "note": "可用于耗时长的会议、谈判等。"
+  },
+  "minister": {
+    "cn": "n. 部长、大臣；牧师；公使。vi. 照料、服侍。",
+    "phrases": [
+      "prime minister 首相、总理",
+      "minister to 照顾"
+    ],
+    "family": "ministry n. 部、牧师职责；ministerial adj. 部长的",
+    "note": "ministry 与 minister 区分机构和任职者。"
+  },
+  "apparent": {
+    "cn": "adj. 明显的；表面上的、似乎的。",
+    "phrases": [
+      "it is apparent that 显然……",
+      "for no apparent reason 无明显原因"
+    ],
+    "family": "apparently adv. 显然、据说",
+    "note": "apparent 有“明显”和“只是表面如此”两义。"
+  },
+  "blame": {
+    "cn": "vt. 责备；归咎于。n. 责任、责备。",
+    "phrases": [
+      "blame A for B 因B责备A",
+      "be to blame 应负责任"
+    ],
+    "family": "blameless adj. 无过错的",
+    "note": "blame sth. on sb.；be to blame 不用被动式 blamed。"
+  },
+  "contract": {
+    "cn": "n. 合同、契约。v. 订合同；收缩；感染疾病。",
+    "phrases": [
+      "sign a contract 签合同",
+      "contract a disease 染病"
+    ],
+    "family": "contraction n. 收缩；contractor n. 承包商",
+    "note": "名词首重音，动词后重音；收缩与 expand 相对。"
+  },
+  "hint": {
+    "cn": "n. 提示、暗示；少量、迹象。v. 暗示。",
+    "phrases": [
+      "hint at 暗示",
+      "a hint of 一丝、一点"
+    ],
+    "family": "",
+    "note": "hint that 后可接从句。"
+  },
+  "nutrition": {
+    "cn": "n. 营养；营养学。",
+    "phrases": [
+      "good nutrition 良好营养",
+      "nutrition education 营养教育"
+    ],
+    "family": "nutritional adj. 营养的；nutritious adj. 有营养的",
+    "note": "nutritional 与 nutritious 不完全相同。"
+  },
+  "prominent": {
+    "cn": "adj. 著名的、重要的；突出的、显眼的。",
+    "phrases": [
+      "a prominent figure 重要人物",
+      "play a prominent role 起重要作用"
+    ],
+    "family": "prominence n. 突出、重要；prominently adv. 显著地",
+    "note": "兼有名望和外形突出之义。"
+  },
+  "pursue": {
+    "cn": "vt. 追赶、追踪；追求；从事、继续。",
+    "phrases": [
+      "pursue a career 从事职业",
+      "pursue a goal 追求目标"
+    ],
+    "family": "pursuit n. 追求、追赶",
+    "note": "in pursuit of 追求、追赶。"
+  },
+  "resolve": {
+    "cn": "v. 解决、消除；下决心；分解。n. 决心。",
+    "phrases": [
+      "resolve a problem 解决问题",
+      "resolve to do sth. 决心做某事"
+    ],
+    "family": "resolution n. 解决、决议；resolved adj. 坚决的",
+    "note": "resolve to do 与 be resolved to do 均可。"
+  },
+  "routine": {
+    "cn": "n. 常规、日常事务；固定程序。adj. 例行的、常规的。",
+    "phrases": [
+      "a daily routine 日常惯例",
+      "routine checks 例行检查"
+    ],
+    "family": "routinely adv. 例行地",
+    "note": "不一定带消极“机械重复”的色彩。"
+  },
+  "withstand": {
+    "cn": "vt. 承受、经受住；抵挡。",
+    "phrases": [
+      "withstand pressure 承受压力",
+      "withstand the test 经受考验"
+    ],
+    "family": "",
+    "note": "过去式和过去分词 withstood。"
+  },
+  "ally": {
+    "cn": "n. 盟友、同盟国；支持者。v. 结盟、联合。",
+    "phrases": [
+      "ally with 与……结盟",
+      "a close ally 亲密盟友"
+    ],
+    "family": "alliance n. 联盟；allied adj. 结盟的",
+    "note": "名词常 /ˈælaɪ/；动词常 /əˈlaɪ/。"
+  },
+  "explode": {
+    "cn": "v. 爆炸；爆发、激增；驳倒、推翻谬论。",
+    "phrases": [
+      "explode with anger 勃然大怒",
+      "explode a myth 破除谬论"
+    ],
+    "family": "explosion n. 爆炸；explosive adj. 爆炸性的",
+    "note": "人口或需求激增也可用 explode。"
+  },
+  "faint": {
+    "cn": "adj. 微弱的；模糊的；眩晕的。vi. 昏倒。n. 昏厥。",
+    "phrases": [
+      "a faint sound 微弱声音",
+      "feel faint 感到眩晕"
+    ],
+    "family": "faintly adv. 微弱地",
+    "note": "do not have the faintest idea 完全不知道。"
+  },
+  "faith": {
+    "cn": "n. 信任、信心；信仰、宗教；忠诚。",
+    "phrases": [
+      "have faith in 信任",
+      "in good faith 真诚地"
+    ],
+    "family": "faithful adj. 忠诚的；faithfully adv. 忠实地",
+    "note": "faith in 后接信任对象。"
+  },
+  "gasoline": {
+    "cn": "n. 汽油（美式英语）。",
+    "phrases": [
+      "unleaded gasoline 无铅汽油",
+      "gasoline engine 汽油发动机"
+    ],
+    "family": "",
+    "note": "英式英语通常用 petrol；gas 在美式口语也可指汽油。"
+  },
+  "magnificent": {
+    "cn": "adj. 壮丽的、宏伟的；极好的。",
+    "phrases": [
+      "magnificent scenery 壮丽景色",
+      "a magnificent achievement 伟大成就"
+    ],
+    "family": "magnificence n. 壮丽；magnificently adv. 壮丽地",
+    "note": "不要与 magnetic“有磁性的”混淆。"
+  },
+  "objective": {
+    "cn": "n. 目标、目的；物镜。adj. 客观的；语法宾格的。",
+    "phrases": [
+      "achieve an objective 实现目标",
+      "an objective assessment 客观评估"
+    ],
+    "family": "objectivity n. 客观性；objectively adv. 客观地",
+    "note": "客观 objective 与主观 subjective 相对。"
+  },
+  "potential": {
+    "cn": "adj. 潜在的、可能的。n. 潜力、潜能；电势。",
+    "phrases": [
+      "potential customers 潜在客户",
+      "realize one's potential 发挥潜能"
+    ],
+    "family": "potentially adv. 潜在地",
+    "note": "have the potential to do 有做某事的潜力。"
+  },
+  "tense": {
+    "cn": "adj. 紧张的；绷紧的。v. 绷紧、使紧张。n. 时态。",
+    "phrases": [
+      "a tense situation 紧张局势",
+      "the past tense 过去时"
+    ],
+    "family": "tension n. 紧张；tensely adv. 紧张地",
+    "note": "时态义与形容词紧张义都要认识。"
+  },
+  "welfare": {
+    "cn": "n. 福利；健康、幸福；社会救济。",
+    "phrases": [
+      "social welfare 社会福利",
+      "child welfare 儿童福利"
+    ],
+    "family": "",
+    "note": "通常不可数；不是 warfare“战争”。"
+  },
+  "circuit": {
+    "cn": "n. 电路；环形路线、跑道；巡回活动。",
+    "phrases": [
+      "an electric circuit 电路",
+      "a short circuit 短路"
+    ],
+    "family": "circuitry n. 电路系统",
+    "note": "circuit 与 circle 意义有关但不是所有语境可互换。"
+  },
+  "curriculum": {
+    "cn": "n. 课程；课程体系。",
+    "phrases": [
+      "the school curriculum 学校课程",
+      "curriculum development 课程开发"
+    ],
+    "family": "curricular adj. 课程的；extracurricular adj. 课外的",
+    "note": "复数 curricula 或 curriculums。"
+  },
+  "dairy": {
+    "cn": "n. 奶场、乳品店、乳品公司。adj. 乳制品的。",
+    "phrases": [
+      "dairy products 乳制品",
+      "a dairy farm 奶牛场"
+    ],
+    "family": "",
+    "note": "dairy 乳品，diary 日记；注意字母顺序。"
+  },
+  "dip": {
+    "cn": "v. 浸、蘸；下降；把手伸入。n. 短暂下降；浸洗；蘸酱。",
+    "phrases": [
+      "dip into 蘸入、动用一部分",
+      "a dip in prices 价格短暂下降"
+    ],
+    "family": "",
+    "note": "dipped、dipping 双写 p。"
+  },
+  "electric": {
+    "cn": "adj. 电的；电动的；充满刺激的、令人兴奋的。",
+    "phrases": [
+      "an electric car 电动汽车",
+      "electric current 电流"
+    ],
+    "family": "electricity n. 电；electrical adj. 电气的",
+    "note": "electric 多指用电的具体物件；electrical 多涉及电气领域。"
+  },
+  "install": {
+    "cn": "vt. 安装；安置；使就职。",
+    "phrases": [
+      "install software 安装软件",
+      "install equipment 安装设备"
+    ],
+    "family": "installation n. 安装、装置；installer n. 安装人员",
+    "note": "installed、installing；另有拼写 instal。"
+  },
+  "lease": {
+    "cn": "n. 租约、租期。vt. 租用；出租。",
+    "phrases": [
+      "sign a lease 签租约",
+      "lease sth. from 向……租用"
+    ],
+    "family": "lessee n. 承租人；lessor n. 出租人",
+    "note": "lease A to B 把A租给B；lease A from B 向B租A。"
+  },
+  "mold": {
+    "cn": "n. 模子、铸模；霉菌。v. 塑造、模制；发霉。",
+    "phrases": [
+      "mold into 塑造成",
+      "break the mold 打破常规"
+    ],
+    "family": "moldy adj. 发霉的；molding n. 模制",
+    "note": "美式 mold，英式常拼 mould；音标不是字母拼写 mold。"
+  },
+  "naughty": {
+    "cn": "adj. 顽皮的、不听话的；不合宜的。",
+    "phrases": [
+      "a naughty child 顽皮孩子",
+      "naughty behaviour 调皮行为"
+    ],
+    "family": "naughtiness n. 顽皮；naughtily adv. 顽皮地",
+    "note": "主要用于孩子顽皮，也可委婉指不合宜。"
+  },
+  "straw": {
+    "cn": "n. 稻草、麦秆；吸管；微不足道之物。",
+    "phrases": [
+      "a drinking straw 吸管",
+      "the last straw 最后使人无法忍受的事"
+    ],
+    "family": "",
+    "note": "the last straw 是固定习语，不是普通的最后一根草。"
+  },
+  "beverage": {
+    "cn": "n. 饮料。",
+    "phrases": [
+      "hot beverages 热饮",
+      "an alcoholic beverage 酒精饮料"
+    ],
+    "family": "",
+    "note": "较正式，包含茶、咖啡、果汁等。"
+  },
+  "broker": {
+    "cn": "n. 经纪人、中间人。vt. 从中安排、促成。",
+    "phrases": [
+      "a stock broker 股票经纪人",
+      "broker a deal 促成交易"
+    ],
+    "family": "brokerage n. 经纪业务、佣金",
+    "note": "broker 可作动词，不只是职业名词。"
+  },
+  "dull": {
+    "cn": "adj. 无聊的；暗淡的；不锋利的；迟钝的；隐隐的。v. 使减弱、迟钝。",
+    "phrases": [
+      "a dull knife 钝刀",
+      "a dull pain 隐痛"
+    ],
+    "family": "dullness n. 无趣、迟钝；dully adv. 沉闷地",
+    "note": "不同义项分别可与 interesting、bright、sharp 对照。"
+  },
+  "ethnic": {
+    "cn": "adj. 民族的、族群的；具有民族特色的。",
+    "phrases": [
+      "ethnic groups 族群",
+      "ethnic minorities 少数族群"
+    ],
+    "family": "ethnicity n. 族群归属",
+    "note": "ethnic 不等于 ethical“道德的”。"
+  },
+  "guarantee": {
+    "cn": "n. 保证、担保；保修单。vt. 保证；担保。",
+    "phrases": [
+      "guarantee to do 保证做",
+      "under guarantee 在保修期内"
+    ],
+    "family": "guarantor n. 担保人；guaranteed adj. 有保证的",
+    "note": "guarantee sb. sth. 或 guarantee that 均常见。"
+  },
+  "halt": {
+    "cn": "v. 停止；使停止。n. 停止、中止。",
+    "phrases": [
+      "come to a halt 停下来",
+      "bring to a halt 使停止"
+    ],
+    "family": "",
+    "note": "halt 的主要考试义是停止，优先于罕见旧义。"
+  },
+  "mission": {
+    "cn": "n. 任务、使命；代表团；传教活动。vt. 派遣执行任务。",
+    "phrases": [
+      "a rescue mission 救援任务",
+      "a sense of mission 使命感"
+    ],
+    "family": "missionary n. 传教士",
+    "note": "mission 可指执行任务的人组成的代表团。"
+  },
+  "restrict": {
+    "cn": "vt. 限制、限定；约束。",
+    "phrases": [
+      "restrict A to B 把A限制在B",
+      "restrict access 限制进入"
+    ],
+    "family": "restriction n. 限制；restrictive adj. 限制性的",
+    "note": "restricted to 仅限于。"
+  },
+  "rub": {
+    "cn": "v. 擦、搓、摩擦；惹恼。n. 擦拭；难处、障碍。",
+    "phrases": [
+      "rub one's eyes 揉眼睛",
+      "rub off 擦掉、影响别人"
+    ],
+    "family": "",
+    "note": "rubbed、rubbing 双写 b。"
+  },
+  "sophisticated": {
+    "cn": "adj. 复杂精密的、先进的；老练的、见多识广的。",
+    "phrases": [
+      "sophisticated technology 先进技术",
+      "a sophisticated approach 精巧方法"
+    ],
+    "family": "sophistication n. 精密、老练；unsophisticated adj. 简单的",
+    "note": "既可形容技术复杂先进，也可形容人老练。"
+  },
+  "assess": {
+    "cn": "vt. 评估、评价；估价；确定税额、罚款额。",
+    "phrases": [
+      "assess the damage 评估损失",
+      "assess sb. as 评价某人为"
+    ],
+    "family": "assessment n. 评估；assessor n. 评估员",
+    "note": "assess 与 access“进入、通道”不同。"
+  },
+  "disguise": {
+    "cn": "vt. 伪装、乔装；掩饰。n. 伪装、化装用品。",
+    "phrases": [
+      "in disguise 伪装着",
+      "disguise A as B 把A伪装成B"
+    ],
+    "family": "disguised adj. 伪装的",
+    "note": "a blessing in disguise 因祸得福。"
+  },
+  "exploration": {
+    "cn": "n. 探索、探险；勘探；探究。",
+    "phrases": [
+      "space exploration 太空探索",
+      "oil exploration 石油勘探"
+    ],
+    "family": "explore v. 探索；explorer n. 探险者",
+    "note": "explore 通常直接接宾语，不需接 into。"
+  },
+  "intent": {
+    "cn": "n. 意图、目的。adj. 专心的；坚决要做的。",
+    "phrases": [
+      "be intent on 专心于、决心做",
+      "with intent to 意图做"
+    ],
+    "family": "intention n. 意图；intentional adj. 故意的",
+    "note": "intent on 后接名词或动名词。"
+  },
+  "knit": {
+    "cn": "v. 编织；使紧密结合；愈合；皱眉。n. 编织物。",
+    "phrases": [
+      "knit a sweater 织毛衣",
+      "a close-knit family 亲密家庭"
+    ],
+    "family": "knitting n. 编织；knitted adj. 针织的",
+    "note": "knitted/knit 都可作过去式、过去分词；knitting 双写 t。"
+  },
+  "legal": {
+    "cn": "adj. 法律的；合法的；法定的。",
+    "phrases": [
+      "legal advice 法律建议",
+      "take legal action 采取法律行动"
+    ],
+    "family": "legally adv. 合法地；illegal adj. 违法的",
+    "note": "lawful 常强调合法；legal 也可泛指法律相关。"
+  },
+  "neutral": {
+    "cn": "adj. 中立的；中性的；不带感情色彩的。n. 中立者；空挡。",
+    "phrases": [
+      "remain neutral 保持中立",
+      "in neutral 挂空挡"
+    ],
+    "family": "neutrality n. 中立；neutralize v. 使中和",
+    "note": "政治中立、化学中性和汽车空挡均可用。"
+  },
+  "overall": {
+    "cn": "adj. 总体的、全部的。adv. 总的说来。n. 工作服、罩衫。",
+    "phrases": [
+      "overall performance 整体表现",
+      "overall cost 总成本"
+    ],
+    "family": "overalls n. 工装裤、工作服",
+    "note": "副词可放句首对整体作评价。"
+  },
+  "parade": {
+    "cn": "n. 游行；阅兵；炫耀。v. 游行；列队行进；炫耀。",
+    "phrases": [
+      "a military parade 阅兵",
+      "parade through 游行经过"
+    ],
+    "family": "",
+    "note": "on parade 受检阅、列队。"
+  },
+  "reside": {
+    "cn": "vi. 居住；存在、归于。",
+    "phrases": [
+      "reside in 居住于",
+      "reside with 与……同住"
+    ],
+    "family": "resident n. 居民；residence n. 住所；residential adj. 居住的",
+    "note": "较正式；reside in 也可指权力等存在于。"
+  },
+  "artificial": {
+    "cn": "adj. 人造的、人工的；假的；不自然的、做作的。",
+    "phrases": [
+      "artificial intelligence 人工智能",
+      "artificial flowers 人造花"
+    ],
+    "family": "artificially adv. 人工地",
+    "note": "artificial 不等于 artistic“艺术的”。"
+  },
+  "compromise": {
+    "cn": "n. 妥协、折中方案。v. 妥协；危及、损害。",
+    "phrases": [
+      "reach a compromise 达成妥协",
+      "compromise on 在……上让步"
+    ],
+    "family": "compromising adj. 有损名誉的",
+    "note": "compromise safety 表示危及安全，不是“与安全妥协”。"
+  },
+  "council": {
+    "cn": "n. 理事会、委员会；地方议会。",
+    "phrases": [
+      "a city council 市议会",
+      "a student council 学生会"
+    ],
+    "family": "councillor/councilor n. 议员",
+    "note": "council 委员会，counsel 建议、律师，注意同音异形。"
+  },
+  "delicate": {
+    "cn": "adj. 易碎的、脆弱的；精致的；微妙难处理的；清淡柔和的。",
+    "phrases": [
+      "a delicate balance 微妙平衡",
+      "delicate skin 娇嫩皮肤"
+    ],
+    "family": "delicacy n. 精致、美味；delicately adv. 精细地",
+    "note": "可指材料易碎、身体虚弱或问题棘手。"
+  },
+  "diplomat": {
+    "cn": "n. 外交官；善于交际、处理关系的人。",
+    "phrases": [
+      "a senior diplomat 高级外交官",
+      "a skilled diplomat 善交际的人"
+    ],
+    "family": "diplomacy n. 外交；diplomatic adj. 外交的、圆通的",
+    "note": "diploma 是文凭，diplomat 是外交官。"
+  },
+  "exert": {
+    "cn": "vt. 施加；运用、发挥；努力。",
+    "phrases": [
+      "exert influence on 对……施加影响",
+      "exert oneself 努力"
+    ],
+    "family": "exertion n. 努力、用力",
+    "note": "exert pressure on 向……施压。"
+  },
+  "hook": {
+    "cn": "n. 钩子；钩状物。v. 钩住；吸引；使着迷。",
+    "phrases": [
+      "hook up 连接",
+      "be hooked on 对……着迷"
+    ],
+    "family": "hooked adj. 钩状的、着迷的",
+    "note": "off the hook 摆脱困境、责任。"
+  },
+  "proverb": {
+    "cn": "n. 谚语、格言。",
+    "phrases": [
+      "as the proverb goes 正如谚语所说",
+      "an old proverb 一句古谚"
+    ],
+    "family": "proverbial adj. 谚语中的、众所周知的",
+    "note": "proverb 通常是表达普遍经验的固定语句。"
+  },
+  "scratch": {
+    "cn": "v. 抓、搔；划伤；刮去、删除。n. 抓痕、划痕。adj. 草稿用的、临时拼凑的。",
+    "phrases": [
+      "from scratch 从零开始",
+      "scratch out 划掉"
+    ],
+    "family": "",
+    "note": "from scratch、up to scratch 是常见习语。"
+  },
+  "symbol": {
+    "cn": "n. 象征；符号、标志。",
+    "phrases": [
+      "a symbol of ……的象征",
+      "a mathematical symbol 数学符号"
+    ],
+    "family": "symbolic adj. 象征的；symbolize v. 象征",
+    "note": "symbol 后多用 of 表所象征的事物。"
+  },
+  "bloom": {
+    "cn": "n. 花、开花；繁盛、青春焕发。vi. 开花；繁荣。",
+    "phrases": [
+      "in full bloom 盛开",
+      "come into bloom 开花"
+    ],
+    "family": "blooming adj. 盛开的",
+    "note": "bloom 与 blossom 语义相近，但不必处处互换。"
+  },
+  "bold": {
+    "cn": "adj. 大胆的、勇敢的；醒目的；粗体的。n. 粗体字。",
+    "phrases": [
+      "a bold decision 大胆决定",
+      "in bold 用粗体"
+    ],
+    "family": "boldly adv. 大胆地；boldness n. 大胆",
+    "note": "排版语境 bold 指粗体。"
+  },
+  "debate": {
+    "cn": "n. 辩论、讨论。v. 辩论、讨论；仔细考虑。",
+    "phrases": [
+      "a debate on 关于……的辩论",
+      "debate whether 讨论是否"
+    ],
+    "family": "debatable adj. 有争议的；debater n. 辩手",
+    "note": "debate 作为动词可直接接议题。"
+  },
+  "distract": {
+    "cn": "vt. 分散注意力；使分心；使烦扰。",
+    "phrases": [
+      "distract sb. from 使某人从……分心",
+      "be distracted by 因……分心"
+    ],
+    "family": "distraction n. 干扰、消遣；distracted adj. 分心的",
+    "note": "from 后可接 doing sth.。"
+  },
+  "liberate": {
+    "cn": "vt. 解放；释放；使摆脱束缚。",
+    "phrases": [
+      "liberate A from B 把A从B中解放",
+      "liberate a country 解放国家"
+    ],
+    "family": "liberation n. 解放；liberator n. 解放者",
+    "note": "liberation 不同于 liberty“自由”，但意义相关。"
+  },
+  "minor": {
+    "cn": "adj. 较小的、次要的；较轻的；小调的。n. 未成年人；辅修科目。vi. 辅修。",
+    "phrases": [
+      "a minor problem 小问题",
+      "minor in 辅修"
+    ],
+    "family": "minority n. 少数、少数群体",
+    "note": "专业主修 major in，与 minor in 相对。"
+  },
+  "necessity": {
+    "cn": "n. 必要、必然性；必需品。",
+    "phrases": [
+      "the necessity of ……的必要性",
+      "basic necessities 基本必需品"
+    ],
+    "family": "necessary adj. 必要的；necessarily adv. 必然地",
+    "note": "not necessarily 不一定；不等于“不必要”。"
+  },
+  "recreation": {
+    "cn": "n. 娱乐、消遣；休养。",
+    "phrases": [
+      "recreation facilities 娱乐设施",
+      "for recreation 为了消遣"
+    ],
+    "family": "recreational adj. 娱乐的",
+    "note": "re-creation 可指重新创造；与 recreation 娱乐区分。"
+  },
+  "resume": {
+    "cn": "v. 重新开始、继续；恢复。n.（亦作résumé）简历；摘要。",
+    "phrases": [
+      "resume doing sth. 继续做某事",
+      "send a résumé 投递简历"
+    ],
+    "family": "resumption n. 恢复、重新开始",
+    "note": "动词 /rɪˈzjuːm/（英）；名词 résumé /ˈrezəmeɪ/，不要混读。"
+  },
+  "stiff": {
+    "cn": "adj. 僵硬的；难弯的；严厉的；困难的；强烈的。v.（非正式）不给应付款。",
+    "phrases": [
+      "a stiff neck 脖子僵硬",
+      "stiff competition 激烈竞争"
+    ],
+    "family": "stiffen v. 使僵硬；stiffness n. 僵硬",
+    "note": "考试优先掌握身体僵硬、物体硬挺和竞争激烈等形容词义。"
+  },
+  "alternative": {
+    "cn": "n. 替代方案、选择。adj. 可供选择的；非传统的。",
+    "phrases": [
+      "an alternative to ……的替代品",
+      "have no alternative 别无选择"
+    ],
+    "family": "alternatively adv. 或者、另一选择是",
+    "note": "alternative to 中 to 是介词。"
+  },
+  "burden": {
+    "cn": "n. 负担、重担；责任。vt. 使负担、使烦恼。",
+    "phrases": [
+      "a heavy burden 沉重负担",
+      "burden sb. with 使某人负担"
+    ],
+    "family": "burdensome adj. 繁重的",
+    "note": "bear the burden of 承担……的重担。"
+  },
+  "dim": {
+    "cn": "adj. 昏暗的；模糊的；不明朗的。v. 变暗、使暗淡。",
+    "phrases": [
+      "dim light 昏暗灯光",
+      "a dim memory 模糊记忆"
+    ],
+    "family": "dimly adv. 昏暗地；dimness n. 昏暗",
+    "note": "dimmed、dimming 双写 m。"
+  },
+  "evident": {
+    "cn": "adj. 明显的、清楚的。",
+    "phrases": [
+      "it is evident that 显然……",
+      "be evident from 从……可见"
+    ],
+    "family": "evidence n. 证据；evidently adv. 显然",
+    "note": "evidence 通常不可数，a piece of evidence 一条证据。"
+  },
+  "fulfill": {
+    "cn": "vt. 履行；完成、实现；满足。",
+    "phrases": [
+      "fulfill a promise 履行承诺",
+      "fulfill one's potential 发挥潜力"
+    ],
+    "family": "fulfillment/fulfilment n. 履行、满足",
+    "note": "美式 fulfill，英式常用 fulfil；fulfilled、fulfilling。"
+  },
+  "grief": {
+    "cn": "n. 悲痛、悲伤；令人悲伤的事。",
+    "phrases": [
+      "overcome with grief 悲痛欲绝",
+      "grief over 因……悲伤"
+    ],
+    "family": "grieve v. 悲痛；grieving adj. 悲伤的",
+    "note": "通常强调失去亲人等造成的深切悲痛。"
+  },
+  "inspect": {
+    "cn": "vt. 检查、检验；视察。",
+    "phrases": [
+      "inspect goods 检验货物",
+      "inspect for 检查有无"
+    ],
+    "family": "inspection n. 检查；inspector n. 检查员",
+    "note": "inspect 的宾语是被检查的事物。"
+  },
+  "notable": {
+    "cn": "adj. 值得注意的、显著的；著名的。n. 名人、要人。",
+    "phrases": [
+      "a notable achievement 显著成就",
+      "be notable for 因……闻名"
+    ],
+    "family": "notably adv. 尤其、显著地",
+    "note": "notable 强调值得注意，而 noticeable 强调容易察觉。"
+  },
+  "tremendous": {
+    "cn": "adj. 巨大的；极大的；极好的。",
+    "phrases": [
+      "tremendous pressure 巨大压力",
+      "tremendous progress 巨大进步"
+    ],
+    "family": "tremendously adv. 极其地",
+    "note": "语气较强，不仅仅表示大小。"
+  },
+  "overlook": {
+    "cn": "vt. 忽视、未注意；俯瞰；宽容、不计较。",
+    "phrases": [
+      "overlook a mistake 忽略错误",
+      "overlook the sea 俯瞰大海"
+    ],
+    "family": "",
+    "note": "overlook 与 oversee“监督”不同。"
+  },
+  "attribute": {
+    "cn": "vt. 把……归因于；认为……属于。n. 属性、特征。",
+    "phrases": [
+      "attribute A to B 把A归因于B",
+      "a personal attribute 个人特质"
+    ],
+    "family": "attribution n. 归因；attributable adj. 可归因于的",
+    "note": "动词 /əˈtrɪbjuːt/；名词 /ˈætrɪbjuːt/。"
+  },
+  "deputy": {
+    "cn": "n. 副手、代理人；议员；副警长。adj. 副的、代理的。",
+    "phrases": [
+      "deputy director 副主任",
+      "act as deputy 充当代理人"
+    ],
+    "family": "deputize v. 代理",
+    "note": "deputy 可直接用在职位名称前。"
+  },
+  "gear": {
+    "cn": "n. 齿轮、挡位；设备、用具；衣物。v. 使适合；调整。",
+    "phrases": [
+      "gear up for 为……准备",
+      "be geared to 适应、针对"
+    ],
+    "family": "",
+    "note": "gear 泛指装备时常不可数。"
+  },
+  "imperial": {
+    "cn": "adj. 帝国的；皇帝的；英制的。n. 特等品。",
+    "phrases": [
+      "imperial power 帝国权力",
+      "imperial units 英制单位"
+    ],
+    "family": "imperialism n. 帝国主义；imperialist n./adj. 帝国主义者、的",
+    "note": "英制计量也可用 imperial。"
+  },
+  "incline": {
+    "cn": "v. 倾向；倾斜；使倾向。n. 斜坡。",
+    "phrases": [
+      "be inclined to 倾向于",
+      "incline towards 倾向"
+    ],
+    "family": "inclination n. 倾向、倾斜",
+    "note": "be inclined to do sth. 想做、倾向于做。"
+  },
+  "overhear": {
+    "cn": "vt. 偶然听到、无意中听到。",
+    "phrases": [
+      "overhear sb. doing 偶然听见某人在做",
+      "overhear a conversation 无意中听见谈话"
+    ],
+    "family": "",
+    "note": "过去式、过去分词 overheard。"
+  },
+  "petroleum": {
+    "cn": "n. 石油、原油。",
+    "phrases": [
+      "petroleum products 石油产品",
+      "petroleum industry 石油工业"
+    ],
+    "family": "",
+    "note": "petroleum 石油，petrol 英式汽油，gasoline 美式汽油。"
+  },
+  "scandal": {
+    "cn": "n. 丑闻、丑事；令人愤慨的事；流言蜚语。",
+    "phrases": [
+      "a political scandal 政治丑闻",
+      "cause a scandal 引起丑闻"
+    ],
+    "family": "scandalous adj. 可耻的；scandalize v. 使震惊愤慨",
+    "note": "注意 scandal 与 candle 拼写不同。"
+  },
+  "vacant": {
+    "cn": "adj. 空着的；职位空缺的；茫然的。",
+    "phrases": [
+      "a vacant seat 空座位",
+      "a vacant position 空缺职位"
+    ],
+    "family": "vacancy n. 空缺；vacantly adv. 茫然地",
+    "note": "vacant 通常指本可被人占用的位置空着。"
+  },
+  "vote": {
+    "cn": "n. 投票、表决；选票；投票权。v. 投票；表决决定。",
+    "phrases": [
+      "vote for 投票支持",
+      "vote against 投票反对"
+    ],
+    "family": "voter n. 选民；voting n. 投票",
+    "note": "vote on 对某议题表决。"
+  },
+  "caution": {
+    "cn": "n. 小心、谨慎；警告。vt. 警告、提醒。",
+    "phrases": [
+      "with caution 谨慎地",
+      "caution sb. against doing 警告别做"
+    ],
+    "family": "cautious adj. 谨慎的；cautiously adv. 谨慎地",
+    "note": "exercise caution 谨慎行事。"
+  },
+  "clue": {
+    "cn": "n. 线索、提示。vt. 提供线索、告知情况。",
+    "phrases": [
+      "a clue to ……的线索",
+      "have no clue 毫无头绪"
+    ],
+    "family": "",
+    "note": "a clue to 中 to 为介词。"
+  },
+  "cooperate": {
+    "cn": "vi. 合作、配合。",
+    "phrases": [
+      "cooperate with 与……合作",
+      "cooperate in 在……方面合作"
+    ],
+    "family": "cooperation n. 合作；cooperative adj. 合作的",
+    "note": "cooperate with sb. on sth. 就某事与某人合作。"
+  },
+  "enormous": {
+    "cn": "adj. 巨大的、庞大的。",
+    "phrases": [
+      "an enormous amount 大量",
+      "enormous changes 巨大变化"
+    ],
+    "family": "enormously adv. 极大地；enormity n. 巨大、严重性",
+    "note": "enormity 在正式语境也强调罪行等的严重性。"
+  },
+  "handle": {
+    "cn": "vt. 处理、应付；操作；触摸；搬动。n. 柄、把手；手柄。",
+    "phrases": [
+      "handle a problem 处理问题",
+      "handle with care 小心轻放"
+    ],
+    "family": "handling n. 处理、装卸",
+    "note": "“处理问题”时可直接接宾语。"
+  },
+  "restrain": {
+    "cn": "vt. 制止、限制；约束、克制。",
+    "phrases": [
+      "restrain sb. from doing 阻止某人做",
+      "restrain oneself 克制自己"
+    ],
+    "family": "restraint n. 克制、限制；restrained adj. 克制的",
+    "note": "from 后用动名词。"
+  },
+  "scarce": {
+    "cn": "adj. 缺乏的、稀少的。",
+    "phrases": [
+      "scarce resources 稀缺资源",
+      "make oneself scarce 溜走、躲开"
+    ],
+    "family": "scarcity n. 缺乏；scarcely adv. 几乎不",
+    "note": "scarcely“几乎不”不是“稀少地”的简单直译。"
+  },
+  "threat": {
+    "cn": "n. 威胁；构成威胁的人或事。",
+    "phrases": [
+      "pose a threat to 对……构成威胁",
+      "under threat 受到威胁"
+    ],
+    "family": "threaten v. 威胁；threatening adj. 威胁性的",
+    "note": "threat to 后接受到威胁的对象。"
+  },
+  "toll": {
+    "cn": "n. 通行费；伤亡或损失数；代价；钟声。v. 缓慢敲钟、鸣钟。",
+    "phrases": [
+      "take a toll on 对……造成损害",
+      "the death toll 死亡人数"
+    ],
+    "family": "",
+    "note": "take its toll on 也很常见；不可仅记通行费。"
+  },
+  "trap": {
+    "cn": "n. 陷阱、圈套；困境；捕捉器。v. 困住；诱捕、使落入圈套。",
+    "phrases": [
+      "be trapped in 被困于",
+      "fall into a trap 落入陷阱"
+    ],
+    "family": "",
+    "note": "trapped、trapping 双写 p。"
+  },
+  "accountable": {
+    "cn": "adj. 负有责任的；应作解释的。",
+    "phrases": [
+      "be accountable to 对……负责",
+      "be accountable for 对某事负责"
+    ],
+    "family": "accountability n. 责任、问责",
+    "note": "accountable to 后接人或机构，for 后接事情。"
+  },
+  "awareness": {
+    "cn": "n. 意识；认识、了解。",
+    "phrases": [
+      "raise awareness of 提高对……的认识",
+      "environmental awareness 环保意识"
+    ],
+    "family": "aware adj. 意识到的；unaware adj. 不知情的",
+    "note": "be aware of 或 be aware that。"
+  },
+  "boost": {
+    "cn": "vt. 促进、推动；提高、增强。n. 推动、增长。",
+    "phrases": [
+      "boost confidence 增强信心",
+      "give a boost to 推动"
+    ],
+    "family": "booster n. 助推器、增强剂",
+    "note": "既可指数量上升，也可指信心增强。"
+  },
+  "conjunction": {
+    "cn": "n. 结合、联合；连词；同时发生。",
+    "phrases": [
+      "in conjunction with 与……共同",
+      "a coordinating conjunction 并列连词"
+    ],
+    "family": "",
+    "note": "and、but、or 等是常见连词。"
+  },
+  "corporation": {
+    "cn": "n. 公司、法人团体。",
+    "phrases": [
+      "a multinational corporation 跨国公司",
+      "a public corporation 公营公司"
+    ],
+    "family": "corporate adj. 公司的；incorporate v. 合并、包含",
+    "note": "corporation 公司，cooperation 合作，拼写、意义不同。"
+  },
+  "device": {
+    "cn": "n. 装置、设备；手段、策略。",
+    "phrases": [
+      "an electronic device 电子设备",
+      "a safety device 安全装置"
+    ],
+    "family": "",
+    "note": "device 为名词，devise 为动词“设计、想出”。"
+  },
+  "persist": {
+    "cn": "vi. 坚持；持续存在；执意。",
+    "phrases": [
+      "persist in doing 坚持做",
+      "persist with 坚持继续"
+    ],
+    "family": "persistence n. 坚持；persistent adj. 持续的、坚持的",
+    "note": "persist in 后接名词或动名词。"
+  },
+  "persuade": {
+    "cn": "vt. 说服；使信服。",
+    "phrases": [
+      "persuade sb. to do 说服某人做",
+      "persuade sb. of 使某人相信"
+    ],
+    "family": "persuasion n. 说服；persuasive adj. 有说服力的",
+    "note": "persuade sb. into doing 也可；强调说服成功。"
+  },
+  "steady": {
+    "cn": "adj. 稳定的、持续的；平稳的、沉着的。v. 使稳定、稳定下来。",
+    "phrases": [
+      "steady growth 稳定增长",
+      "a steady hand 沉稳的手"
+    ],
+    "family": "steadily adv. 稳定地；steadiness n. 稳定",
+    "note": "比较级 steadier，最高级 steadiest。"
+  },
+  "temper": {
+    "cn": "n. 脾气、情绪；韧度、回火。vt. 缓和；调和；使金属回火。",
+    "phrases": [
+      "lose one's temper 发脾气",
+      "temper A with B 用B缓和A"
+    ],
+    "family": "tempered adj. ……脾气的",
+    "note": "keep one's temper 克制脾气。"
+  },
+  "awe": {
+    "cn": "n. 敬畏、惊叹。vt. 使敬畏。",
+    "phrases": [
+      "in awe of 敬畏",
+      "stand in awe of 对……肃然起敬"
+    ],
+    "family": "awesome adj. 令人敬畏的、极好的；awestruck adj. 敬畏的",
+    "note": "awe 与 fear 不完全相同，含敬重或惊叹。"
+  },
+  "bargain": {
+    "cn": "n. 划算商品；交易、协议。vi. 讨价还价、商谈。",
+    "phrases": [
+      "a real bargain 真正划算的东西",
+      "bargain with 与……讨价还价"
+    ],
+    "family": "bargaining n. 讨价还价",
+    "note": "bargain for 料到、预期；more than one bargained for 超出预料。"
+  },
+  "blade": {
+    "cn": "n. 刀刃、刀片；叶片；草叶；桨叶。",
+    "phrases": [
+      "a razor blade 剃须刀片",
+      "a blade of grass 一片草叶"
+    ],
+    "family": "",
+    "note": "不可只记“刀”，也常用于风机叶片。"
+  },
+  "consult": {
+    "cn": "v. 咨询、请教；查阅；商议。",
+    "phrases": [
+      "consult a dictionary 查词典",
+      "consult with 与……商量"
+    ],
+    "family": "consultation n. 咨询；consultant n. 顾问",
+    "note": "consult sb. about sth. 向某人咨询某事。"
+  },
+  "corridor": {
+    "cn": "n. 走廊、通道；狭长地带。",
+    "phrases": [
+      "a long corridor 长走廊",
+      "a transport corridor 交通走廊"
+    ],
+    "family": "",
+    "note": "不只用于建筑内通道，也可指狭长交通区域。"
+  },
+  "nightmare": {
+    "cn": "n. 噩梦；可怕的经历、难题。",
+    "phrases": [
+      "have a nightmare 做噩梦",
+      "a logistical nightmare 棘手的后勤问题"
+    ],
+    "family": "nightmarish adj. 噩梦般的",
+    "note": "可泛指极难处理的糟糕情形。"
+  },
+  "insert": {
+    "cn": "vt. 插入、嵌入；添写。n. 插入物、夹页。",
+    "phrases": [
+      "insert A into B 将A插入B",
+      "insert a card 插卡"
+    ],
+    "family": "insertion n. 插入",
+    "note": "动词后重音；名词通常首音节重读。"
+  },
+  "leisure": {
+    "cn": "n. 空闲、闲暇。adj. 休闲的。",
+    "phrases": [
+      "at leisure 从容地、闲暇时",
+      "leisure time 休闲时间"
+    ],
+    "family": "leisurely adj./adv. 悠闲的、地",
+    "note": "leisure 与 pleasure 拼写相近但不是同义。"
+  },
+  "mortgage": {
+    "cn": "n. 抵押贷款、按揭；抵押契约。vt. 抵押。",
+    "phrases": [
+      "take out a mortgage 办理按揭",
+      "mortgage payments 按揭还款"
+    ],
+    "family": "",
+    "note": "gage 部分常不按普通 gate 发音；t 不发音。"
+  },
+  "pin": {
+    "cn": "n. 别针、大头针；销钉。vt. 别住、钉住；按住；把责任归给。",
+    "phrases": [
+      "pin down 确定、钉住",
+      "pin A on B 把A归咎于B"
+    ],
+    "family": "",
+    "note": "pinned、pinning 双写 n；PIN 大写常指个人识别码。"
+  },
+  "accuse": {
+    "cn": "vt. 指责；控告。",
+    "phrases": [
+      "accuse sb. of doing 指责某人做",
+      "the accused 被告"
+    ],
+    "family": "accusation n. 指责、指控；accuser n. 指控者",
+    "note": "用 accuse of，不用 accuse for。"
+  },
+  "complaint": {
+    "cn": "n. 抱怨、投诉；控诉；病痛。",
+    "phrases": [
+      "make a complaint 提出投诉",
+      "a complaint about 关于……的投诉"
+    ],
+    "family": "complain v. 抱怨",
+    "note": "动词 complain，名词 complaint 有词尾 t。"
+  },
+  "considerable": {
+    "cn": "adj. 相当大的；相当多的；重要的。",
+    "phrases": [
+      "a considerable amount 相当多",
+      "considerable progress 长足进步"
+    ],
+    "family": "considerably adv. 相当地",
+    "note": "considerable 数量大；considerate 体贴的。"
+  },
+  "equip": {
+    "cn": "vt. 装备、配备；使有能力。",
+    "phrases": [
+      "equip A with B 为A配备B",
+      "equip sb. to do 使某人具备做某事的能力"
+    ],
+    "family": "equipment n. 设备",
+    "note": "equipped、equipping 双写 p；equipment 通常不可数。"
+  },
+  "delivery": {
+    "cn": "n. 递送、交付；分娩；讲话方式；投球。",
+    "phrases": [
+      "free delivery 免费配送",
+      "take delivery of 接收"
+    ],
+    "family": "deliver v. 递送、发表；deliverable n. 可交付成果",
+    "note": "deliver a speech 发表演讲，delivery 可指表达方式。"
+  },
+  "fatigue": {
+    "cn": "n. 疲劳、疲乏；材料疲劳。v. 使疲劳、疲劳。",
+    "phrases": [
+      "mental fatigue 精神疲劳",
+      "metal fatigue 金属疲劳"
+    ],
+    "family": "fatigued adj. 疲惫的",
+    "note": "不可把 metal（金属）误成 mental（精神的）。"
+  },
+  "lean": {
+    "cn": "v. 倚靠、倾斜；倾向、依赖。adj. 瘦的、少脂肪的；精简的、歉收的。n. 瘦肉。",
+    "phrases": [
+      "lean against 靠着",
+      "lean on 依靠、向……施压"
+    ],
+    "family": "leaning n. 倾向",
+    "note": "过去式、过去分词 leaned 或 leant。"
+  },
+  "regulate": {
+    "cn": "vt. 管理、管制；调节、校准。",
+    "phrases": [
+      "regulate temperature 调节温度",
+      "regulate the industry 监管行业"
+    ],
+    "family": "regulation n. 法规、调节；regulatory adj. 监管的",
+    "note": "regulation 既可指一条法规，也可指监管活动。"
+  },
+  "symptom": {
+    "cn": "n. 症状；征兆、迹象。",
+    "phrases": [
+      "a symptom of ……的症状",
+      "show symptoms 出现症状"
+    ],
+    "family": "symptomatic adj. 有症状的、表明……的",
+    "note": "symptom 症状，symbol 象征，不要混淆。"
+  },
+  "utmost": {
+    "cn": "adj. 最大的、极度的。n. 最大限度、极限。",
+    "phrases": [
+      "do one's utmost 竭尽全力",
+      "of the utmost importance 极其重要"
+    ],
+    "family": "",
+    "note": "utmost 表程度极大，通常不用比较级。"
+  },
+  "circulate": {
+    "cn": "v. 循环、流通；传播；传阅、分发。",
+    "phrases": [
+      "circulate through 在……中循环",
+      "circulate a report 传阅报告"
+    ],
+    "family": "circulation n. 循环、发行量；circulatory adj. 循环的",
+    "note": "in circulation 流通中。"
+  },
+  "contempt": {
+    "cn": "n. 轻蔑、鄙视；藐视法庭。",
+    "phrases": [
+      "contempt for 对……的轻蔑",
+      "hold in contempt 鄙视"
+    ],
+    "family": "contemptuous adj. 轻蔑的；contemptible adj. 可鄙的",
+    "note": "contemptuous 描述看不起别人的态度，contemptible 描述可鄙的对象。"
+  },
+  "delay": {
+    "cn": "v. 推迟、延误；拖延。n. 延迟、耽搁。",
+    "phrases": [
+      "delay doing sth. 推迟做某事",
+      "without delay 立即"
+    ],
+    "family": "",
+    "note": "后接动名词，不用 delay to do 表推迟做。"
+  },
+  "devise": {
+    "cn": "vt. 设计、想出；制定。n./v. 遗赠（法律用语）。",
+    "phrases": [
+      "devise a plan 想出计划",
+      "devise a method 设计方法"
+    ],
+    "family": "",
+    "note": "devise 为动词，device 为名词“装置”。"
+  },
+  "donation": {
+    "cn": "n. 捐赠；捐款、捐赠物。",
+    "phrases": [
+      "make a donation 捐赠",
+      "a donation to 向……的捐赠"
+    ],
+    "family": "donate v. 捐赠；donor n. 捐赠者",
+    "note": "donate A to B 把A捐给B。"
+  },
+  "incredible": {
+    "cn": "adj. 难以置信的；极好的、惊人的。",
+    "phrases": [
+      "an incredible story 难以置信的故事",
+      "incredible progress 惊人进步"
+    ],
+    "family": "incredibly adv. 难以置信地、极其",
+    "note": "既可表示不可信，也可用于赞叹。"
+  },
+  "isolate": {
+    "cn": "vt. 使隔离、孤立；分离、单独考虑。n. 分离物、孤立种群。",
+    "phrases": [
+      "isolate A from B 把A与B隔开",
+      "feel isolated 感到孤独"
+    ],
+    "family": "isolation n. 隔离；isolated adj. 孤立的",
+    "note": "isolate 是动词，isolated 是常用形容词。"
+  },
+  "organism": {
+    "cn": "n. 生物、有机体；有机组织。",
+    "phrases": [
+      "a living organism 活生物",
+      "a single-celled organism 单细胞生物"
+    ],
+    "family": "",
+    "note": "organ 器官，organism 生物体，organization 组织。"
+  },
+  "penalty": {
+    "cn": "n. 处罚、罚款；刑罚；罚球；不利后果。",
+    "phrases": [
+      "a penalty for 对……的处罚",
+      "a penalty kick 点球"
+    ],
+    "family": "penalize v. 处罚；penal adj. 刑事的",
+    "note": "足球中 penalty 常指点球。"
+  },
+  "property": {
+    "cn": "n. 财产、所有物；房产；性质、特性；属性。",
+    "phrases": [
+      "private property 私有财产",
+      "the properties of ……的特性"
+    ],
+    "family": "",
+    "note": "财产通常不可数；性质常用复数 properties；房产也可数。"
+  },
+  "budget": {
+    "cn": "n. 预算。v. 编预算；安排开支、时间。adj. 廉价的。",
+    "phrases": [
+      "on a tight budget 预算紧张",
+      "budget for 为……编预算"
+    ],
+    "family": "budgetary adj. 预算的",
+    "note": "budget 作形容词如 budget airline 廉价航空公司。"
+  },
+  "fade": {
+    "cn": "v. 褪色；渐弱、逐渐消失；凋谢。n. 渐变、淡入淡出。",
+    "phrases": [
+      "fade away 逐渐消失",
+      "fade out 淡出"
+    ],
+    "family": "",
+    "note": "fade 强调逐渐变化，不是突然消失。"
+  },
+  "geology": {
+    "cn": "n. 地质学；某地区的地质情况。",
+    "phrases": [
+      "study geology 学习地质学",
+      "the geology of ……的地质"
+    ],
+    "family": "geological adj. 地质的；geologist n. 地质学家",
+    "note": "geography 是地理学，geology 是地质学。"
+  },
+  "interval": {
+    "cn": "n. 间隔、间歇；中场休息；音程。",
+    "phrases": [
+      "at regular intervals 每隔一定时间",
+      "an interval between ……之间的间隔"
+    ],
+    "family": "",
+    "note": "at intervals 断断续续、间或。"
+  },
+  "nerve": {
+    "cn": "n. 神经；勇气；无礼、厚颜；（复数）紧张。vt. 鼓起勇气。",
+    "phrases": [
+      "lose one's nerve 失去勇气",
+      "get on one's nerves 使某人心烦"
+    ],
+    "family": "nervous adj. 紧张的；nervousness n. 紧张",
+    "note": "nerves 复数常表示紧张情绪。"
+  },
+  "optimism": {
+    "cn": "n. 乐观；乐观主义。",
+    "phrases": [
+      "optimism about 对……乐观",
+      "cautious optimism 谨慎乐观"
+    ],
+    "family": "optimistic adj. 乐观的；optimist n. 乐观者",
+    "note": "optimistic about；反义 pessimism 悲观。"
+  },
+  "pad": {
+    "cn": "n. 垫、衬垫；便笺本；肉垫。v. 加垫；填塞；用多余材料拉长。",
+    "phrases": [
+      "a writing pad 便笺本",
+      "pad out 用多余内容拉长"
+    ],
+    "family": "padding n. 衬垫、赘文",
+    "note": "padded、padding 双写 d。"
+  },
+  "recession": {
+    "cn": "n. 经济衰退；后退、退缩。",
+    "phrases": [
+      "an economic recession 经济衰退",
+      "in recession 处于衰退"
+    ],
+    "family": "recede v. 后退；recessionary adj. 衰退的",
+    "note": "考试优先记经济衰退义。"
+  },
+  "shell": {
+    "cn": "n. 壳、贝壳；炮弹；外壳。v. 剥壳；炮击。",
+    "phrases": [
+      "an egg shell 蛋壳",
+      "shell out 花一大笔钱"
+    ],
+    "family": "",
+    "note": "shell out 是非正式短语动词。"
+  },
+  "vocational": {
+    "cn": "adj. 职业的；职业培训的。",
+    "phrases": [
+      "vocational training 职业培训",
+      "vocational education 职业教育"
+    ],
+    "family": "vocation n. 职业、使命感",
+    "note": "通常强调特定职业所需的技能培训。"
+  },
+  "component": {
+    "cn": "n. 零部件、元件；组成部分。adj. 组成的、构成的。",
+    "phrases": [
+      "a key component 关键组成部分",
+      "electronic components 电子元件"
+    ],
+    "family": "",
+    "note": "a component of ……的组成部分。"
+  },
+  "curse": {
+    "cn": "n. 诅咒；咒骂；祸根。v. 诅咒、咒骂。",
+    "phrases": [
+      "curse at 咒骂",
+      "a blessing and a curse 利弊兼具之物"
+    ],
+    "family": "cursed adj. 被诅咒的",
+    "note": "curse at sb.，或 curse sb.，注意及物与不及物。"
+  },
+  "dash": {
+    "cn": "v. 猛冲；猛撞；使希望破灭。n. 猛冲、短跑；破折号；少量。",
+    "phrases": [
+      "dash off 匆忙写、匆忙离开",
+      "dash one's hopes 使希望破灭"
+    ],
+    "family": "",
+    "note": "a dash of 表少许；标点 dash 是破折号。"
+  },
+  "efficient": {
+    "cn": "adj. 效率高的；能干的；节能的。",
+    "phrases": [
+      "an efficient system 高效系统",
+      "energy-efficient 节能的"
+    ],
+    "family": "efficiency n. 效率；efficiently adv. 高效地",
+    "note": "efficient 强调少耗费，effective 强调产生预期效果。"
+  },
+  "extend": {
+    "cn": "v. 延长、延伸；扩大；伸展；给予。",
+    "phrases": [
+      "extend a deadline 延长截止期",
+      "extend to 延伸到"
+    ],
+    "family": "extension n. 延长、扩展；extensive adj. 广泛的",
+    "note": "extend an invitation 发出邀请。"
+  },
+  "merit": {
+    "cn": "n. 优点、长处；价值、功绩。vt. 值得、应得。",
+    "phrases": [
+      "on merit 根据能力、凭功绩",
+      "merit attention 值得关注"
+    ],
+    "family": "meritorious adj. 值得赞扬的",
+    "note": "merit 做动词可直接接名词或动名词。"
+  },
+  "nasty": {
+    "cn": "adj. 令人不快的、恶劣的；恶意的；严重的、棘手的。",
+    "phrases": [
+      "a nasty accident 严重事故",
+      "a nasty smell 难闻气味"
+    ],
+    "family": "nastily adv. 恶劣地；nastiness n. 恶劣",
+    "note": "不只表示脏，也可形容伤病、脾气或问题。"
+  },
+  "spite": {
+    "cn": "n. 恶意、怨恨。vt. 故意刁难、使难受。",
+    "phrases": [
+      "in spite of 尽管",
+      "out of spite 出于恶意"
+    ],
+    "family": "spiteful adj. 恶意的",
+    "note": "in spite of 后接名词、动名词或 the fact that，不直接接普通从句。"
+  },
+  "weave": {
+    "cn": "v. 编织；编造、组织；迂回穿行。n. 织法、编织式样。",
+    "phrases": [
+      "weave A into B 将A编入B",
+      "weave through 穿梭于"
+    ],
+    "family": "",
+    "note": "过去式 wove，过去分词 woven；部分“穿行”用法也见 weaved。"
+  },
+  "wit": {
+    "cn": "n. 机智、风趣；机智的人；（复数）理智、头脑。",
+    "phrases": [
+      "at one's wits' end 束手无策",
+      "a witty remark 诙谐的话"
+    ],
+    "family": "witty adj. 机智幽默的",
+    "note": "wit 表机智通常不可数；a wit 指一个风趣的人。"
+  }
+}

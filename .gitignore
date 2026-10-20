@@ -1,0 +1,26 @@
+# Private study data, signing secrets and local machine state
+/backups/
+/android/signing/
+/android/build-qa/
+/android/build-release/
+/android/upstream/
+/imports/**/sources/
+/checks/*
+!/checks/*.js
+!/checks/*.cjs
+/checks/ui-source-inspection.txt
+*.log
+*.pid
+*.partial
+*.p12
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example
+/deployment-info.json
+/releases/*.json
+/releases/*.apk
+node_modules/
+/.tools/
+/test-results/

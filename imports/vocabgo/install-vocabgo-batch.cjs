@@ -1,0 +1,26 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname,'../..');
+const target = path.join(root,'wordforge.html');
+const batch = JSON.parse(fs.readFileSync(path.join(__dirname,'vocabgo-batch-reviewed.json'),'utf8'));
+const quality = JSON.parse(fs.readFileSync(path.join(__dirname,'quality-report.json'),'utf8'));
+assert.equal(quality.status,'ready-for-import');
+assert.equal(batch.parts.length,10);
+assert.equal(batch.contentStatus,'enriched-and-checked-before-import');
+assert.equal(batch.parts.flatMap(p=>p.words).length,300);
+let html=fs.readFileSync(target,'utf8');
+if(html.includes('id="wf-vocabgo-import"'))throw Error('Vocabulary batch already installed; no changes made.');
+fs.copyFileSync(target,path.join(root,'backups','wordforge-before-vocabgo-import.html'));
+function replaceOnce(a,b){assert.equal(html.split(a).length,2,'Unique patch location: '+a.slice(0,80));html=html.replace(a,b);}
+const safeJSON=JSON.stringify(batch).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+replaceOnce('<script id="wf-textbook-import">','<script id="wf-vocabgo-import">window.__WF_VOCABGO_IMPORT='+safeJSON+';</script>\n<script id="wf-textbook-import">');
+replaceOnce('function mergeTextbookImports(d) {\n  var batch = window.__WF_TEXTBOOK_IMPORT;','function mergeTextbookImports(d, batch) {\n  batch = batch || window.__WF_TEXTBOOK_IMPORT;');
+replaceOnce('      desc: "新视野大学英语（第四版）Unit 1 · 第"','      desc: part.desc || "新视野大学英语（第四版）Unit 1 · 第"');
+replaceOnce('  return mergeTextbookImports(d);\n}\nvar saveTimer = null;', '  d = mergeTextbookImports(d);\n  if (window.__WF_VOCABGO_IMPORT) d = mergeTextbookImports(d, window.__WF_VOCABGO_IMPORT);\n  return d;\n}\nvar saveTimer = null;');
+replaceOnce('" · 按课本页码"', '" · 按来源顺序"');
+replaceOnce('  var lines = d.split("\\n");\n  var h = \'<div class="w-block"><div class="bt">近义词辨析</div><div class="w-dis">\';', '  var studyNotes = d.indexOf("【学习要点】") === 0;\n  if (studyNotes) d = d.replace(/^【学习要点】\\n?/, "");\n  var lines = d.split("\\n");\n  var h = \'<div class="w-block"><div class="bt">\' + (studyNotes ? "用法与辨析" : "近义词辨析") + \'</div><div class="w-dis">\';');
+for(const m of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g))new Function(m[2]);
+fs.writeFileSync(target,html,'utf8');
+console.log('Installed reviewed vocabulary batch: 10 lists, 300 words.');
