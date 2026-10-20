@@ -4,6 +4,10 @@
 
 基于 [zhiyf-huajq/wordforge](https://github.com/zhiyf-huajq/wordforge) 的 MIT 版本修改；上游署名和许可见 [upstream-LICENSE](upstream-LICENSE)。这不是上游官方发行版。
 
+## 换对话时继续工作
+
+先读 [HANDOFF.md](HANDOFF.md)，再看 [更新日志索引](CHANGELOG.md) 中最近的更新。后续工作遵守 [AGENTS.md](AGENTS.md)：每轮更新新增一篇中文日志，并同步交接说明。日志模板在 [docs/updates/TEMPLATE.md](docs/updates/TEMPLATE.md)。
+
 ## 电脑运行
 
 需要 Node.js 18+，无需安装 npm 依赖：
