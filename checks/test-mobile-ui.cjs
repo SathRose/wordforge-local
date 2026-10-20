@@ -89,14 +89,31 @@ async function shot(page, name) {
     check(label + ': final card renders a completion summary', (await page.locator('#view').innerText()).includes('本轮完成'));
     await page.locator('#homeSes').click();
     check(label + ': summary Home button is functional', await page.locator('#startStudy').count() === 1);
-    await page.evaluate(() => { __WFAPI.setCfg('vmode', 'w2m'); __WFAPI.setCfg('vask', 'spell'); __WFAPI.startSession('auto'); });
-    check(label + ': spelling mode is actually rendered', await page.locator('#spellIn').count() === 1);
+    // Choice answers must save immediately and advance: correct → known (7), wrong → forgotten (8).
+    await page.evaluate(() => { __WFAPI.setCfg('vmode', 'w2m'); __WFAPI.setCfg('vask', 'choice'); __WFAPI.setCfg('autoSpeak', false); __WFAPI.startSession('auto'); });
+    check(label + ': choice mode renders options', await page.locator('.opt').count() > 0);
     {
-      const answer = await page.evaluate(() => __WFAPI.session().queue[__WFAPI.session().i]);
-      await page.locator('#spellIn').fill(answer);
-      await page.locator('#spellOk').click();
-      await page.locator('[data-g="3"]').click();
-      check(label + ': dynamically added spelling score buttons are bound', await page.evaluate(() => __WFAPI.session().pending === 3));
+      const word = await page.evaluate(() => { const s = __WFAPI.session(); return s.queue[s.i]; });
+      const before = await page.evaluate(() => __WFAPI.session().i);
+      const beforeRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return p ? { ok: p[7], no: p[8] } : { ok: 0, no: 0 }; }, word);
+      const okIdx = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => o.ok));
+      await page.locator(`.opt[data-pick="${okIdx}"]`).click();
+      check(label + ': correct choice advances immediately', await page.evaluate(() => __WFAPI.session().i) === before + 1);
+      const afterRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return { ok: p[7], no: p[8] }; }, word);
+      check(label + ': correct choice is saved as known without manual rating',
+        afterRec.ok === beforeRec.ok + 1 && afterRec.no === beforeRec.no, JSON.stringify({ beforeRec, afterRec }));
+      check(label + ': no manual rating bar after a choice', await page.locator('.gbtn').count() === 0);
+    }
+    check(label + ': no spelling input is rendered', await page.locator('#spellIn').count() === 0);
+    {
+      await page.evaluate(() => __WFAPI.startSession('auto'));
+      const word = await page.evaluate(() => { const s = __WFAPI.session(); return s.queue[s.i]; });
+      const beforeRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return p ? { ok: p[7], no: p[8] } : { ok: 0, no: 0 }; }, word);
+      const badIdx = await page.evaluate(() => __WFAPI.session().opts.findIndex(o => !o.ok));
+      await page.locator(`.opt[data-pick="${badIdx}"]`).click();
+      const afterRec = await page.evaluate(w => { const p = __WFAPI.getDB().prog[w]; return { ok: p[7], no: p[8] }; }, word);
+      check(label + ': wrong choice is saved as forgotten without manual rating',
+        afterRec.no === beforeRec.no + 1 && afterRec.ok === beforeRec.ok, JSON.stringify({ beforeRec, afterRec }));
     }
     const id = await seedArticle(page);
     // This route used to render correctly but have no click handlers from Today.

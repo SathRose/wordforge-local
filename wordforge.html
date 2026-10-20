@@ -1178,28 +1178,25 @@ var CFG_DEF = {
   newPerDay: 20,
   revPerDay: 300,
   optCount: 4,
-  /* 题型轮换顺序。默认六种全开，两种「有前置条件」的排在中间：
+  /* 题型轮换顺序。默认四种无需输入作答的题型全开：
        recog   看词选义  —— 最轻，认脸
        recall  看义选词  —— 反向认，比 recog 难一档
        listen  听音辨词  —— 六级听力占 35%，不能默认关着
-       cloze   例句填空  —— 真实例句挖空，语境回忆
-       spell   拼写      —— 最难，从零产出
        card    卡片速记  —— 兜底，没有任何前置条件
-     后两种（listen / cloze）分别需要「设备有英语语音」和「这个词有例句」，
-     不满足时 pickMode 会自动顺延到下一个能用的题型，
-     所以「全开」不等于「让用户对着做不了的题」。 */
-  activeModes: ["recog", "recall", "listen", "cloze", "spell", "card"],
+     listen 需要「设备有英语语音」，不满足时 pickMode 会自动顺延到下一个能用的题型；
+     拼写 / 例句填空是旧版的输入题，已停用，旧配置也会在运行时被过滤。 */
+  activeModes: ["recog", "recall", "listen", "card"],
   /* ---- 背词模式（统一入口）----
      用户的反馈原话：「现在这种背词模式实在太混乱了」。
      混乱的根源不是选项太少，是【方向】这个维度从来没有被表达出来 ——
-     六个题型名（看词选义 / 看义选词 / 听音辨词 / 例句填空 / 拼写 / 卡片速记）
-     其实混着两件不同的事：**先看到哪一面**（词 or 释义）和**要你做什么**（选 / 听 / 拼）。
-     拆开之后，用户只需要回答两个问题就够定位自己的偏好，不用在六个名词之间猜。
+     若干题型名（看词选义 / 看义选词 / 听音辨词 / 卡片速记）
+     其实混着两件不同的事：**先看到哪一面**（词 or 释义）和**要你做什么**（选 / 听 / 想）。
+     拆开之后，用户只需要回答两个问题就够定位自己的偏好，不用在题型名词之间猜。
 
      dir   先给哪一面：  w2m 看词想义 / m2w 看义想词 / mix 交替
             → 它决定「同一张卡先露哪一面」，是学习感受里最直接的一层
-     ask   要你做什么：  recall 只想（自评） / choice 选一个 / spell 写出来 / listen 听出来
-            → 它决定交互的强度。想得起来但写不出来，正是「眼熟≠会」的分界
+     ask   要你做什么：  recall 只想（自评） / choice 选一个 / listen 听出来
+            → 它决定交互的强度。想得起来但说不出来，正是「眼熟≠会」的分界
      card  纯卡片速记仍然保留为兜底（没有任何前置条件，永远能用）
 
      ⚠ 这两层必须【派生】出 activeModes，而不是各管各的。
@@ -1520,13 +1517,12 @@ function ttsReady() {
   } catch (e) { return false; }
 }
 /* 题型的前置条件。不满足就换题，绝不让用户对着做不了的题。
-   cloze 其实在 clozeBody 里已有兜底（没例句就退回卡片），这里提前判断只是为了
-   让卡头的题型标签与实际渲染的东西一致。 */
+   spell / cloze 是历史输入题型，现统一禁用；这里提前判断可避免旧配置重新生成。 */
 function modeOK(mode, r) {
+  if (mode === "spell" || mode === "cloze") return false;
   if (mode === "listen") return ttsReady();
-  if (mode === "cloze") return !!(r && r[F.EX]);
-  /* recog / recall / spell 都要把中文释义摆到用户面前 —— recog 是把它当选项，
-     recall 和 spell 是把它当题干。而全库有 79 条的中文释义字段其实是英文
+  /* recog / recall 都要把中文释义摆到用户面前 —— recog 是把它当选项，
+     recall 是把它当题干。而全库有 79 条的中文释义字段其实是英文
      （源数据如此，例：kilometer → "A kilometer is a unit of measurement…"）。
      拿它们出这三种题，用户会看到一句英文长句、然后被要求「根据释义拼写」——
      题根本没法做。自动顺延到别的题型，规则和 listen / cloze 完全一致；
@@ -2768,8 +2764,10 @@ function startSession(kind) {
    两处各写一份的话，哪天改了默认值（比如加一种新题型）必然漏掉一处，
    而漏掉的那处不会报错，只是那一种入口永远用不上新题型。 */
 function sessionModes() {
-  var a = cfg().activeModes;
-  return a && a.length ? a.slice() : ["card"];
+  /* 旧版本可能保存 spell / cloze；升级后不再生成任何需要输入作答的题型。 */
+  var a = cfg().activeModes || [];
+  var modes = a.filter(function (m) { return m !== "spell" && m !== "cloze"; });
+  return modes.length ? modes : ["card"];
 }
 
 /* ---------- 8c-2. 背词模式：把 (方向 × 动作) 派生成题型序列 ----------
@@ -2796,7 +2794,7 @@ function dirAt(i) {
    choice 交给方向决定；recall 是纯自评，方向决定题干。 */
 var ASK_NAME = {
   auto: "按方向自动", recall: "只想一想（自评）", choice: "选一个",
-  spell: "写出来", listen: "听出来"
+  listen: "听出来"
 };
 var DIR_NAME = { w2m: "看单词想释义", m2w: "看释义想单词", mix: "两种轮流" };
 /* 从 (方向, 动作, 序号) 推出这一张该用哪个题型。
@@ -2804,7 +2802,8 @@ var DIR_NAME = { w2m: "看单词想释义", m2w: "看释义想单词", mix: "两
    而不是硬塞一个不合适的题型进来。 */
 function modeFromPair(dir, ask, canSpell, canListen, canCloze) {
   if (ask === "listen") return canListen ? "listen" : null;
-  if (ask === "spell") return (canSpell && dir !== "m2w") ? "spell" : null;
+  /* 兼容旧配置：曾保存的 spell 动作不再生成输入题，退回卡片题。 */
+  if (ask === "spell") return dir === "m2w" ? "recallCard" : "card";
   /* 「只看一听」：方向决定题干，揭晓时露出另一面 —— 由 vflipFirst 控制是否先藏 */
   if (ask === "recall") return dir === "m2w" ? "recallCard" : "card";
   if (ask === "choice") {
@@ -2829,7 +2828,8 @@ function pickModeIdx(i) {
        交给 modeOK 再挡一道，挡下来就顺延，不让用户对着做不了的题 */
     if (m && modeOK(m, r)) return m;
   }
-  var modes = (S && S.modes && S.modes.length) ? S.modes : ["card"];
+  var modes = (S && S.modes && S.modes.length) ? S.modes.filter(function (x) { return x !== "spell" && x !== "cloze"; }) : ["card"];
+  if (!modes.length) modes = ["card"];
   var n = modes.length, base = i % n;
   for (var k = 0; k < n; k++) {
     var mm = modes[(base + k) % n];
@@ -2845,7 +2845,7 @@ function vmodeDesc() {
   var m = DIR_NAME[d] || DIR_NAME.mix;
   if (a === "auto") return m + "，按你勾选的题型轮换";
   if (a === "recall") return m + "，只想一想然后自评" + (cfg().vflipFirst ? "（答案先盖住）" : "（答案直接给）");
-  if (a === "spell") return d === "m2w" ? "写出来 —— 但「看释义想单词」不能拼写（会变成听写），已退回自评" : m + "，写出单词";
+  if (a === "spell") return m + "，按卡片速记（旧版拼写设置已兼容）";
   if (a === "listen") return "听发音，判断是哪个词";
   if (a === "choice") return d === "m2w" ? "看释义，从选项里选出单词" : d === "w2m" ? "看单词，从选项里选出释义" : "看单词选释义 / 看释义选单词，两种轮流";
   return m;
@@ -2940,7 +2940,11 @@ function curWord() { return S && S.i < S.queue.length ? rec(S.queue[S.i]) : null
      · commitAndNext / nextWord 里 S.i++  → 题型前进一格
      · prevWord 里 S.i = st.i            → 题型跟着退回上一格
    也就不存在「游标」和「卡片序号」两套状态漂移的可能。 */
-function curMode() { return S.modes[S.i % S.modes.length]; }
+function curMode() {
+  var modes = (S && S.modes ? S.modes : []).filter(function (m) { return m !== "spell" && m !== "cloze"; });
+  if (!modes.length) return "card";
+  return modes[S.i % modes.length];
+}
 /* 当前这一张该用哪个题型：从轮到的那个开始往后顺延，跳到第一个「这个设备 + 这个词」能用的。
    全部都用不了时退回卡片速记 —— 它不需要任何前置条件。
    注意返回的必须是**实际渲染**的那个题型，因为卡头的题型标签读的就是它；
@@ -2988,7 +2992,7 @@ function renderSession() {
   bindCommon();
   bindSession();
   updateChrome();
-  if (!S.answered && cfg().autoSpeak && (mode === "listen" || mode === "spell" || mode === "card")) {
+  if (!S.answered && cfg().autoSpeak && (mode === "listen" || mode === "card")) {
     setTimeout(function () { speak(r[F.W]); }, 160);
   }
 }
@@ -3011,9 +3015,7 @@ function cardBody(r, mode) {
   if (mode === "recog") return recogBody(r);
   if (mode === "recall") return recallBody(r);
   if (mode === "recallCard") return recallCardBody(r);
-  if (mode === "spell") return spellBody(r);
   if (mode === "listen") return listenBody(r);
-  if (mode === "cloze") return clozeBody(r);
   return cardBodyFlip(r);
 }
 function recogBody(r) {
@@ -3036,22 +3038,6 @@ function recallBody(r) {
   for (var i = 0; i < opts.length; i++) h += '<button class="opt" data-pick="' + i + '"><span class="k">' + (i + 1) + "</span><span>" + esc(opts[i].v) + "</span></button>";
   return h + "</div>";
 }
-function spellBody(r) {
-  var w = r[F.W];
-  var hint = [];
-  for (var i = 0; i < w.length; i++) {
-    var ch = w[i];
-    if (ch === " " || ch === "-" || ch === "'") hint.push('<i class="given">' + esc(ch) + "</i>");
-    else if (i === 0) hint.push('<i class="given">' + esc(ch) + "</i>");
-    else hint.push('<i class="blank">_</i>');
-  }
-  return '<div class="w-block"><div class="bt">根据释义与音标拼写单词</div>' + defHTML(r) + "</div>" +
-    (cfg().showEn && r[F.EN] ? '<div class="w-en">' + esc(r[F.EN]) + "</div>" : "") +
-    '<div class="spell-box"><div class="spell-hint">' + hint.join("") + "</div>" +
-    '<input class="spell-input" id="spellIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="' + w.length + ' 个字母">' +
-    '<div class="row" style="gap:8px;margin-top:12px"><button class="btn" id="say"><svg><use href="#i-vol"/></svg>听发音</button>' +
-    '<button class="btn primary sp" id="spellOk">确认</button></div></div>';
-}
 function listenBody(r) {
   var opts = makeOptions(r, S.pool, cfg().optCount, true, preferWords());
   S.opts = opts;
@@ -3061,15 +3047,6 @@ function listenBody(r) {
   h += '<div class="opts">';
   for (var i = 0; i < opts.length; i++) h += '<button class="opt" data-pick="' + i + '"><span class="k">' + (i + 1) + "</span><span>" + esc(opts[i].v) + "</span></button>";
   return h + "</div>";
-}
-function clozeBody(r) {
-  if (!r[F.EX]) return cardBodyFlip(r);
-  var h = '<div class="w-block"><div class="bt">填空：把例句补完整</div>' +
-    '<div class="w-ex"><div class="en">' + esc(r[F.EX]).replace(new RegExp("\\b(" + esc(r[F.W]).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\w*)\\b", "ig"), "<mark>____</mark>") + "</div>" +
-    (r[F.EXZ] ? '<div class="zh">' + esc(r[F.EXZ]) + "</div>" : "") + "</div></div>" +
-    '<div class="spell-box"><input class="spell-input" id="spellIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="填入缺失的单词">' +
-    '<div class="row" style="gap:8px;margin-top:12px"><button class="btn" id="say"><svg><use href="#i-vol"/></svg>听发音</button>' +
-    '<button class="btn primary sp" id="spellOk">确认</button></div></div>';
 }
 /* 反方向的自评卡：**题干是释义，答案是单词**。
    这就是用户说的「给定释义回想单词」被点名要的那种 —— 原来的六个题型里
@@ -3151,7 +3128,7 @@ function gradeBarHTML() {
 }
 function markAnswer(ok) {
   var r = curWord();
-  if (!r) return;
+  if (!r || S.answered) return;
   var opts = S.opts || [];
   document.querySelectorAll(".opt").forEach(function (b) {
     var idx = Number(b.getAttribute("data-pick"));
@@ -3162,7 +3139,8 @@ function markAnswer(ok) {
   S.pending = ok ? 2 : 0;
   S.answered = true;
   S.autoGraded = true;
-  revealAnswer();
+  /* 答对沿用「认识」(2)，答错沿用「忘记」(0)，由原提交路径写学习记录并立刻进入下一词。 */
+  commitAndNext();
 }
 function revealAnswer() {
   var r = curWord();
@@ -3434,14 +3412,6 @@ function bindSession() {
       });
     };
   });
-  var si = $("spellIn");
-  if (si) {
-    si.focus();
-    si.oninput = function () { S.typed = si.value; };
-    si.onkeydown = function (e) { if (e.key === "Enter") { e.preventDefault(); checkSpell(); } };
-  }
-  var so = $("spellOk");
-  if (so) so.onclick = checkSpell;
   var qs = $("quitSes");
   if (qs) qs.onclick = function () {
     openModal("结束本轮？", "<p class='muted'>已测评的单词会正常记录，未测评的将保留在队列中下次继续。</p>",
@@ -3455,26 +3425,6 @@ function bindSession() {
   if (ag) ag.onclick = function () { startSession("auto"); };
   var hm = $("homeSes");
   if (hm) hm.onclick = function () { S = null; go("today"); };
-}
-function checkSpell() {
-  var r = curWord();
-  if (!r || S.answered) return;
-  var inp = $("spellIn");
-  var val = (inp ? inp.value : S.typed || "").trim().toLowerCase();
-  var ok = val === String(r[F.W]).toLowerCase();
-  if (inp) { inp.classList.add(ok ? "ok" : "no"); inp.disabled = true; }
-  S.spellOK = ok;
-  if (ok) {
-    S.pending = 2; S.answered = true; S.autoGraded = true;
-    addExtra(r); bindCommon();
-    var dots = document.querySelector(".underbar .tiny"); if (dots) dots.textContent = "拼写正确！按 1-4 调整评价，Enter 下一张";
-    refreshGradeHost();
-  } else {
-    S.pending = 0; S.answered = true; S.autoGraded = true;
-    addExtra(r); bindCommon();
-    var d2 = document.querySelector(".underbar .tiny"); if (d2) d2.textContent = "正确拼写：" + r[F.W] + " · 按 1-4 调整，Enter 下一张";
-    refreshGradeHost();
-  }
 }
 function addExtra(r) {
   var card = $("wcard");
@@ -6196,7 +6146,7 @@ function vQuiz() {
     [10, 20, 30, 50, 100].map(function (n) { return '<option value="' + n + '"' + (n === c.quizCount ? " selected" : "") + ">" + n + " 题</option>"; }).join("") +
     "</select></label>" +
     '<label class="fld"><span>题型</span><select id="qType">' +
-    '<option value="mix">混合题型</option><option value="recog">看词选义</option><option value="recall">看义选词</option><option value="spell">拼写</option><option value="listen">听音辨词</option>' +
+    '<option value="mix">混合题型</option><option value="recog">看词选义</option><option value="recall">看义选词</option><option value="listen">听音辨词</option>' +
     "</select></label>" +
     '<label class="fld"><span>出题范围</span><select id="qScope">' +
     '<option value="all">整个词书随机</option><option value="seen">只考学过的词</option><option value="due">只考到期复习的词</option><option value="hard">只考错过的词</option>' +
@@ -6234,7 +6184,9 @@ function startQuiz() {
   if (scope === "hard") pool = pool.filter(function (r) { var p = DB.prog[r[F.W]]; return p && p[N.NO] > 0; });
   if (pool.length < 4) { toast("可用词条太少（至少 4 个），换个范围试试", "bad"); return; }
   var picked = shuffle(pool.slice()).slice(0, Math.min(n, pool.length));
-  var types = type === "mix" ? ["recog", "recall", "spell", "listen"] : [type];
+  /* 测试中心只生成选择题/听力选择题，不再生成任何输入式拼写题。 */
+  var types = type === "mix" ? ["recog", "recall", "listen"] : [type];
+  if (type === "spell" || type === "cloze") types = ["recog", "recall", "listen"];
   var qs = [];
   for (var i = 0; i < picked.length; i++) {
     /* 逐个挑一个「这个词 + 这台设备」真做得出来的题型，跟学习卡共用同一套 modeOK。
@@ -6278,10 +6230,8 @@ function renderQuizQ() {
     h += '<div style="text-align:center;padding:14px 0 4px"><button class="spk" id="say" style="width:64px;height:64px;border-radius:50%"><svg style="width:28px;height:28px"><use href="#i-vol"/></svg></button>' +
       '<div class="tiny faint" style="margin-top:12px">点击重听</div></div>' + optList(Q.opts);
   } else {
-    h += '<div class="w-block"><div class="bt">根据释义拼写</div>' + defHTML(r) + "</div>" +
-      '<div class="spell-box"><input class="spell-input" id="qSpell" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="' + r[F.W].length + ' 个字母">' +
-      '<div class="row" style="gap:8px;margin-top:12px"><button class="btn" id="say"><svg><use href="#i-vol"/></svg>听发音</button>' +
-      '<button class="btn primary sp" id="qSpellOk">确认</button></div></div>';
+    /* 兼容旧状态：历史配置中的输入题不再渲染，退回卡片信息而不显示输入框。 */
+    h += '<div class="w-word">' + esc(r[F.W]) + "</div>" + ipaHTML(r) + defHTML(r);
   }
   h += '<div id="qExtra"></div></div>';
   h += '<div class="underbar"><span class="tiny faint" id="qHint">按 1-4 选择</span></div>';
@@ -6314,19 +6264,7 @@ function bindQuiz() {
   document.querySelectorAll("[data-qpick]").forEach(function (b) {
     b.onclick = function () { if (Q.answered) return; Q.picked = Number(b.getAttribute("data-qpick")); quizAnswer(Q.picked); };
   });
-  var si = $("qSpell");
-  if (si) { si.focus(); si.onkeydown = function (e) { if (e.key === "Enter") { e.preventDefault(); quizSpell(); } }; }
-  var so = $("qSpellOk"); if (so) so.onclick = quizSpell;
   var qq = $("qQuit"); if (qq) qq.onclick = function () { if (Q && Q.timer) clearInterval(Q.timer); Q = null; go("quiz"); };
-}
-function quizSpell() {
-  if (!Q || Q.answered) return;
-  var r = Q.qs[Q.i].r;
-  var inp = $("qSpell");
-  var val = (inp ? inp.value : "").trim().toLowerCase();
-  var ok = val === String(r[F.W]).toLowerCase();
-  if (inp) { inp.classList.add(ok ? "ok" : "no"); inp.disabled = true; }
-  quizRecord(ok);
 }
 function quizAnswer(pick) {
   if (!Q || Q.answered) return;
@@ -7487,7 +7425,7 @@ var THEMES = [["dawn", "晨雾"], ["paper", "纸墨"], ["forest", "林间"], ["s
    否则设置页上从上到下看到的是「看词选义 / 看义选词 / 拼写 / 听音辨词…」，
    实际轮换却是「看词选义 / 看义选词 / 听音辨词 / 例句填空…」，
    用户按界面顺序去理解学习节奏就会对不上。 */
-var MODES = [["recog", "看词选义"], ["recall", "看义选词"], ["listen", "听音辨词"], ["cloze", "例句填空"], ["spell", "拼写"], ["card", "卡片速记"]];
+var MODES = [["recog", "看词选义"], ["recall", "看义选词"], ["listen", "听音辨词"], ["card", "卡片速记"]];
 /* ---------- 数值输入的「单元格格式」规格表 ----------
    声明与校验同源：numRow / numField 从这里取 min / max / step，提交时也用它校验。
    kind    "int" 只收整数 / "dec" 收小数
@@ -7567,7 +7505,7 @@ function vSettings() {
       return '<button data-vmode="' + o[0] + '"' + (c.vmode === o[0] ? ' class="on"' : "") + ">" + o[1] + "</button>";
     }).join("") + "</div></div>" +
     '<div class="setrow"><div class="setrow-t"><b>要你做什么</b><span>「选一个」有提示、最简单；「只想一想」不给选项、最接近真实回忆</span></div><div class="seg">' +
-    [["auto", "按题型轮换"], ["recall", "只想一想"], ["choice", "选一个"], ["spell", "写出来"], ["listen", "听出来"]].map(function (o) {
+    [["auto", "按题型轮换"], ["recall", "只想一想"], ["choice", "选一个"], ["listen", "听出来"]].map(function (o) {
       return '<button data-vask="' + o[0] + '"' + (c.vask === o[0] ? ' class="on"' : "") + ">" + o[1] + "</button>";
     }).join("") + "</div></div>" +
     '<div class="setrow"><div class="setrow-t"><b>先盖住答案</b><span>「只想一想」时，答案等你揭晓才出现 —— 强制先回想一遍，记得更牢；关掉就变成「看一眼确认」</span></div>' +
@@ -7577,7 +7515,7 @@ function vSettings() {
        只能回去学习、看第一张卡长什么样，试错成本太高。 */
     '<div class="setrow"><div class="setrow-t"><b>现在是这样</b><span data-vdesc>' + esc(vmodeDesc()) + "</span></div></div>" +
     '<div class="tiny faint" style="padding-bottom:8px">' +
-    esc("两个都选完之后，题型由它们自动推导（看词选义 / 看义想词 / 拼写 / 听音辨词…），不需要你再去下面挑。") +
+    esc("两个都选完之后，题型由它们自动推导（看词选义 / 看义想词 / 听音辨词…），不需要你再去下面挑。") +
     "<br>" +
     esc("推导出来的题型如果这个设备或这个词做不了，会自动顺延到下一个能做的，并说明跳过原因。") +
     "</div></div></div>";
@@ -7588,7 +7526,7 @@ function vSettings() {
       return '<button class="btn sm' + (on ? " primary" : "") + '" data-mode="' + m[0] + '">' + m[1] + "</button>";
     }).join("") + "</div>" +
     '<div class="tiny faint" style="padding-bottom:8px">' +
-    esc("后两种题型有前置条件：听音辨词需要设备上有英语语音，例句填空需要该词条收了例句。") +
+    esc("听音辨词有前置条件：需要设备上有英语语音；不满足时会自动使用其他选择题或卡片速记。") +
     "<br>" +
     esc("不满足时不会卡住 —— 这一张自动顺延到下一个能做的题型，并会告诉你跳过原因。") +
     "</div></div>";

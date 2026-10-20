@@ -1362,8 +1362,8 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
   const def = API.CFG_DEF.activeModes;
 
   /* ---- 默认值：六种全开，且是「认得出 → 听得懂 → 填得出 → 写得出」的坡道 ---- */
-  t("默认启用六种题型（听力占六级 35%，不能默认关着）", def.length === 6, def);
-  ["recog", "recall", "listen", "cloze", "spell", "card"].forEach((m) => {
+  t("默认启用四种无需输入的题型", def.length === 4, def);
+  ["recog", "recall", "listen", "card"].forEach((m) => {
     t("默认启用里含 " + m, def.indexOf(m) >= 0);
   });
   const known = API.MODES.map((x) => x[0]);
@@ -1381,7 +1381,8 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
   /* stub DOM 里 speechSynthesis 是 undefined —— 正好模拟「这台设备没有英语语音」 */
   t("没有语音环境时 ttsReady 为假（且不抛异常）", API.ttsReady() === false);
   t("听音辨词在没有语音时不可用", API.modeOK("listen", withEx) === false);
-  t("例句填空对有例句的词可用", API.modeOK("cloze", withEx) === true);
+  t("例句填空对有例句的词也不再生成", API.modeOK("cloze", withEx) === false);
+  t("拼写题统一禁用", API.modeOK("spell", withEx) === false);
   t("例句填空对没例句的词不可用", API.modeOK("cloze", noEx) === false);
   /* ⚠ 这三条的语义在 2026-09-18 变过一次，断言跟着改，**不是放宽**：
      原来 recog / recall / spell 是「无前置条件」，现在多了一条 —— 词条必须有中文释义。
@@ -1395,7 +1396,7 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
   t("词库里能找到有中文释义的词", !!withCn);
   t("词库里也能找到「中文释义字段里其实是英文」的词（正是要靠新前置条件挡住的那些）", !!noCn);
   if (noCn) p("      样例：" + noCn[F.W] + " → " + JSON.stringify(String(noCn[F.CN]).slice(0, 60)));
-  ["recog", "recall", "spell"].forEach((m) => {
+  ["recog", "recall"].forEach((m) => {
     t(m + " 对有中文释义的词可用", API.modeOK(m, withCn) === true);
     t(m + " 对只有英文释义的词不可用（否则会出一道「根据这句英文拼写」的废题）", API.modeOK(m, noCn) === false);
   });
@@ -1424,7 +1425,7 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
      于是题型轮换从来没生效过。断言不看内部字段，只看「第 i 张实际该用什么题型」。 */
   setCfg("newPerDay", 60);
   API.resetPreview();
-  API.setCfg("activeModes", ["recog", "recall", "spell", "card"]);
+  API.setCfg("activeModes", ["recog", "recall", "spell", "cloze", "card"]);
   API.startSession("auto");
   let S = API.session();
   t("会话队列足够长（轮换断言才有意义）", S.queue.length >= 6, S.queue.length);
@@ -1433,8 +1434,8 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
   const seq = [];
   for (let k = 0; k < 5; k++) { seq.push(API.curMode()); API.nextWord(); }
   seq.push(API.curMode());
-  t("题型按配置顺序逐张轮换", seq.join() === "recog,recall,spell,card,recog,recall", seq.join());
-  t("轮换走满一圈后回到第一种（是循环而不是走到头就停）", seq[4] === seq[0] && seq[5] === seq[1], seq);
+  t("题型按配置顺序逐张轮换", seq.join() === "recog,recall,card,recog,recall,card", seq.join());
+  t("轮换走满一圈后回到第一种（是循环而不是走到头就停）", seq[3] === seq[0] && seq[4] === seq[1], seq);
 
   const before = API.curMode();
   API.prevWord();
@@ -1457,7 +1458,10 @@ p("[21] 题型轮换与前置条件（听音辨词 / 例句填空 的自动回�
   API.startSession("auto");
   t("第一张用第一个能用的题型", API.pickMode() === "recog", API.pickMode());
   API.nextWord();
-  t("第二张轮到不可用的听力题 → 跳到它后面的拼写", API.pickMode() === "spell", API.pickMode());
+  t("旧拼写被过滤，听力不可用时回到选择题", API.pickMode() === "recog", API.pickMode());
+  API.setCfg("activeModes", ["spell", "cloze"]);
+  API.startSession("auto");
+  t("只保留旧输入题的配置安全回退卡片", API.pickMode() === "card", API.pickMode());
 
   /* 极端情况：只勾了一个做不了的题型 —— 必须退到卡片速记，而不是「这一轮什么题都出不来」 */
   API.setCfg("activeModes", ["listen"]);
@@ -2129,9 +2133,9 @@ p("[23] 词汇量测试（阶梯自适应 · 自评二选一 + 假词陷阱）")
   p("");
   p("[24] 背词模式（方向 × 动作 派生题型）");
 
-  const VMODES = ["w2m", "m2w", "mix"], VASKS = ["auto", "recall", "choice", "spell", "listen"];
+  const VMODES = ["w2m", "m2w", "mix"], VASKS = ["auto", "recall", "choice", "listen"];
   t("三条方向轴齐全（先单词 / 先释义 / 交替）", VMODES.every((v) => v in API.DIR_NAME), Object.keys(API.DIR_NAME));
-  t("五个动作齐全（自动 / 只想 / 选一个 / 写出来 / 听出来）", VASKS.every((v) => v in API.ASK_NAME), Object.keys(API.ASK_NAME));
+  t("四个无需输入的动作齐全", VASKS.every((v) => v in API.ASK_NAME), Object.keys(API.ASK_NAME));
   t("默认方向是「交替」（不在两个极端里选边站）", API.CFG_DEF.vmode === "mix", API.CFG_DEF.vmode);
   t("默认动作是「按题型轮换」（等于旧行为，老用户升级不觉得变了）", API.CFG_DEF.vask === "auto", API.CFG_DEF.vask);
   t("默认先盖住答案（「只想一想」的摩擦力才是它的意义）", API.CFG_DEF.vflipFirst === true, API.CFG_DEF.vflipFirst);
@@ -2174,8 +2178,8 @@ p("[23] 词汇量测试（阶梯自适应 · 自评二选一 + 假词陷阱）")
 
   /* 推导出的题型仍要过 modeOK 那一关 —— 两种前置条件必须叠加，不能互相绕过 */
   API.setCfg("vask", "spell");
-  t("写出来 + 先释义 → 不返回 spell（会变成听写），交给顺延",
-    API.modeFromPair("m2w", "spell", canS, canL, canC) === null);
+  t("旧拼写动作 + 先释义 → 看义想词卡片",
+    API.modeFromPair("m2w", "spell", canS, canL, canC) === "recallCard");
   API.setCfg("vask", "listen");
   t("听出来 + 设备没语音 → 不返回 listen，交给顺延",
     API.modeFromPair("w2m", "listen", canS, false, canC) === null);
@@ -2196,7 +2200,7 @@ p("[23] 词汇量测试（阶梯自适应 · 自评二选一 + 假词陷阱）")
     t("改完方向后取到的是合法题型名", typeof mA === "string" && typeof mB === "string", [mA, mB]);
     API.setCfg("vask", "spell");
     const mC = API.pickModeIdx(0);
-    t("改成「写出来」后题型也变（不是只有方向生效）", mC !== mB || mC === "spell", mC);
+    t("旧拼写动作实际回退卡片，不生成输入题", mC === "card", mC);
     API.setCfg("vask", "auto"); API.setCfg("vmode", API.CFG_DEF.vmode);
   }
 
