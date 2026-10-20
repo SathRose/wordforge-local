@@ -5,15 +5,24 @@
 ## 必读顺序
 
 1. [项目工作规范](AGENTS.md)。用户要求：**每次更新后新增一篇中文更新日志，并同步本交接说明。**
-2. [最近一轮：Android 12 API 31 模拟器验证](docs/updates/2026-10-20-07-android12-emulator.md)。AOSP 模拟器 15 项通过；不是 OriginOS / 真机验收。
+2. [最新更新：字体美化](docs/updates/2026-10-20-13-typography-polish.md)：参考用户截图优化系统无衬线字体栈、词头/中文标题/按钮字重与比例音标字体，不下载字体、不覆盖用户衬线/等宽偏好。字体专项 31、布局 1209、浏览器 392、逻辑 747、API 36 QA 原生 24 项通过；同签名 local.8 已本地构建，未提交、推送或发布。
+   [上一轮：紧凑背词布局](docs/updates/2026-10-20-12-compact-study-layout.md)：主流程一屏优先，按钮不覆盖选项，自适应字号/间距和横屏分栏；完整题干与详解从显式入口打开。对应 local.7。
+   [上一轮：答错反馈与会话恢复](docs/updates/2026-10-20-11-study-feedback-and-resume.md)：答错即时保存并停留，标记正确项与误选项；跨栏目恢复原学习/复习会话。对应 local.6。
+   [上一轮：换词书会话修复](docs/updates/2026-10-20-09-book-switch-session.md)：切换词书后清除旧会话及预览，浏览器 266 项、逻辑 733 项通过。该轮无新 APK，随后进入 local.5。
+   [上一轮：背词批次修复](docs/updates/2026-10-20-08-study-batch-continuation.md)。自动续批、换批更换候选、移除跨词书兜底；逻辑 733 项、浏览器 245 项通过。源码尚未进入 APK，当前工作区修改未提交、未推送。
+   [上一轮：Android 12 API 31 模拟器验证](docs/updates/2026-10-20-07-android12-emulator.md)。AOSP 模拟器 15 项通过；不是本轮代码或 OriginOS / 真机验收。
 3. [上一轮：发布 1.1.1-local.4 并补跑 Playwright](docs/updates/2026-10-20-06-release-and-playwright.md)；[更早：重新打包 1.1.1-local.4](docs/updates/2026-10-20-05-apk-1.1.1-local.4.md) 与 [切词动画/中文选英文](docs/updates/2026-10-20-04-study-animation-and-recall-choice.md)。
 4. 运行 `git status --short --branch`、`git log -5 --oneline`，以实际工作区和远端状态为准。
 
 ## 当前可用版本
 
+- **最新本地 APK：`1.1.1-local.8`，versionCode `8`**，路径 `releases/词匠-本地版-1.1.1-local.8.apk`，大小 4,690,608 bytes；字体美化，并保留紧凑布局、错题反馈、栏目恢复、批次与切书修复，复用本机原签名。
+- 新包 SHA-256：`16e8d21338032bef21798c1ece99cee4c4a02bb1d0939e05f1fd41ef427c2e21`。构建、签名、版本及包内 HTML 摘要核验通过；同源码 QA 包在隔离 API 36 模拟器原生回归 24 项通过；本轮没有正式包实际覆盖安装或真机验收。
+- 详见[本轮日志](docs/updates/2026-10-20-13-typography-polish.md)。新包尚未公开发布，工作区未提交或推送；下面 local.4 的远端链接与摘要仅为历史发布记录。
+
 - 项目目录：`E:\workplace\英语单词系统`。
 - GitHub 公开库：[SathRose/wordforge-local](https://github.com/SathRose/wordforge-local)，分支 `main`。
-- 当前 APK：`1.1.1-local.4`，versionCode `4`，包名 `com.wordforge.local`，最低 Android 8.0。
+- 当前已公开发布 APK（不是最新本地包）：`1.1.1-local.4`，versionCode `4`，包名 `com.wordforge.local`，最低 Android 8.0。
 - 本地安装包：`releases/词匠-本地版-1.1.1-local.4.apk`（被 `.gitignore` 忽略，不随 Git 提交）。
 - [发布页面](https://github.com/SathRose/wordforge-local/releases/tag/v1.1.1-local.4)；[APK 下载](https://github.com/SathRose/wordforge-local/releases/download/v1.1.1-local.4/WordForge-1.1.1-local.4.apk)；[HTML 下载](https://github.com/SathRose/wordforge-local/releases/download/v1.1.1-local.4/WordForge-1.1.1-local.4.html)；Release id `418200198`。
 - APK SHA-256：`d0e8de76a4fbfb11d26471246eef62c77781855e26c98d6b0a19ef157e865c23`；HTML SHA-256：`33d6a38a77ab44ec233337a972a23d88323e6abe4c72435189f8ff2e1b275b7a`；签名证书 SHA-256 与旧版一致。
@@ -22,6 +31,10 @@
 
 ## 已完成，不要当作待办重复重做
 
+- 本轮 local.8：默认采用系统无衬线字体栈，词头由粗体改为 600 半粗、正文 400、按钮 500 / 主按钮 600；音标改用比例无衬线字体。字体不联网、不转载商业字体文件；不同平台的实际字形可有差异。用户衬线/等宽词头设置仍有效。
+- 上一轮 local.7：背词主要内容与操作一屏优先；操作区普通布局不覆盖选项，自适应三档（选项不低于 12px，主点击区域至少 44px）；六选项及横屏分栏。核心释义留主屏，完整题干/英文解释/例句/词形等移入可关闭弹层，退出弹层保留当前题。无限长自定义内容仍安全滚动，不裁剪或锁死高度。
+- 上一轮 local.6：答错即时记“忘记”且停留当前词，用颜色和文字明确标记正确项/误选项；确认下一张不会重复计分，上一张完整撤销。答对仍即时保存推进。
+- 切换栏目不再清除会话恢复标记，学习及复习恢复原位置、选项顺序、揭晓/待评分和错题反馈；明确结束及换词书仍清理旧会话。恢复仅限当前页面进程，未实现刷新/进程重启后的卡片位置持久化。
 - 初始化本地 Git、建立公开仓库并推送；排除签名、私人学习备份与原始截图。
 - 手机首页开始学习进入首屏，统计两列显示，长词书名不再挤坏标题。
 - 学习提供上一张、跳过、保存评价并下一张；保留原评分和撤销语义，修复总结。
@@ -36,18 +49,22 @@
 
 ## 最近功能版本的验证证据
 
+- **本轮 local.8**：字体专项 **31 项通过**（真实切换衬线/等宽/无衬线、字重、音标及会话/记录保留）；本轮重跑八尺寸布局 **1209**、通用浏览器 **392**、逻辑 **747**、API 36 QA 原生 **24** 项全部通过；导入/排序 10/16/14 项通过；结构 0 错误、1 项既有模板标签警告。正式及 QA 构建完成，电脑版原来源服务已重启并核对摘要。本轮未重跑 API 31，未进行 OriginOS 真机验收。
+- **上一轮 local.6（历史）**：逻辑 747 项、浏览器七尺寸 392 项、API 36 隔离 QA 模拟器原生 20 项通过；教材导入/词库导入/词书排序 10/16/14 项通过。后续条目也是历史结果，不代表本轮 Android 12 或真机验收。
 - API 36 原生 UI 回归 16 项通过、0 失败（`emulator-5556`）；覆盖选择题自动推进、撤销、返回键、软键盘、粘贴导入和重载持久化。
 - Android 12 API 31 AOSP 模拟器（`WordForge_API31`）原生回归 15 项通过、0 失败；CDP 触摸/截图不可用，使用 DOM click 回退，IME 断言跳过。
 - QA 包内验证：中文选英文、无拼写输入框、`anim-next` / `wfCardNext` 均生效。
 - 正式包 `versionCode=4`、`versionName=1.1.1-local.4`，签名证书 SHA-256 与旧版一致；同签名覆盖安装成功，`firstInstallTime` 保持原值。
-- 上一轮逻辑回归与导入 10/16/14 项通过、结构检查 0 错误；本轮 `wordforge.html` 未再修改，这些结果继续有效。
+- 本轮批次修复：逻辑回归 733 项通过、0 失败；教材导入/词库导入/词书排序分别 10/16/14 项通过，结构检查 0 错误、1 项模板标签扫描警告。
+- 本轮最终源码的 Playwright 回归 245 项通过、0 失败；电脑版服务已在原来源重启并核对 HTML 摘要。本轮未重新打包 APK、未运行新的 Android 原生回归。
+- 自动续批排除连续学习中已展示词；换批轮换候选；显式 order 模式及教材来源顺序保留。当前源码与测试、日志留在工作区，尚未提交或推送。
 - 移动端 Playwright 回归 238 项通过、0 失败（临时 `playwright-core` + 系统 Chrome，七种尺寸）。
 - Release 下载验证：APK/HTML 均 HTTP 200，SHA-256 与本地构建一致。
 - 本机原始结果在被 Git 忽略的 `test-results/`；可复现脚本在 `checks/`。
 
 ## 尚未完成 / 优先下一步
 
-1. **等待用户在 iQOO Neo9 上反馈 1.1.1-local.4 的实际体验。** 本轮已在 Android 12 AOSP 模拟器跑通 15 项，但它不是 OriginOS 真机；动画流畅度、触控手感仍需真机确认。
+1. **字体美化已进入本地 APK `1.1.1-local.8`。** 源码、字体/布局专项、浏览器和 API 36 QA 原生回归已通过；尚未公开发布，未实际覆盖安装正式包或执行 iQOO Neo9 真机验收。local.7 没有本轮字体调整。此前 Android 12 AOSP 15 项属于旧包，本轮没有重跑 API 31。实际字体依赖设备系统字体，不能承诺与用户参考图像素级一致。
 2. **API 31 的触摸/IME 未用 CDP 真实验证**：该 WebView 的 CDP 触摸/截图不可用，测试用 DOM click 回退并跳过 IME 断言；API 36 真实触摸/键盘 16 项仍有效。不要声称 OriginOS 真机通过。
 3. 依据真机截图、操作路径和屏幕/字体设置复现剩余问题，优先检查首页、精读、系统返回与键盘。没有反馈时不要编造新的故障。
 4. 新闻源在具体手机网络下的可达性未全面验收；目前交互测试使用隔离文本，网络问题与布局问题要分开定位。
@@ -62,4 +79,4 @@
 
 ## 可直接发给新对话的一句话
 
-> 请先阅读本项目 AGENTS.md、HANDOFF.md、CHANGELOG.md 和其中最近的功能更新日志，检查 Git 现场后继续。当前已发布 1.1.1-local.4；API 36 原生 16 项、Android 12 AOSP 模拟器 15 项、Playwright 238 项通过，但都不是 OriginOS 真机验收。真机体验仍待我的 iQOO Neo9 反馈。每轮完成后新增更新日志并更新交接说明。
+> 请先阅读本项目 AGENTS.md、HANDOFF.md、CHANGELOG.md 和最近功能日志并检查 Git 现场。最新本地包 1.1.1-local.8 优化字体并保留紧凑背词，字体 31 / 布局 1209 / 浏览器 392 / 逻辑 747 / API 36 QA 原生 24 项通过；未公开发布、未提交或推送。远端仍为 local.4，未进行本轮 Android 12 或 iQOO Neo9 真机验收。每轮新增日志并同步交接说明，不改真实学习记录。
