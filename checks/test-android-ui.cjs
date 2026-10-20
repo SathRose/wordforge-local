@@ -40,11 +40,20 @@ async function back() { shell(['shell', 'input', 'keyevent', '4']); await delay(
   await tap('#startStudy');
   check('A real touch opens the study card', await c.evaluate(`!!document.getElementById('wcard')`));
   const before = await c.evaluate(`({i:__WFAPI.session().i,log:JSON.stringify(__WFAPI.getDB().log),prog:JSON.stringify(__WFAPI.getDB().prog)})`);
-  if (await c.evaluate(`!!document.getElementById('reveal')`)) await tap('#reveal');
-  else await tap('.opt');
-  await tap('[data-g="3"]');
-  await tap('#sessionNext');
-  check('Visible save-and-next button commits and advances', await c.evaluate(`__WFAPI.session().i`) === before.i + 1);
+  /* 选择题点击即自动保存并推进；卡片题仍走揭晓 → 评分 → 下一张。 */
+  if (await c.evaluate(`!!document.querySelector('.opt')`)) {
+    await tap('.opt');
+    check('Choice tap commits and advances without manual rating',
+      await c.evaluate(`__WFAPI.session().i`) === before.i + 1);
+    check('No manual rating bar after a choice',
+      await c.evaluate(`document.querySelectorAll('.gbtn').length`) === 0);
+  } else {
+    await tap('#reveal');
+    await tap('[data-g="3"]');
+    await tap('#sessionNext');
+    check('Visible save-and-next button commits and advances',
+      await c.evaluate(`__WFAPI.session().i`) === before.i + 1);
+  }
   await tap('#sessionPrev');
   const restored = await c.evaluate(`({i:__WFAPI.session().i,log:JSON.stringify(__WFAPI.getDB().log),prog:JSON.stringify(__WFAPI.getDB().prog)})`);
   check('Previous restores all progress and counts exactly', JSON.stringify(restored) === JSON.stringify(before));
